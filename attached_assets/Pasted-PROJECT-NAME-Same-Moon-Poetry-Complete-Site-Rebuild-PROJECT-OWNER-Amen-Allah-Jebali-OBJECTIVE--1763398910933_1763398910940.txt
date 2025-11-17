@@ -1,0 +1,3899 @@
+PROJECT_NAME: Same Moon Poetry - Complete Site Rebuild
+PROJECT_OWNER: Amen Allah Jebali
+OBJECTIVE: Transform current website into a 3-4x improved version maintaining original voice
+DELIVERY_FORMAT: Production-ready, full-stack application
+TARGET_PLATFORM: Modern web (responsive, performant, accessible)
+BACKEND_REQUIREMENT: Full admin panel with CMS capabilities
+TIMELINE: Single generation with phased implementation structure
+
+PART 1: CONTENT ANALYSIS INSTRUCTION
+Please provide the complete source code of your current website in the following format, and I'll prepare a unified prompt for Flames.blue:
+Required Files:
+1. index.html (or main component) - Full markup
+2. styles.css (or all CSS files) - Complete styling
+3. script.js (or all JavaScript) - All functionality
+4. Poems content - All poem texts with metadata
+5. Prose sections - All prose pieces with metadata
+6. Images/assets - List of current assets used
+7. Any configuration files - Environment, settings, etc.
+Once you provide these, I will create a unified Flames.blue prompt that includes:
+
+Your exact content (poems, prose, stories) embedded in the instructions
+Current design system reference
+All improvements mapped to your specific structure
+Production deployment instructions
+
+
+INTERIM: TEMPLATE FLAMES.BLUE PROMPT
+(Use this structure while you gather files)
+markdown# FLAMES.BLUE BUILD PROMPT: SAME MOON POETRY REDESIGN
+
+## PROJECT DEFINITION
+
+**Project Name:** Same Moon Poetry Website Rebuild  
+**Creator:** Amen Allah Jebali  
+**Vision:** Recreate website with 3-4x improvement in design, functionality, and user experience while preserving original emotional essence.
+
+**Core Message:** "At least we are watching the same moon" — a meditation on universal human connection through shared observation and spiritual growth.
+
+---
+
+## SECTION 1: DESIGN SYSTEM & VISUAL DIRECTION
+
+### Color Palette
+```
+Primary: #6b8b7e (Jade Green - contemplation, growth)
+Secondary: #d4af37 (Gold - insight, highlights)
+Accent: #4a5568 (Slate Blue - depth, text emphasis)
+Background: #faf9f7 (Off-white - breathing room)
+Text: #2c2c2c (Charcoal - readability)
+Highlight: #f5f3f0 (Cream - subtle accent)
+```
+
+### Typography
+```
+Display Font: 'Crimson Text' (serif) — titles, quotes, spiritual elements
+Body Font: 'Source Sans 3' (sans-serif) — content, UI
+Mono Font: 'Monaco' — code/admin areas
+Line Heights: 1.2 (tight), 1.5 (normal), 1.75 (relaxed), 2 (loose)
+```
+
+### Visual Style
+- Minimalist illustrations (hand-drawn aesthetic)
+- Organic shapes + geometric precision
+- Generous whitespace
+- Subtle texture overlays
+- Smooth animations (cubic-bezier transitions)
+- Depth through layering, not heavy shadows
+
+### Inspiration References
+- Contemplative silhouettes on cliffs (perspective, introspection)
+- Misty mountains with depth (spiritual layers)
+- Bonsai trees (growth, balance, discipline)
+- Flying birds (freedom, journey)
+- Moon phases (cycles, transformation)
+- Minimalist line work (elegance, simplicity)
+
+---
+
+## SECTION 2: CONTENT STRUCTURE
+
+### [INSERT YOUR POEMS HERE]
+**Format per poem:**
+```
+POEM_TITLE: [Title]
+THEME: [Spiritual Depth | Presence & Connection | Time & Purpose | Growth & Becoming]
+MOOD: [Reflective | Energetic | Melancholic | Inspiring]
+CONTENT: [Full poem text]
+CONTEXT: [Brief inspiration/context]
+```
+
+### [INSERT YOUR PROSE PIECES HERE]
+**Format per prose:**
+```
+STORY_TITLE: [Title]
+PHILOSOPHY: [Opening observation/lesson]
+NARRATIVE: [Personal story that illustrates it]
+THEME: [Related theme]
+CALL_TO_ACTION: [Related poem or reflection prompt]
+```
+
+### [INSERT ABOUT/BIO INFORMATION HERE]
+```
+Your creative journey, philosophy, spiritual practice, what inspires you
+```
+
+---
+
+## SECTION 3: FRONTEND REQUIREMENTS
+
+### Page Structure & Features
+
+#### **1. HOME PAGE**
+
+**Hero Section**
+- Animated parallax background (3-4 layers, subtle movement)
+- Moon phase animation (cycles smoothly every 30 seconds)
+- Rotating featured quotes (auto-rotates every 5 seconds, smooth fade)
+- Typewriter effect on hero quote OR character-by-character staggered reveal
+- Author name with gradient text effect
+- "Scroll to explore" indicator with gentle pulse animation
+- Responsive: full viewport height, adjusted spacing on mobile
+
+**Featured Journey Section**
+- Title: "Featured Poems"
+- Subtitle: "A journey through growth, presence, and becoming"
+- 3-act structure (Searching → Discovering → Becoming)
+- Each act displays featured poem card showing:
+  - Poem title
+  - Theme badge with hover tooltip
+  - First 2 lines excerpt
+  - Mood indicator icon
+  - "Discover" button → opens immersive reader
+- Timeline line connecting the three acts (animated on scroll)
+- Cards slide in from sides on scroll
+- Hover effects: lift card, reveal full excerpt
+
+**Prose Stories Section (Primary Feature)**
+- Title: "Reflections in Prose"
+- Subtitle: "Observations that become stories. Lessons that become truth."
+- Dual-column layout (desktop):
+  - LEFT: Philosophy/lesson (highlighted callout boxes)
+  - DIVIDER: Gold vertical line
+  - RIGHT: Personal narrative
+- Mobile: stacked layout
+- Each story shows reading time, mood, theme
+- "Save to Collection" button
+- "Share This Story" generates custom quote graphic
+- Subtle scroll-reveal animations
+
+**Favorites Section**
+- Title: "Reader Favorites"
+- Cards showing top 3 poems with star icons
+- Click cards to jump to poem in collection
+
+**Newsletter Section**
+- Dark background (gradient)
+- Title: "Receive Monthly Reflections"
+- Promise: "No spam. Just thoughtfully selected poetry and insights."
+- Email input + Subscribe button
+- Optional: show sample previous newsletters
+
+**Footer**
+- Links to all sections
+- Social media links (Instagram, Twitter/X, Email)
+- Quick stats ("You've read X poems this session")
+- Copyright notice
+
+---
+
+#### **2. POETRY COLLECTION PAGE**
+
+**Header**
+- Large title: "Poetry Collection"
+- Subtitle: "Explore poems by theme, mood, or spiritual direction"
+- Optional: Search bar + Theme filter buttons
+
+**Theme-Based Organization (4 Sections)**
+
+**Theme 1: 🌙 Spiritual Depth**
+- Description: "Poems exploring Allah, gratitude, transformation, and spiritual awakening"
+- Background: Subtle sage green gradient
+- Icon/Illustration: Moon phase or spiritual symbol
+- List all poems in this theme with:
+  - Title
+  - First line excerpt
+  - Mood indicator
+  - Reading time
+  - "Open" button
+
+**Theme 2: 💫 Presence & Connection**
+- Description: "On authentic relationships, listening, and being truly seen"
+- Background: Subtle slate blue gradient
+- Icon: Connected circles or hearts
+- [Same poem list format]
+
+**Theme 3: ⏰ Time & Purpose**
+- Description: "Wrestling with time, discipline, intentional living, and choosing your hard"
+- Background: Subtle gold gradient
+- Icon: Clock or path
+- [Same poem list format]
+
+**Theme 4: 🌱 Growth & Becoming**
+- Description: "The journey from wanting to becoming, transformation, evolution"
+- Background: Subtle green gradient
+- Icon: Tree or seedling
+- [Same poem list format]
+
+**Visual Effects**
+- Smooth scroll reveals theme sections
+- Title animations (slide in)
+- Poem cards fade in staggered
+- Hover: cards lift, color accents appear
+- Theme icons pulse gently
+
+---
+
+#### **3. PROSE COLLECTION PAGE**
+
+**Header**
+- Title: "Reflections in Prose"
+- Subtitle: "Life lessons through stories and reflections"
+
+**Introduction Block**
+- Explanation of your prose approach
+- "This section reflects the same themes I've explored in my poetry—but through a different lens..."
+- Visual divider (◈)
+
+**Story Cards Grid**
+- Each story displayed as card with:
+  - Title
+  - Philosophy summary (first 2-3 lines)
+  - Theme badge
+  - Reading time
+  - "Read Story" button
+
+**Individual Story Page**
+- Full dual-column layout:
+  - LEFT: Philosophy section (highlighted insights)
+  - RIGHT: Narrative section (your story)
+- Callout boxes for key insights
+- Related poem suggestion at bottom
+- "Share Story" button
+- Reflection prompt at end
+
+---
+
+#### **4. ABOUT PAGE**
+
+**Header**
+- Title: "About Amen Allah Jebali"
+- Tagline: "Poet, Writer, and Seeker of Truth"
+- Background image: Contemplative silhouette
+
+**Timeline Section**
+- Visual timeline of creative journey
+- Key milestones with icons, brief descriptions
+- Years/periods marked
+- Each point connects to related work
+
+**Philosophy Cards (Interactive)**
+- Click through belief statements:
+  - "I believe in authentic connection"
+  - "Growth requires presence and discipline"
+  - "Time is the ultimate teacher"
+  - "We're all watching the same moon"
+- Each card reveals full exploration + related poem
+
+**Creator's Perspective (Optional Visual)**
+- 30-60 second looping visual journey (if animation capable)
+- Sequence: balcony at night → reading books → handwriting → stars
+- Ambient sound (optional)
+
+**Direct Connection**
+- "Let's Connect" heading
+- Contact form fields:
+  - "What brought you here?"
+  - "Which poem resonated most?"
+  - "What's on your mind?"
+  - Email
+  - Optional name
+- Newsletter signup: "Receive Monthly Reflections"
+
+---
+
+### **IMMERSIVE POEM READER** (Modal/Full Screen)
+
+**Features**
+- Full poem displayed centered
+- Right sidebar controls:
+  - Font size adjustment
+  - Line height toggle
+  - Dark/Light mode
+  - Reading time display
+  - Bookmark/Save button
+- Poem metadata (theme, mood, date written)
+- Navigation: Previous/Next poem
+- "Related Poems" suggestions below
+- "Share Poem" button (generates custom graphic)
+- Close button (X top-right)
+
+**Design**
+- Minimal UI (controls fade on scroll)
+- Generous line height (1.8-2)
+- Max-width text (60-70 characters per line)
+- Smooth background transitions
+
+---
+
+### **GLOBAL UI COMPONENTS**
+
+**Navigation**
+- Desktop: Left sidebar (always visible, minimal) showing logo + menu + social
+- Mobile: Hamburger menu sliding in from left
+- Current section highlighted
+- Smooth scroll to sections
+- Floating breadcrumb (bottom-right) showing: Home > Section > Page
+
+**Animations & Transitions**
+- All transitions: 0.6s cubic-bezier(0.4, 0, 0.2, 1)
+- Parallax on scroll (subtle, accessible)
+- Quote fade-in-up on hero load
+- Cards slide in from sides
+- Moon phases animate smoothly
+- Birds fly across hero (infinite loop)
+- Theme sections reveal with title slide + content fade
+
+**Responsive Design**
+- Mobile (<640px): stacked, full-width, 48px+ touch targets
+- Tablet (640-1024px): 2-column layouts, adjusted spacing
+- Desktop (>1024px): multi-column, optimized spacing
+- Mobile-first CSS approach
+
+**Accessibility**
+- WCAG 2.1 AA compliance
+- Semantic HTML (header, article, section, etc.)
+- ARIA labels
+- Color contrast ≥4.5:1 for text
+- Keyboard navigation support
+- Screen reader friendly
+- Reduced motion options
+
+**Performance**
+- Lazy loading for images
+- Optimized animations (transform + opacity)
+- Code splitting
+- WebP images with fallbacks
+- Minified CSS/JS
+- Fast load times
+
+---
+
+## SECTION 4: BACKEND & ADMIN PANEL REQUIREMENTS
+
+### Admin Dashboard Features
+
+**Authentication**
+- Login page (email + password)
+- JWT token authentication (24-hour expiry)
+- Session management
+- Rate limiting
+- HTTPS only
+
+**Main Dashboard**
+- Welcome message (Hi, [Creator Name])
+- Key metrics displayed:
+  - Total poem views
+  - Total prose views
+  - Total newsletter subscribers
+  - Most popular poem (this month)
+  - Recent submissions/messages
+
+**Content Management - Poems Section**
+- Button: "+ Add New Poem"
+- List all poems in table with columns:
+  - Title | Theme | Mood | Status | Views | Actions (Edit | Delete)
+- Edit Poem form:
+  - Title (text)
+  - Content (rich text editor)
+  - Theme (dropdown)
+  - Mood (dropdown)
+  - Featured image (upload)
+  - Reading time (auto-calculated)
+  - SEO title, description, keywords
+  - Published date
+  - Status (draft/published/scheduled)
+  - Save / Publish / Delete buttons
+
+**Content Management - Prose Section**
+- Button: "+ Add New Story"
+- List all stories in table
+- Edit Prose form:
+  - Title (text)
+  - Philosophy section (rich text)
+  - Narrative section (rich text)
+  - Theme (dropdown)
+  - Mood (dropdown)
+  - Featured image (upload)
+  - Related poem (select)
+  - Reading time (auto-calculated)
+  - SEO data
+  - Published date
+  - Status
+  - Save / Publish / Delete buttons
+
+**Content Management - Pages**
+- Edit homepage hero quotes
+- Select featured poems
+- Edit About bio and timeline events
+- Edit footer content
+
+**Analytics Dashboard**
+- Chart: Views over time (line chart)
+- Chart: Top 5 poems (bar chart)
+- Chart: Theme distribution (pie chart)
+- Table: Recent visitors info
+- Export data as CSV
+
+**User Management**
+- Newsletter subscribers list with:
+  - Email | Name | Subscribed Date | Status | Actions
+- Contact form submissions:
+  - Sender | Message | Date | Status (new/read) | Reply button
+- Ability to export subscriber list
+
+**Settings**
+- Site metadata (title, description, keywords)
+- Social media links
+- Email configuration (for contact form & newsletter)
+- Theme customization (optional: color picker)
+- Security settings (password change, API keys)
+
+---
+
+## SECTION 5: DATABASE STRUCTURE
+
+**Tables Needed:**
+```
+poems
+├── id, title, content, theme_id, mood, reading_time
+├── featured_image, created_at, updated_at, published_at
+├── status (draft/published/scheduled), view_count, seo_metadata
+
+prose_stories
+├── id, title, philosophy_section, narrative_section, theme_id, mood
+├── reading_time, featured_image, related_poem_id
+├── created_at, updated_at, published_at, status, view_count, seo_metadata
+
+themes
+├── id, name (Spiritual Depth, Presence, Time, Growth)
+├── description, color_accent, icon_url
+
+admin_users
+├── id, email (unique), password_hash, name, role, created_at, last_login
+
+newsletter_subscribers
+├── id, email (unique), name, subscribed_at, is_active
+
+contact_submissions
+├── id, name, email, message, poem_reference, submitted_at, status
+
+analytics
+├── id, content_type, content_id, views, date, metadata
+```
+
+---
+
+## SECTION 6: TECHNICAL STACK
+
+**Frontend:**
+- Framework: Next.js 14+ with React 18
+- Styling: Tailwind CSS + custom CSS modules
+- Animation: Framer Motion (smooth, performant)
+- State: React Context API or Zustand
+- Form Management: React Hook Form + Zod validation
+- Rich Text Editor: TipTap
+- Responsive Images: Next.js Image component
+
+**Backend:**
+- Runtime: Node.js (Next.js API routes)
+- Database: PostgreSQL (with Prisma ORM)
+- Authentication: JWT + bcrypt
+- Email: Nodemailer or SendGrid
+- File Storage: Cloudinary or AWS S3
+- Caching: Redis (optional)
+
+**Admin Panel:**
+- Built into Next.js (separate route structure)
+- Charts: Recharts
+- Tables: TanStack Table
+- Media Manager: Custom upload component
+
+**Deployment:**
+- Platform: Vercel (or similar)
+- CI/CD: GitHub Actions
+- Monitoring: Sentry for errors
+- Analytics: PostHog or Mixpanel
+
+---
+
+## SECTION 7: CRITICAL REQUIREMENTS
+
+**Must Have:**
+✅ Fully responsive (mobile-first design)
+✅ Smooth animations (no janky transitions)
+✅ Dark/light mode toggle
+✅ Reading time estimates
+✅ Theme-based poem organization
+✅ Dual-column prose layout
+✅ Secure admin authentication
+✅ WCAG 2.1 AA accessibility
+✅ Fast load times (<3s)
+✅ SEO optimization
+
+**Nice to Have:**
+🎯 Related content suggestions
+🎯 Read/Save statistics
+🎯 Newsletter campaign builder
+🎯 Social sharing with custom graphics
+🎯 Visitor analytics dashboard
+🎯 Content scheduling
+
+---
+
+## SECTION 8: DESIGN PRIORITIES
+
+1. **Aesthetic Excellence**: Modern, contemplative, emotionally resonant
+2. **User Experience**: Intuitive, discoverable, engaging
+3. **Technical Quality**: Performant, accessible, maintainable
+4. **Content Preservation**: Maintain author's voice and message
+5. **Admin Power**: Easy content management, analytics, growth tools
+
+---
+
+## SECTION 9: DELIVERY EXPECTATIONS
+
+**Phase 1 Output:** Complete frontend with all pages, animations, responsive design
+**Phase 2 Output:** Fully functional admin panel with content management
+**Phase 3 Output:** Database integration, API routes, authentication
+**Phase 4 Output:** Deployment setup, SEO optimization, performance tuning
+
+**Final Deliverable:** Production-ready website deployable to Vercel with full CMS capabilities
+
+---
+
+## FINAL INSTRUCTIONS FOR FLAMES.BLUE
+
+Generate a complete, production-ready website that:
+1. Honors the creator's voice and spiritual message
+2. Implements all design specifications exactly
+3. Includes fully functional admin panel
+4. Deploys seamlessly to modern web infrastructure
+5. Maintains 3-4x improvement in design and functionality vs. original
+6. Preserves emotional essence while modernizing presentation
+
+Start building with Phase 1 priority: Frontend structure and hero section animations.
+
+PART 2: HOW TO USE THIS WITH YOUR CONTENT
+Step 1: Prepare Your Content
+Before submitting to Flames.blue, compile your poems and prose in this format:
+poems.json
+json{
+  "poems": [
+    {
+      "id": "poem-1",
+      "title": "Poem Title Here",
+      "content": "Full poem text here",
+      "theme": "Spiritual Depth",
+      "mood": "Reflective",
+      "context": "Brief inspiration behind it"
+    }
+    // ... more poems
+  ]
+}
+prose.json
+json{
+  "stories": [
+    {
+      "id": "prose-1",
+      "title": "Story Title",
+      "philosophy": "The lesson/observation...",
+      "narrative": "Here's the personal story...",
+      "theme": "Presence & Connection",
+      "relatedPoemId": "poem-1"
+    }
+    // ... more stories
+  ]
+}
+Step 2: Submit to Flames.blue
+
+Go to Flames.blue
+Create new project
+Copy the entire prompt above
+Add section: "## SECTION 0: YOUR CONTENT" and paste your JSON data
+Click "Generate Website"
+Wait for completion (typically 5-15 minutes)
+
+Step 3: Customize & Deploy
+
+Review generated code
+Test all pages and admin functions
+Add custom domain
+Deploy to Vercel/hosting platform
+Update social links and email configuration
+
+
+WHAT YOU NEED TO PROVIDE ME
+To finalize this prompt with your exact content, please share:
+
+All poems (title, full text, which theme each belongs to)
+All prose pieces (title, philosophy section, narrative section)
+About/bio information (your story, timeline milestones)
+Any existing images (or description of visual style preferences)
+Current website colors (if different from suggested palette)
+Specific features you want emphasized
+
+Once I have these, I'll embed them directly into the Flames.blue prompt, making it even more precise and ready for generation.
+
+READY TO PROCEED?
+Option A: Send me your content files, and I'll create the final complete prompt
+Option B: Use the template above and fill in your content in Section 0
+Option C: Share your current website source code, and I'll extract everything automatically
+Which would you prefer? 🌙✨Réessayer5You already have all the necessary information based on our previous conversations and the latest vision for the website. Please use the insights, especially from the last four conversations, as the primary reference to create the final comprehensive prompt. Feel free to add any features that will 100% enhance the reader's experience. Deliver the entire prompt as a single, cohesive block.markdown# 🌙 FLAMES.BLUE PRODUCTION PROMPT: SAME MOON POETRY - COMPLETE REBUILD
+
+## PROJECT INITIALIZATION
+
+**Project Name:** Same Moon Poetry Website Rebuild  
+**Creator:** Amen Allah Jebali  
+**Current Status:** Enhanced redesign from contemplative portfolio to immersive storytelling platform  
+**Vision Statement:** "At least we are watching the same moon" — Transform a beautiful linear website into a 3-4x improved version that honors the creator's voice while delivering modern technical excellence, seamless user experience, and powerful creator tools.
+
+**Core Philosophy:** Every visitor should feel like they're stepping into an intimate reading room where someone they trust is sharing their deepest thoughts. Design should whisper: "You're not alone in this. We're watching the same moon. And I see what you see too."
+
+---
+
+## SECTION 1: COMPLETE DESIGN SYSTEM
+
+### Color Psychology & Palette
+```
+PRIMARY: #6b8b7e (Jade Green)
+  - Represents: Growth, contemplation, spiritual depth, healing
+  - Usage: Primary buttons, accents, section dividers, theme highlight
+  - Psychology: Calming, introspective, connected to nature
+
+SECONDARY: #d4af37 (Gold)
+  - Represents: Insight, transformation, illumination, value
+  - Usage: Key CTAs, highlights, success states, "NEW" badges
+  - Psychology: Warm, precious, draws attention intentionally
+
+ACCENT: #4a5568 (Slate Blue)
+  - Represents: Depth, intellectual contemplation, poetry
+  - Usage: Text emphasis, borders, subtle backgrounds
+  - Psychology: Grounding, literary, sophisticated
+
+BACKGROUND: #faf9f7 (Off-white/Cream)
+  - Represents: Blank canvas, breathing room, paper quality
+  - Usage: Main backgrounds, reading surfaces
+  - Psychology: Clean, inviting, non-fatiguing
+
+TEXT: #2c2c2c (Charcoal)
+  - Represents: Clarity, grounding, readability
+  - Usage: All body text, headers
+  - Psychology: Warm black (not pure #000), easy on eyes
+
+LIGHT ACCENT: #f5f3f0 (Soft Cream)
+  - Represents: Subtle emphasis, gentle highlighting
+  - Usage: Hover states, subtle backgrounds, callout boxes
+  - Psychology: Elegant, understated
+
+SAGE: #a8bfb3 (Muted Sage Green)
+  - Represents: Growth, healing, secondary emphasis
+  - Usage: Secondary highlights, dividers, subtle effects
+  - Psychology: Calming, natural
+```
+
+### Typography System
+```
+Display Font: 'Crimson Text' (serif)
+  - Weight: 300 (light), 400 (regular), 600 (bold)
+  - Usage: All titles, quotes, poetic elements, hero text
+  - Rationale: Elegant, literary, conveys wisdom and contemplation
+
+Body Font: 'Source Sans 3' (sans-serif)
+  - Weight: 300 (light), 400 (regular), 500 (medium), 600 (bold)
+  - Usage: UI, buttons, descriptions, body text
+  - Rationale: Modern clarity, excellent readability
+
+Mono Font: 'Monaco' (monospace)
+  - Usage: Code blocks in admin, technical elements
+  - Rationale: Clarity in technical contexts
+
+Type Scale (based on modular scale 1.2):
+  --text-xs: 0.75rem (12px) — small labels
+  --text-sm: 0.875rem (14px) — small text, metadata
+  --text-base: 1rem (16px) — standard body text
+  --text-lg: 1.125rem (18px) — slightly larger body
+  --text-xl: 1.25rem (20px) — emphasis text
+  --text-2xl: 1.5rem (24px) — subheadings
+  --text-3xl: 1.875rem (30px) — section titles
+  --text-4xl: 2.25rem (36px) — page titles
+  --text-5xl: 3rem (48px) — hero titles
+
+Line Height Scale:
+  --line-tight: 1.2 (for titles, compact readability)
+  --line-normal: 1.5 (standard UI)
+  --line-relaxed: 1.75 (comfortable reading)
+  --line-loose: 2 (immersive reading mode)
+
+Spacing System (8px base):
+  --space-xs: 0.5rem (4px)
+  --space-sm: 1rem (8px)
+  --space-md: 1.5rem (12px)
+  --space-lg: 2rem (16px)
+  --space-xl: 3rem (24px)
+  --space-2xl: 4rem (32px)
+  --space-3xl: 5rem (40px)
+```
+
+### Visual Language
+- **Minimalist Illustrations:** Hand-drawn aesthetic, not photo-realistic. Use icons for themes (moon phases, trees, birds, mirrors, clocks, diamonds)
+- **Organic + Geometric:** Blend flowing curves with clean lines
+- **Generous Whitespace:** Never crowded. Breathing room is part of the design
+- **Subtle Texture:** Paper grain overlay (opacity 0.03), subtle canvas texture on hero
+- **Depth Through Layering:** Use z-index and staggered animations, not heavy shadows
+- **Shadows (subtle):**
+  - Small: 0 2px 8px rgba(0,0,0,0.08)
+  - Medium: 0 8px 24px rgba(0,0,0,0.12)
+  - Large: 0 12px 40px rgba(0,0,0,0.15)
+- **Border Radius:**
+  - Small: 8px
+  - Medium: 12px
+  - Large: 16px
+  - Extra Large: 20px
+  - Full: 9999px
+
+### Visual Reference Inspiration
+- **Image 1 (Contemplative Cliff):** Solitary figure perspective, introspection, standing at edge overlooking landscape → Used for hero, About page
+- **Image 2 (Bonsai with Color):** Balance, growth, discipline in nature, selective color accent → Visual theme for transformation pieces
+- **Image 3 (Eclipse Diagram):** Cosmic perspective, scientific + spiritual blend, structured data → Thematic grouping headers, About visualization
+- **Image 4 (Misty Mountains):** Layers, spiritual depth, fog representing unknown, tree resilience → Section dividers, backgrounds
+- **Image 5 (Birds in Flight):** Movement, freedom, journey, collective migration → Background animations, theme illustrations
+- **Image 6 (Church Steeple):** Spiritual connection reaching skyward, architecture + sky → About section aesthetic, connection themes
+
+---
+
+## SECTION 2: COMPLETE CONTENT LIBRARY
+
+### POEMS (Organized by Theme)
+
+#### **THEME 1: 🌙 SPIRITUAL DEPTH**
+*Description: "Poems exploring Allah, gratitude, transformation, and spiritual awakening"*
+
+**Poem 1: "Each One a Mirror"**
+```
+Theme: Spiritual Depth
+Mood: Reflective
+Reading Time: 2 mins
+Content:
+Here we are again, charged, full of emotions, and above all—gratitude to Allah.
+
+I am blessed, alhamdulillah.
+
+I sit on my balcony, the sky stretched like a painting: light above, fiery orange below, mountains fading in the distance.
+
+But the moon— cut in half, grabs all my attention.
+
+And I whisper to myself: "How did I miss all this beauty, all this glory in front of me?"
+
+Thanks to someone— who inspired me, not with words, but with action, I found a new me.
+
+Wallahi, this brings me peace.
+
+I was inspired. Inspired by how they look at the sky differently, inspired by their passion for reading.
+
+At first, it felt strange— but soon, I was drawn in.
+
+Book by book, page by page: from The 48 Laws of Power, to The Psychology of Money, from Ego is the Enemy, to In Our Stories We Live.
+
+Each one a step, each one a mirror.
+
+And above all, strengthening my bond with Allah turned me into someone new.
+
+Now as I write, night has arrived— stars scattered in the distance, and the moon, magnificent, still watching over me.
+
+But at least we are watching the same moon.
+
+Context: A spiritual journey of gratitude and transformation. Written during a period of creative awakening, reflecting how external inspiration (books, people, observing nature) becomes internal transformation through strengthening spiritual connection.
+```
+
+#### **THEME 2: 💫 PRESENCE & CONNECTION**
+*Description: "On authentic relationships, listening, and being truly seen"*
+
+**Poem 1: "The Rare Ones"**
+```
+Theme: Presence & Connection
+Mood: Reflective
+Reading Time: 2.5 mins
+Content:
+in a world too loud to listen, i realized something... some people are like treasure — rare, hidden, sometimes buried deep beneath noise and distraction.
+
+it's hard to find someone who really understands you, someone who shares that quiet spark that makes you feel seen, like they've touched the part of you you couldn't even name.
+
+my favorite people are the ones who evolve — open-minded, ready to learn, ready to live new experiences.
+
+and when you find that sweet chemistry, that unexplainable click between souls... the magic begins. but even magic fades when one soul stops showing up. so sometimes, you have to let things go.
+
+because if they truly know your worth, they'll circle back — and if they don't... well, we live in an age where meaning is vanishing, where connection's become just another notification.
+
+everyone's online — but it feels like no one's there. scrolling, replying, talking — but not really speaking.
+
+i'm the type of guy who craves the real — a small talk that feels big, a shared silence that says everything, eye contact that speaks louder than words.
+
+you get the point... i'm not chasing attention — i'm searching for presence.
+
+because in the end, presence is the rarest treasure left.
+
+Context: A reflection on authentic connection in a distracted world. Written during observations of how technology has changed human interaction, yet the hunger for real presence remains the same.
+```
+
+#### **THEME 3: ⏰ TIME & PURPOSE**
+*Description: "Wrestling with time, discipline, intentional living, and choosing your hard"*
+
+**Poem 1: "Choose Your Hard"**
+```
+Theme: Time & Purpose
+Mood: Energetic
+Reading Time: 1.5 mins
+Content:
+"Time", people overlook it, but it's the very thing that shapes us.
+
+It builds discipline, it turns dreams into reality.
+
+Lately, I've been living with purpose. Every minute feels valuable.
+
+Yeah, I'm busy— but it's the kind of busy that makes me proud.
+
+Balancing studies, the gym, personal work— it's not easy.
+
+But easy never built anything.
+
+Excuses? I don't buy them.
+
+The classic "I got no time"? That's just fear in disguise.
+
+Here's the truth: Life will always be hard.
+
+But you get to choose your hard.
+
+Grinding is hard.
+
+Wasting time and regretting later is harder.
+
+Context: A meditation on purposeful living and the discipline of choice. Reflects the understanding that difficulty is inevitable—the question is whether you'll face it with intention or regret.
+```
+
+**Poem 2: "If You Have to Ask"**
+```
+Theme: Time & Purpose
+Mood: Inspiring
+Reading Time: 1.5 mins
+Content:
+It's been a long time since I did one of these, but inspiration comes and goes.
+
+Anyways, I learned a valuable lesson. What lesson, you may ask?
+
+Let me tell you: "If you have to ask for it, it loses its value."
+
+Damn— that's too good of a lesson.
+
+Mind your business, do what makes you happy, and everything else will come naturally.
+
+That's why I fell in love with this quote: "Don't chase butterflies, plant a garden instead."
+
+This showed me: you attract what you are.
+
+And thank God I learned this early in my life— God knows best.
+
+Every chapter, every human interaction became a lesson for me.
+
+That switch in mindset— a real game changer.
+
+Context: A reflection on self-worth and natural attraction. The philosophy: stop chasing external validation, focus on becoming the person who naturally attracts what you desire.
+```
+
+#### **THEME 4: 🌱 GROWTH & BECOMING**
+*Description: "The journey from wanting to becoming, transformation, evolution"*
+
+**Poem 1: "When Today Is Enough"**
+```
+Theme: Growth & Becoming
+Mood: Reflective
+Reading Time: 2 mins
+Content:
+I wake up and the sun is already smiling
+birds doing their thing outside
+coffee in my hand, no rush in my step
+
+and I wonder—
+why do we make life harder than it is
+
+Why stress about tomorrow
+when today is sitting right here
+singing its simple song
+
+isn't this enough
+
+the breath in my chest
+the laugh waiting with my friends
+the small wins nobody claps for but me
+
+I used to think happiness was a place
+something I had to chase
+but maybe it's just this
+
+a good vibe
+a clear sky
+a moment where nothing feels missing
+
+And if storms come—so what
+doesn't the rainbow always follow
+so why complain about the clouds
+when they're just painting the view
+
+So yeah
+today I choose peace
+I choose laughter
+I choose the light in small things
+
+and maybe that's the secret after all
+
+Context: Finding contentment in the present moment. A journey from future-oriented anxiety to present-moment appreciation, recognizing that fulfillment isn't a destination but a perspective shift.
+```
+
+**Poem 2: "Empty but Alive"**
+```
+Theme: Growth & Becoming
+Mood: Melancholic
+Reading Time: 2 mins
+Content:
+I sat on the couch, listening to the calming sound of crickets, rain falling, drop by drop.
+
+Honestly, the vibe was perfect for relaxing and writing, but inside I felt empty.
+
+You might ask—what's the thing that does this to you?
+
+Truth is, I don't even know.
+
+When I pick up a pencil and let it move, words come naturally. I don't know if that's a blessing or just something developing inside me.
+
+Damn, I went too deep—time to breathe
+
+Still, a thought crosses my mind: We've all faced storms in our lives, yet we complain about a little rain on another day.
+
+So I made a promise to myself: never complain.
+
+Because really, what's the point? Complaining fixes nothing.
+
+Picture this: it's a burning hot day, you're working, laughing, talking with your friend— and suddenly I complain about the weather.
+
+Just like that, the vibe shifts. Negative energy spreads, and nothing changes.
+
+That's enough yapping for today.
+
+I'll leave it here, like raindrops fading into silence— a small truth whispered, but still enough to carry me forward.
+
+Context: A reflection on emptiness, creativity, and choosing positivity. Explores the paradox of feeling empty while actively creating, and the realization that complaining is a choice we can refuse.
+```
+
+### PROSE STORIES (Dual Philosophy + Narrative Structure)
+
+**Prose Piece 1: "Nice Encounter"**
+```
+Title: Nice Encounter
+Theme: Presence & Connection
+Mood: Reflective
+Reading Time: 3 mins
+
+PHILOSOPHY SECTION (Left Column - Opening Observations):
+The art of manifesting is one of the most delightful feelings. It's like rewiring your brain to attract a certain moment, person, or outcome that you truly desire.
+
+Key Insights:
+- Presence speaks louder than words. Someone's energy, vibe, intention communicates before they open their mouth.
+- Kindness lives in small acts—respecting elders, giving up your seat, letting someone go first. These little actions reveal everything about who a person is.
+- True connection happens when people listen deeply. Not waiting for their turn to talk, but actually paying attention to what's being said (and unsaid).
+- Reading people is a learnable skill. The more you observe, listen, and admire small details, the better you understand human nature.
+
+Reflection Question: When was the last time you felt truly *seen* by someone?
+
+NARRATIVE SECTION (Right Column - The Story):
+Let me tell you a story. Last night, during my usual walk, I was thinking about seeing the one who first made me curious about reading—a small influence that ended up changing so much for me. 
+
+We hadn't crossed paths in years. I went about my day as usual, not expecting anything special. Then SubhanAllah, today, they came up to me first—calm and friendly, like time hadn't even passed.
+
+Don't get me wrong—we're all just people. I'm not putting anyone on a pedestal. But sometimes, someone's energy just grabs you. Their presence, their vibe—it speaks louder than words. In that moment, I realized that authentic presence is rare. Most people are there but not really present.
+
+Lately, I've been developing a new skill: learning to read people. I'm still learning as I go, but it gives me a whole new perspective on how to see things. You notice patterns in how someone listens, how their eyes move, how they choose their words.
+
+Kindness shows in the smallest moments—respecting the elderly by letting them go first, giving up your seat on the train, genuinely asking "How are you?" and actually waiting for the answer. These little actions say so much about a person. Sometimes they even bring back memories you'd forgotten, showing how deeply they notice and listen.
+
+They're not just waiting for their turn to talk—they listen. They pay attention. And honestly, I'm the kind of person who loves that. I love observing, listening, and admiring the small things in life. That's when you realize the rare ones are those who show up, who are present, who truly see you.
+
+Context: Reflections on manifestation, presence, and the art of truly seeing people. A meditation on how small, intentional moments of connection reveal character and create lasting impact.
+```
+
+### ABOUT/BIO INFORMATION
+
+**Creator's Story:**
+Amen Allah Jebali is a poet and writer whose work emerges from late-night balconies overlooking mountains, books that challenge perspective, and moments of connection between heartbeats.
+
+Poetry found him when he needed it most—what began as scattered thoughts has grown into a collection of verses that speak to universal experiences of growth, spirituality, and self-discovery.
+
+**Creative Journey Timeline:**
+- **Childhood Curiosity:** First inspired by someone's passion for reading, beginning a lifelong love of books and learning
+- **Late-Night Discovery:** Poetry emerges as a voice during reflective moments, alone with the sky
+- **Spiritual Awakening:** Relationship with Allah becomes the anchor that gives meaning to all observation and creation
+- **Reading Transformation:** Books become mirrors—each one a step in personal evolution
+- **Creating This Space:** Decision to share reflections as invitation for others to see through his lens
+
+**Philosophy & Beliefs:**
+
+1. **"I believe in authentic connection"**
+   - In a world too loud to listen, presence is the rarest treasure. Real connection happens when people stop waiting for their turn to talk and actually see each other.
+   - Related Poem: "The Rare Ones"
+
+2. **"Growth requires presence and discipline"**
+   - Time shapes us. Every minute is valuable. The question isn't whether life will be hard—it's whether you'll face it with intention or regret.
+   - Related Poem: "Choose Your Hard"
+
+3. **"Time is the ultimate teacher"**
+   - Every interaction, every chapter becomes a lesson. Watch how people show up. Notice the small kindnesses. These reveal truth.
+   - Related Poem: "If You Have to Ask"
+
+4. **"We're all watching the same moon"**
+   - Universal connection through shared observation. You're not alone in your contemplation, your struggle, your spiritual seeking. Someone else is looking at the same stars.
+   - Related Poem: "Each One a Mirror"
+
+**Creator's Process:**
+When not writing, you'll find me on my balcony watching the sky paint itself in different colors, reading books that expand perspective, or sitting in grateful silence. But don't let these quiet moments fool you—I'm energetic, adventurous, and willing to take risks. I find balance between contemplation and action, between introspection and experience.
+
+The intersection of coding and writing represents my worldview: that technology and poetry, logic and emotion, can create something greater than either alone.
+
+**Direct Message:**
+My hope is that these words reach you at exactly the right moment—when you need to remember your worth, when you're learning to plant gardens instead of chasing butterflies, or when you simply need to know that someone else is looking at the same moon, thinking similar thoughts.
+
+---
+
+## SECTION 3: FRONTEND ARCHITECTURE & PAGE SPECIFICATIONS
+
+### **PAGE 1: HOME PAGE**
+
+#### **Hero Section**
+**Visual Design:**
+- Full viewport height (90-100vh on desktop, adjusted on mobile)
+- Parallax animated background with 4 layers:
+  - Layer 1 (speed 0.2): Distant mountains, very subtle
+  - Layer 2 (speed 0.4): Mid-range mist and clouds
+  - Layer 3 (speed 0.6): Closer terrain features
+  - Layer 4 (speed 0.8): Fine details and text overlay
+- Moon phase animation that cycles through 8 phases (new → full → new) every 30 seconds
+- Animated birds flying in formation across top third of hero (infinite loop, slow, peaceful)
+- Paper texture overlay (opacity 0.03) for subtle tactile feel
+
+**Content & Interactions:**
+```
+CENTER SECTION (z-index 10):
+├── Hero Quote Container
+│   ├── Quote appears with staggered character animation (150ms between chars)
+│   ├── Quote auto-rotates every 5 seconds with smooth crossfade
+│   ├── Current quote displays in serif font, centered, 3.2rem desktop / 2.4rem tablet / 1.8rem mobile
+│   ├── Quotation marks appear with slight delay for emphasis
+│   └── On hover: subtle color shift, opacity shift, cursor becomes pointer
+│
+├── Quote Context (below quote)
+│   ├── Displays current quote's theme, mood, and date written
+│   ├── Font: small serif italic
+│   ├── Opacity: 0.7, appears 1 second after quote
+│   └── On hover: expands to show "Full story behind this quote"
+│
+├── Author Information (appears on scroll down ~50%)
+│   ├── Name: "Amen Allah Jebali" (large serif, gradient effect)
+│   ├── Subtitle: "Poet & Writer" (smaller sans-serif, uppercase, tracking: 4px)
+│   ├── Animation: Fade-in + slight upward movement (cubic-bezier 0.4,0,0.2,1)
+│   └── Animation trigger: On scroll, when hero quote is fully visible
+│
+└── Call-to-Action Button
+    ├── Label: "Begin Your Journey" or "Explore Poems"
+    ├── Style: Subtle gradient background (jade-green), white text
+    ├── Position: Below author info
+    ├── Animation: Fade in with scale effect
+    └── On click: Smooth scroll to Featured Journey section
+```
+
+**Bottom Section (Scroll Indicator):**
+```
+Floating at bottom (position: absolute, bottom: 3rem):
+├── Icon: Down arrow (↓) or scroll indicator animation
+├── Text: "Scroll to explore" (small, centered)
+├── Animation: Gentle vertical bounce (translateY: -10px) repeating every 3 seconds
+├── Opacity: 0.6, fade out completely on scroll down 200px
+└── On desktop only (hidden on mobile)
+```
+
+**Interactions & Effects:**
+- **Parallax on Scroll:** Each background layer responds to scroll position
+- **Moon Phase Sync:** Moon position reflects scroll progress (visual feedback)
+- **Quote Hover State:** 
+  - Background dims slightly (opacity 0.9 → 0.95)
+  - Text color becomes gold (#d4af37)
+  - Subtle underline appears beneath quote
+- **Touch Optimization:** Disable parallax on mobile, use simple fade transitions
+- **Accessibility:** 
+  - Provide skip link to main content
+  - Ensure quote text has sufficient contrast (4.5:1 minimum)
+  - Include alt text for moon and bird animations
+
+---
+
+#### **Featured Journey Section** (Below Hero)
+**Layout & Design:**
+```
+Section Container:
+├── Max-width: 1200px, centered
+├── Padding: 5rem horizontal (desktop), 2rem (mobile)
+├── Background: Gradient from cream → soft sage (subtle, barely perceptible)
+│
+├── SECTION HEADER
+│   ├── Title: "Featured Poems"
+│   │   ├── Font: Serif, 3.2rem, color: charcoal
+│   │   ├── Animation: On scroll into view, slide in from left with fade
+│   │   ├── Underline: Gold gradient line (0.5rem height, 120px width, centered)
+│   │   └── Underline animation: Grows from center outward (0.8s duration)
+│   │
+│   └── Subtitle: "A journey through growth, presence, and becoming"
+│       ├── Font: Sans-serif, 1.125rem, color: charcoal, italic
+│       ├── Animation: Fade in 0.3s after title
+│       └── Spacing: 1rem below title
+
+├── TIMELINE CONTAINER
+│   └── Visual connection line (gold, animated on scroll)
+│       ├── Height: 3px, width: 60% centered
+│       ├── Animation: Line grows from center outward as section scrolls into view
+│       └── Connects three act containers
+
+└── THREE-ACT POEM DISPLAY (Grid: 3 columns on desktop, 1 column on mobile)
+    ├── Spacing: 3rem between cards
+    │
+    ├── ACT 1: SEARCHING (Left)
+    │   ├── Card Title: "Act 1: Searching"
+    │   ├── Poem Card
+    │   │   ├── Visual Icon: Butterfly (symbolizing migration/seeking)
+    │   │   ├── Color Accent: Fade to gold (#d4af37)
+    │   │   ├── Poem: "If You Have to Ask"
+    │   │   ├── Theme Badge: "Self-Worth" (tag style, gold background)
+    │   │   ├── Preview Text: "Mind your business, do what makes you happy..."
+    │   │   ├── Reading Time: "1.5 min read"
+    │   │   ├── Mood Indicator: Icon showing "Inspiring"
+    │   │   ├── Button: "Discover" (outline style, jade-green border)
+    │   │   └── Animation: Slide in from left on scroll, staggered delay
+    │   │
+    │   └── On Hover:
+    │       ├── Card lifts (transform: translateY(-12px))
+    │       ├── Shadow increases (0 20px 60px)
+    │       ├── Icon rotates slightly (5deg)
+    │       ├── Button changes to solid background
+    │       └── Preview text reveals 1-2 more lines
+    │
+    ├── ACT 2: DISCOVERING (Center)
+    │   ├── Card Title: "Act 2: Discovering"
+    │   ├── Poem Card
+    │   │   ├── Visual Icon: Mirror (symbolizing reflection/truth)
+    │   │   ├── Color Accent: Fade to slate-blue (#4a5568)
+    │   │   ├── Poem: "Each One a Mirror"
+    │   │   ├── Theme Badge: "Transformation"
+    │   │   ├── Preview Text: "And I whisper to myself: How did I miss all this beauty..."
+    │   │   ├── Reading Time: "2 min read"
+    │   │   ├── Mood Indicator: Icon showing "Reflective"
+    │   │   ├── Button: "Discover"
+    │   │   └── Animation: Fade in (no slide, emphasizing as center point)
+    │   │
+    │   └── Visual Prominence: Slightly larger than Acts 1 & 3, indicating narrative center
+    │
+    └── ACT 3: BECOMING (Right)
+        ├── Card Title: "Act 3: Becoming"
+        ├── Poem Card
+        │   ├── Visual Icon: Diamond/Treasure (symbolizing rarity/value)
+        │   ├── Color Accent: Fade to sage-green (#a8bfb3)
+        │   ├── Poem: "The Rare Ones"
+        │   ├── Theme Badge: "Connection"
+        │   ├── Preview Text: "in a world too loud to listen, i realized something..."
+        │   ├── Reading Time: "2.5 min read"
+        │   ├── Mood Indicator: Icon showing "Reflective"
+        │   ├── Button: "Discover"
+        │   └── Animation: Slide in from right on scroll, staggered delay (slower than Act 1)
+        │
+        └── On Hover: Same effects as Act 1
+```
+
+**Interaction Flows:**
+- **"Discover" Button Click:**
+  - Smooth transition animation (0.4s fade out current section)
+  - Opens full Immersive Poem Reader modal
+  - Reader displays complete poem with controls (font size, reading mode, bookmarks)
+  - Related poems suggested at bottom of reader
+
+**Responsive Behavior:**
+- **Desktop (>1024px):** 3-column grid, cards equal height
+- **Tablet (640-1024px):** 2-column grid, cards stack on third row
+- **Mobile (<640px):** 1-column stack, cards full width with adjusted padding
+
+---
+
+#### **Prose Stories Section** (New Primary Hero Feature)
+**Strategic Position:** Immediately after Featured Journey, before Favorites
+**Section Significance:** Equal visual prominence to poetry, recognizing prose as core brand element
+
+**Visual Design:**
+Container:
+├── Background: Linear gradient (135deg, rgba(212,175,55,0.08), rgba(212,175,55,0.04))
+├── Border: 1px solid rgba(212,175,55,0.15) with 6px left accent border (gold)
+├── Padding: 5rem all sides (desktop), 2rem (mobile)
+├── Border-radius: 24px
+│
+├── SECTION HEADER
+│   ├── Main Title: "✨ Reflections in Prose ✨"
+│   │   ├── Font: Serif, 2.4rem, color: gold (#d4af37)
+│   │   ├── Sparkle emojis: Part of design (not decorative, intentional)
+│   │   ├── Spacing: Letter-spacing 2px
+│   │   └── Animation: Fade in with slight scale effect
+│   │
+│   ├── Subtitle: "Observations that become stories. Lessons that become truth."
+│   │   ├── Font: Sans-serif, 1.1rem, color: charcoal, italic
+│   │   ├── Animation: Fade in 0.3s after title
+│   │   └── Spacing: 1.5rem below title
+│   │
+│   └── Background Icon: Faded bonsai tree illustration (opacity 0.05) positioned top-right
+│
+├── STORY CARDS GRID (Responsive)
+│   ├── Desktop: 1-2 cards per row (full width for single story highlight)
+│   ├── Tablet: 1 card per row
+│   ├── Mobile: 1 card per row, full width
+│   │
+│   └── INDIVIDUAL STORY CARD
+│       ├── Structure: Dual-column layout (desktop), stacked (mobile)
+│       │
+│       ├── LEFT COLUMN: PHILOSOPHY/OBSERVATION (40% width desktop)
+│       │   ├── Background: Subtle cream (#f5f3f0)
+│       │   ├── Padding: 2rem
+│       │   ├── Content:
+│       │   │   ├── Opening Lesson (bold serif, 1.25rem)
+│       │   │   ├── Key Insights (bulleted list, each with icon)
+│       │   │   ├── Insight boxes with gold left border (3px)
+│       │   │   └── Reflection Question (italic, indented, color: jade-green)
+│       │   │
+│       │   └── Visual Elements:
+│       │       ├── Icon at top-left (theme-specific)
+│       │       ├── Subtle gold accent line at bottom
+│       │       └── Text selection color: gold overlay
+│       │
+│       ├── DIVIDER (Desktop Only)
+│       │   ├── Style: Vertical line, 6px width, gold (#d4af37)
+│       │   ├── Height: 100% of card
+│       │   ├── Animation: Slide up from bottom on scroll (500ms)
+│       │   └── Mobile: Horizontal divider instead (◈ symbol centered)
+│       │
+│       ├── RIGHT COLUMN: NARRATIVE/STORY (60% width desktop)
+│       │   ├── Background: White (#fdfefe)
+│       │   ├── Padding: 2rem
+│       │   ├── Content:
+│       │   │   ├── "Here's what happened..." (introduction, serif)
+│       │   │   ├── Narrative paragraphs (body text, generous line-height)
+│       │   │   ├── Moment of realization (emphasized, italicized)
+│       │   │   └Réessayer5Continuer│   │   └── How it changed me (reflective conclusion)
+│       │   │
+│       │   └── Visual Elements:
+│       │       ├── Drop cap on first paragraph (large serif letter, gold color)
+│       │       ├── Subtle text shadows for emphasis on key passages
+│       │       └── Smooth text reveal animation on scroll
+│       │
+│       ├── STORY FOOTER
+│       │   ├── Metadata: Reading time | Mood indicator | Theme badge
+│       │   ├── Actions:
+│       │   │   ├── "Save to Collection" button (outline, jade-green)
+│       │   │   ├── "Share This Story" button (generates custom graphic)
+│       │   │   └── "Read More" link (if part of series)
+│       │   │
+│       │   └── Related Content Link
+│       │       └── "This story connects to: [Related Poem]" (clickable, jumps to poem)
+│       │
+│       └── Card Animation:
+│           ├── On scroll into view: Fade in + slide from left (0.6s)
+│           ├── On hover: Subtle lift (2px), shadow increase
+│           ├── Left column: Slightly darker on hover
+│           └── Divider: Glows gold on parent hover
+
+**Interaction Details:**
+- **Philosophy Column Hover:** Text highlights, insight boxes shift color slightly
+- **Story Column Hover:** Background lightens, text appears more prominent
+- **"Share This Story" Flow:**
+  - Opens modal with customizable quote graphic preview
+  - User selects quote from story
+  - Options: customize text color, background, font size
+  - Generate shareable image (Twitter, Instagram, Pinterest formats)
+  - Social share buttons below image
+
+**Responsive Transformation:**
+- **Mobile:** Stacked layout (philosophy → divider → narrative)
+- **Tablet:** Single column with emphasized structure
+- **Desktop:** True dual-column with visual balance
+
+---
+
+#### **Favorites Section**
+**Design:**
+Container:
+├── Background: Light gradient (rgba(122,155,142,0.06), rgba(168,195,184,0.04))
+├── Padding: 4rem horizontal, 3rem vertical
+│
+├── Title: "Reader Favorites"
+│   ├── Font: Serif, 2.4rem, centered
+│   ├── Color: Charcoal
+│   └── Animation: Slide in from top on scroll
+│
+└── FAVORITES ROW (Flex, space-around, wrap)
+├── Gap: 2rem between items
+│
+├── FAVORITE ITEM 1: "The Rare Ones"
+│   ├── Layout: Flex row (icon + text)
+│   ├── Icon: Gold star (★) with drop shadow
+│   ├── Text: Poem title (serif, 1.25rem)
+│   ├── Background: White with subtle border
+│   ├── Padding: 1.5rem 2rem
+│   ├── Border-radius: 30px
+│   ├── Animation: Fade in on scroll with staggered delay
+│   │
+│   └── On Hover:
+│       ├── Lift: translateY(-5px)
+│       ├── Shadow: 0 12px 30px rgba(122,155,142,0.15)
+│       ├── Star: Rotate and scale (1 → 1.2)
+│       └── Background: Slight color shift
+│
+├── FAVORITE ITEM 2: "Same Moon" (with read count)
+│   └── [Same structure as Item 1]
+│
+└── FAVORITE ITEM 3: "When Today Is Enough"
+└── [Same structure as Item 1]
+
+**Click Behavior:**
+- Each favorite card is clickable
+- On click: Smooth transition to Poetry Collection page
+- Poem automatically highlighted/scrolled to on collection page
+
+---
+
+#### **Newsletter Section**
+**Design & Positioning:**
+Container:
+├── Background: Linear gradient (135deg, #2c2c2c, #4a4a4a)
+├── Color: White text
+├── Padding: 5rem all sides (desktop), 3rem (mobile)
+├── Border-radius: 24px
+├── Position: Relative overflow hidden
+│
+├── Background Effect (Overlay)
+│   └── Radial gradient circle (top-right, rgba(122,155,142,0.1), fading to transparent)
+│
+├── Content (Centered, max-width 600px)
+│   ├── Title: "Receive verses in your inbox"
+│   │   ├── Font: Serif, 2.6rem, weight 300
+│   │   ├── Color: White
+│   │   └── Animation: Fade in from bottom
+│   │
+│   ├── Subtitle: "Monthly poetry, exclusive previews, and writing insights"
+│   │   ├── Font: Sans-serif, 1.1rem
+│   │   ├── Color: rgba(255,255,255,0.8)
+│   │   └── Animation: Fade in 0.2s after title
+│   │
+│   ├── Newsletter Form
+│   │   ├── Layout: Flex row (desktop), column (mobile)
+│   │   ├── Gap: 1rem
+│   │   │
+│   │   ├── Email Input
+│   │   │   ├── Placeholder: "your.email@example.com"
+│   │   │   ├── Padding: 1.5rem 2rem
+│   │   │   ├── Border: 2px solid rgba(255,255,255,0.2)
+│   │   │   ├── Background: rgba(255,255,255,0.1)
+│   │   │   ├── Color: White
+│   │   │   ├── Border-radius: 15px
+│   │   │   ├── Font-size: 1rem
+│   │   │   ├── Placeholder color: rgba(255,255,255,0.5)
+│   │   │   │
+│   │   │   └── On Focus:
+│   │   │       ├── Outline: None
+│   │   │       ├── Border-color: Jade-green
+│   │   │       └── Background: rgba(255,255,255,0.15)
+│   │   │
+│   │   └── Submit Button
+│   │       ├── Text: "Subscribe"
+│   │       ├── Background: Linear gradient (jade-green, soft-jade)
+│   │       ├── Color: White
+│   │       ├── Padding: 1.5rem 3rem
+│   │       ├── Border: None
+│   │       ├── Border-radius: 15px
+│   │       ├── Font-size: 1rem
+│   │       ├── Letter-spacing: 1px
+│   │       ├── Text-transform: Uppercase
+│   │       ├── Font-weight: 500
+│   │       ├── Cursor: Pointer
+│   │       ├── Transition: All 0.6s cubic-bezier(0.4,0,0.2,1)
+│   │       │
+│   │       └── On Hover:
+│   │           ├── Transform: translateY(-2px)
+│   │           └── Box-shadow: 0 8px 25px rgba(122,155,142,0.3)
+│   │
+│   └── Success State
+│       ├── Button text changes to "Thank you!"
+│       ├── Button background shifts slightly
+│       ├── Form resets after 3 seconds
+│       └── Subtle success animation (checkmark or similar)
+
+**Mobile Optimization:**
+- Stack layout vertically
+- Full-width email input
+- Full-width button
+- Adjusted padding for mobile screens
+
+---
+
+### **PAGE 2: POETRY COLLECTION PAGE**
+
+**Overall Layout:**
+Container:
+├── Max-width: 1200px, centered
+├── Padding: 3rem horizontal (desktop), 1.5rem (mobile)
+│
+├── HEADER SECTION
+│   ├── Background: Gradient (135deg, rgba(122,155,142,0.03), rgba(168,195,184,0.02))
+│   ├── Padding: 5rem vertical, centered
+│   │
+│   ├── Title: "Poetry Collection"
+│   │   ├── Font: Serif, 3.2rem, centered
+│   │   ├── Color: Charcoal
+│   │   ├── Animation: Slide down from top on page load
+│   │   └── Underline: Gold gradient line (grows from center)
+│   │
+│   ├── Subtitle: "A journey through words, reflections, and spiritual growth"
+│   │   ├── Font: Sans-serif, 1.3rem, italic
+│   │   ├── Color: Charcoal
+│   │   └── Animation: Fade in after title
+│   │
+│   └── (Optional) Search & Filter Bar
+│       ├── Search input: Filter poems by title/content
+│       ├── Theme filter buttons: Click to show only poems in theme
+│       ├── Mood filter buttons: Click to show only poems with mood
+│       └── "Show All" button: Reset filters
+│
+├── FOUR THEME SECTIONS (Stacked vertically)
+│   │
+│   ├── THEME 1: 🌙 SPIRITUAL DEPTH
+│   │   ├── Container
+│   │   │   ├── Background: Subtle sage gradient (opacity 0.08)
+│   │   │   ├── Padding: 3rem
+│   │   │   ├── Margin-bottom: 3rem
+│   │   │   ├── Border-left: 6px solid jade-green
+│   │   │   └── Border-radius: 16px
+│   │   │
+│   │   ├── Theme Header
+│   │   │   ├── Icon: Moon phases illustration (animated, cycles through phases)
+│   │   │   ├── Title: "🌙 Spiritual Depth"
+│   │   │   │   ├── Font: Serif, 2.4rem
+│   │   │   │   ├── Color: Jade-green
+│   │   │   │   └── Animation: Slide in from left on scroll
+│   │   │   │
+│   │   │   └── Description: "Poems exploring Allah, gratitude, transformation, and spiritual awakening"
+│   │   │       ├── Font: Sans-serif, 1.1rem
+│   │   │       ├── Color: Charcoal
+│   │   │       ├── Font-style: Italic
+│   │   │       └── Margin-bottom: 2rem
+│   │   │
+│   │   └── Poem List
+│   │       ├── Layout: Flex column (or grid if many poems)
+│   │       ├── Gap: 1.5rem
+│   │       │
+│   │       └── POEM LIST ITEM (for "Each One a Mirror")
+│   │           ├── Structure: Horizontal card
+│   │           ├── Background: White with subtle border
+│   │           ├── Padding: 1.5rem
+│   │           ├── Border-radius: 12px
+│   │           ├── Border-left: 4px solid jade-green
+│   │           │
+│   │           ├── Title: "Each One a Mirror"
+│   │           │   ├── Font: Serif, 1.5rem, weight 400
+│   │           │   ├── Color: Charcoal
+│   │           │   └── Margin-bottom: 0.5rem
+│   │           │
+│   │           ├── Excerpt: "And I whisper to myself: How did I miss all this beauty..."
+│   │           │   ├── Font: Sans-serif, 1rem, italic
+│   │           │   ├── Color: Charcoal (opacity 0.8)
+│   │           │   ├── Max-length: 100 characters, truncate with ellipsis
+│   │           │   └── Margin-bottom: 1rem
+│   │           │
+│   │           ├── Metadata Row
+│   │           │   ├── Mood Icon: Reflective (icon)
+│   │           │   ├── Mood Label: "Reflective"
+│   │           │   ├── Separator: •
+│   │           │   ├── Reading Time: "2 min read"
+│   │           │   ├── Separator: •
+│   │           │   └── Theme Badge: "Spiritual Depth" (tag style)
+│   │           │
+│   │           ├── Button: "Open"
+│   │           │   ├── Style: Outline, jade-green border, 2px
+│   │           │   ├── Padding: 0.75rem 1.5rem
+│   │           │   ├── Border-radius: 20px
+│   │           │   ├── Font: Sans-serif, 0.9rem, uppercase
+│   │           │   ├── Letter-spacing: 1px
+│   │           │   └── On click: Opens Immersive Reader modal
+│   │           │
+│   │           └── On Hover:
+│   │               ├── Background: Light jade tint
+│   │               ├── Border-left: 6px (wider)
+│   │               ├── Shadow: 0 8px 24px rgba(122,155,142,0.12)
+│   │               ├── Transform: translateX(4px)
+│   │               └── Button: Solid background fill
+│   │
+│   ├── THEME 2: 💫 PRESENCE & CONNECTION
+│   │   ├── Similar structure to Theme 1
+│   │   ├── Color accent: Slate-blue instead of sage-green
+│   │   ├── Icon: Connected circles or hearts
+│   │   └── Poems: "The Rare Ones"
+│   │
+│   ├── THEME 3: ⏰ TIME & PURPOSE
+│   │   ├── Similar structure to Theme 1
+│   │   ├── Color accent: Warm gold
+│   │   ├── Icon: Clock or winding path
+│   │   └── Poems: "Choose Your Hard", "If You Have to Ask"
+│   │
+│   └── THEME 4: 🌱 GROWTH & BECOMING
+│       ├── Similar structure to Theme 1
+│       ├── Color accent: Sage-green
+│       ├── Icon: Tree or seedling
+│       └── Poems: "When Today Is Enough", "Empty but Alive"
+│
+└── Visual Effects
+├── Smooth scroll reveals (each theme section fades in and slides on scroll)
+├── Staggered animations (poems appear one by one within theme)
+├── Icon animations (theme icons pulse gently, scale on hover)
+└── Dividers between sections (decorative line or space)
+
+**Responsive Behavior:**
+- **Desktop:** Full structure as described
+- **Tablet:** Theme sections full width, poems in 1-column layout
+- **Mobile:** Stacked, adjusted spacing, larger touch targets
+
+---
+
+### **PAGE 3: PROSE STORIES COLLECTION PAGE**
+
+**Layout:**
+Container:
+├── Max-width: 1200px, centered
+├── Padding: 3rem horizontal (desktop), 1.5rem (mobile)
+│
+├── HEADER SECTION
+│   ├── Background: Gradient (135deg, rgba(122,155,142,0.03), rgba(168,195,184,0.02))
+│   ├── Padding: 5rem vertical, centered
+│   │
+│   ├── Title: "Reflections in Prose"
+│   │   ├── Font: Serif, 3.2rem, centered
+│   │   ├── Color: Charcoal
+│   │   └── Underline: Gold gradient line
+│   │
+│   └── Subtitle: "Life lessons through stories and reflections"
+│       ├── Font: Sans-serif, 1.3rem, italic
+│       ├── Color: Charcoal
+│       └── Animation: Fade in after title
+│
+├── INTRODUCTION BLOCK
+│   ├── Background: White with subtle border
+│   ├── Padding: 3rem
+│   ├── Border-left: 6px solid soft-jade
+│   ├── Border-radius: 16px
+│   │
+│   ├── Intro Text: "This section reflects the same themes I've explored in my poetry—authenticity, growth, and meaningful connection—but through a different lens. My approach is simple: I start by sharing observations and life lessons I've learned, then weave them into real stories from my own experience. This way, you don't just read about ideas—you see them come alive through moments that shaped my perspective. It's my way of inviting you into my world, showing you how I think, and maybe helping you see your own experiences a little differently."
+│   │   ├── Font: Sans-serif, 1.15rem, italic
+│   │   ├── Color: Charcoal
+│   │   ├── Line-height: 2
+│   │   ├── Text-align: Center
+│   │   └── Animation: Fade in from bottom on page load
+│   │
+│   └── Visual Divider (below intro)
+│       ├── Symbol: ◈ (ornamental)
+│       ├── Color: Jade-green (opacity 0.5)
+│       ├── Size: 1.8rem
+│       ├── Text-align: Center
+│       ├── Margin: 2rem 0
+│       └── Animation: Fade in with scale
+│
+├── STORY GRID (2 columns on desktop, 1 on tablet/mobile)
+│   ├── Gap: 2rem between cards
+│   │
+│   └── STORY CARD (for "Nice Encounter")
+│       ├── Background: White with subtle border
+│       ├── Padding: 2rem
+│       ├── Border-radius: 16px
+│       ├── Border: 1px solid rgba(122,155,142,0.1)
+│       ├── Box-shadow: 0 4px 12px rgba(0,0,0,0.05)
+│       │
+│       ├── Story Title
+│       │   ├── Font: Serif, 2rem
+│       │   ├── Color: Charcoal
+│       │   ├── Margin-bottom: 1rem
+│       │   └── Animation: Fade in on scroll
+│       │
+│       ├── Story Metadata (Row)
+│       │   ├── Theme Badge: "Presence & Connection"
+│       │   ├── Separator: •
+│       │   ├── Mood: "Reflective"
+│       │   ├── Separator: •
+│       │   ├── Reading Time: "3 min read"
+│       │   └── Font: Sans-serif, 0.9rem, color: charcoal (opacity 0.7)
+│       │
+│       ├── Philosophy Preview (truncated)
+│       │   ├── First 100 characters of philosophy section
+│       │   ├── Font: Sans-serif, 1.1rem, italic
+│       │   ├── Color: Charcoal
+│       │   ├── Margin: 1.5rem 0
+│       │   └── "..." at end with "Read more" link
+│       │
+│       ├── Story Excerpt (narrative preview)
+│       │   ├── First 150 characters of narrative
+│       │   ├── Font: Sans-serif, 1rem
+│       │   ├── Color: Charcoal (opacity 0.8)
+│       │   ├── Line-height: 1.6
+│       │   └── Margin: 1rem 0
+│       │
+│       ├── Related Poem Link (if available)
+│       │   ├── Text: "Connects to: Each One a Mirror"
+│       │   ├── Color: Jade-green
+│       │   ├── Font: Sans-serif, 0.95rem
+│       │   ├── Text-decoration: Underline on hover
+│       │   └── On click: Jump to poem in Poetry Collection
+│       │
+│       ├── Button: "Read Full Story"
+│       │   ├── Style: Gradient background (jade-green)
+│       │   ├── Text: White, uppercase, letter-spacing 1px
+│       │   ├── Padding: 1rem 2rem
+│       │   ├── Border-radius: 20px
+│       │   ├── Margin-top: 1.5rem
+│       │   └── On click: Navigate to full story page or open reader modal
+│       │
+│       └── On Hover:
+│           ├── Card lifts: translateY(-8px)
+│           ├── Shadow increases: 0 12px 36px rgba(122,155,142,0.15)
+│           ├── Background: Slight sage tint
+│           └── Button: Shadow intensifies
+│
+└── Optional: "More Stories Coming Soon" teaser
+├── Position: Below current stories
+├── Text: "I'm writing more reflections. Subscribe to be notified when new stories are shared."
+└── CTA: Link to newsletter signup
+
+---
+
+### **PAGE 4: INDIVIDUAL STORY PAGE** (Full Story Reader)
+
+**Layout:**
+Container:
+├── Max-width: 900px for readability
+├── Centered
+├── Padding: 3rem horizontal (desktop), 1.5rem (mobile)
+│
+├── HEADER
+│   ├── Story Title
+│   │   ├── Font: Serif, 2.8rem
+│   │   ├── Color: Charcoal
+│   │   ├── Text-align: Center
+│   │   ├── Margin-bottom: 1rem
+│   │   └── Animation: Fade in from top
+│   │
+│   ├── Metadata
+│   │   ├── Theme | Mood | Reading Time
+│   │   ├── Font: Sans-serif, 0.95rem
+│   │   ├── Text-align: Center
+│   │   ├── Color: Charcoal (opacity 0.7)
+│   │   └── Margin-bottom: 2rem
+│   │
+│   └── Divider Line
+│       ├── Width: 60px, centered
+│       ├── Height: 2px
+│       ├── Color: Jade-green gradient
+│       └── Margin-bottom: 2rem
+│
+├── STORY CONTENT (Dual-Column on Desktop, Stacked on Mobile)
+│   │
+│   ├── LEFT COLUMN: PHILOSOPHY (Desktop width: 40%)
+│   │   ├── Background: Light cream (#f5f3f0)
+│   │   ├── Padding: 2.5rem all sides
+│   │   ├── Border-radius: 16px
+│   │   ├── Position: Sticky (remains visible while scrolling)
+│   │   │
+│   │   ├── Section Icon (top-center)
+│   │   │   └── Theme-specific icon (theme-related symbol)
+│   │   │
+│   │   ├── Opening Lesson
+│   │   │   ├── Font: Serif, 1.3rem, weight 400
+│   │   │   ├── Color: Charcoal
+│   │   │   ├── Margin-bottom: 1.5rem
+│   │   │   └── Font-style: Italic for emphasis
+│   │   │
+│   │   ├── Key Insights
+│   │   │   ├── Each insight in its own box
+│   │   │   ├── Background: White with 3px left gold border
+│   │   │   ├── Padding: 1rem
+│   │   │   ├── Margin-bottom: 1rem
+│   │   │   ├── Border-radius: 8px
+│   │   │   ├── Font: Sans-serif, 1rem
+│   │   │   ├── Line-height: 1.6
+│   │   │   │
+│   │   │   └── Small Icon (left): Subtle bullet or symbol
+│   │   │
+│   │   └── Reflection Question
+│   │       ├── Background: Light gold tint
+│   │       ├── Padding: 1.5rem
+│   │       ├── Border-radius: 12px
+│   │       ├── Font: Sans-serif italic, 1.05rem
+│   │       ├── Color: Charcoal (opacity 0.9)
+│   │       ├── Margin-top: 2rem
+│   │       └── Animation: Subtle pulse on page load
+│   │
+│   ├── DIVIDER (Desktop Only)
+│   │   ├── Vertical gold line
+│   │   ├── Width: 6px
+│   │   ├── Height: 100% of column
+│   │   └── Animation: Slide up from bottom on scroll
+│   │
+│   └── RIGHT COLUMN: NARRATIVE (Desktop width: 60%)
+│       ├── Background: White
+│       ├── Padding: 2.5rem
+│       ├── Border-radius: 16px
+│       │
+│       ├── Story Introduction
+│       │   ├── Font: Serif, 1.2rem, italic
+│       │   ├── Color: Jade-green
+│       │   ├── Margin-bottom: 1.5rem
+│       │   └── Drop cap: Large serif letter (first letter), gold color
+│       │
+│       ├── Story Paragraphs
+│       │   ├── Font: Serif, 1.2rem
+│       │   ├── Line-height: 2 (generous for reading)
+│       │   ├── Color: Charcoal
+│       │   ├── Margin-bottom: 1.5rem
+│       │   ├── Text-align: Justified (desktop), left (mobile)
+│       │   ├── Max-width per line: 70 characters (optimal reading)
+│       │   └── Paragraphs reveal staggered on scroll
+│       │
+│       ├── Emphasis Elements
+│       │   ├── Key moments: Italic text
+│       │   ├── Profound realizations: Slightly larger, bold
+│       │   ├── Dialogue: Serif, indented, quoted style
+│       │   └── Emotional peaks: Subtle background highlight (cream)
+│       │
+│       └── Story Conclusion
+│           ├── Font: Serif, 1.2rem, italic
+│           ├── Color: Jade-green
+│           └── Margin-top: 2rem
+│
+├── STORY FOOTER
+│   ├── Metadata & Actions
+│   ├── Text: "This story connects to: [Related Poem Title]"
+│   ├── Related poem is clickable link → jumps to Poetry Collection
+│   │
+│   ├── Action Buttons (Flex row, centered)
+│   │   ├── "Save to Collection" (outline button)
+│   │   ├── "Share This Story" (solid button, generates quote graphic)
+│   │   └── "Print Story" (optional, outline button)
+│   │
+│   ├── Reflection Prompt (below buttons)
+│   │   ├── Background: Light sage tint
+│   │   ├── Padding: 2rem
+│   │   ├── Border-radius: 12px
+│   │   ├── Text: "How does this resonate with your experience?"
+│   │   ├── Optional: Text area for reader to journal (save locally)
+│   │   └── "Save to My Reflections" button
+│   │
+│   └── More Stories Suggestion
+│       ├── Text: "You might also like:"
+│       ├── Show 2-3 related stories as cards
+│       └── "View All Stories" link
+│
+└── Mobile Stack Order:
+├── Philosophy section (full width)
+├── Narrative section (full width)
+└── Divider becomes visual separator (horizontal line + ◈)
+
+---
+
+### **PAGE 5: ABOUT PAGE**
+
+**Layout:**
+Container:
+├── Max-width: 1200px, centered
+│
+├── HEADER SECTION
+│   ├── Background: Gradient (135deg, rgba(122,155,142,0.03), rgba(168,195,184,0.02))
+│   ├── Padding: 5rem vertical
+│   │
+│   ├── Title: "About Amen Allah Jebali"
+│   │   ├── Font: Serif, 3.2rem, centered
+│   │   ├── Color: Charcoal
+│   │   └── Underline: Gold gradient line
+│   │
+│   ├── Tagline: "Poet, Writer, and Seeker of Truth"
+│   │   ├── Font: Sans-serif, 1.3rem, italic, centered
+│   │   ├── Color: Charcoal
+│   │   └── Margin-top: 1rem
+│   │
+│   └── Hero Image (optional)
+│       └── Contemplative silhouette (background image, subtle)
+│
+├── MAIN CONTENT
+│   ├── Padding: 3rem horizontal, 0 vertical
+│   │
+│   ├── SECTION 1: YOUR STORY
+│   │   ├── Title: "Your Creative Journey"
+│   │   │   ├── Font: Serif, 2.4rem
+│   │   │   ├── Color: Charcoal
+│   │   │   └── Margin-bottom: 2rem
+│   │   │
+│   │   └── Text Content
+│   │       ├── Font: Serif, 1.2rem
+│   │       ├── Line-height: 1.9
+│   │       ├── Paragraphs separated by 1.5rem margin
+│   │       ├── Animation: Fade in paragraphs staggered on scroll
+│   │       └── Includes key points about your journey
+│   │
+│   ├── SECTION 2: TIMELINE VISUALIZATION
+│   │   ├── Title: "The Journey So Far"
+│   │   │   ├── Font: Serif, 2.4rem
+│   │   │   └── Color: Charcoal
+│   │   │
+│   │   └── Timeline Component
+│   │       ├── Vertical line (center desktop, left mobile) connecting events
+│   │       ├── Line color: Gold
+│   │       ├── Line animation: Draws on scroll
+│   │       │
+│   │       ├── TIMELINE EVENT 1
+│   │       │   ├── Year/Period: "Childhood Curiosity"
+│   │       │   ├── Title: "First Inspired by Reading"
+│   │       │   ├── Description: Brief text (1-2 sentences)
+│   │       │   ├── Icon: Book or light bulb (left side)
+│   │       │   ├── Desktop: Alternates left/right of timeline
+│   │       │   ├── Animation: Fade in + slide on scroll
+│   │       │   └── Related poem: Link to related work
+│   │       │
+│   │       ├── TIMELINE EVENT 2: "Late-Night Discovery"
+│   │       │   └── [Similar structure]
+│   │       │
+│   │       ├── TIMELINE EVENT 3: "Spiritual Awakening"
+│   │       │   └── [Similar structure]
+│   │       │
+│   │       ├── TIMELINE EVENT 4: "Reading Transformation"
+│   │       │   └── [Similar structure]
+│   │       │
+│   │       └── TIMELINE EVENT 5: "Creating This Space"
+│   │           └── [Similar structure]
+│   │
+│   ├── SECTION 3: PHILOSOPHY CARDS (Interactive)
+│   │   ├── Title: "My Core Beliefs"
+│   │   │   ├── Font: Serif, 2.4rem
+│   │   │   └── Color: Charcoal
+│   │   │
+│   │   └── Card Grid (4 columns desktop, 2 tablet, 1 mobile)
+│   │       ├── Gap: 2rem
+│   │       │
+│   │       ├── PHILOSOPHY CARD 1
+│   │       │   ├── State 1 (Collapsed):
+│   │       │   │   ├── Background: White with jade-green border-left (6px)
+│   │       │   │   ├── Padding: 2remRéessayer5Continuer│   │   │   ├── Padding: 2rem
+│   │   │   ├── Border-radius: 12px
+│   │   │   ├── Statement: "I believe in authentic connection"
+│   │   │   │   ├── Font: Serif, 1.3rem, bold
+│   │   │   │   ├── Color: Charcoal
+│   │   │   │   └── Animation: Fade in on scroll
+│   │   │   │
+│   │   │   ├── Icon: Connected circles or similar
+│   │   │   │   ├── Size: 2rem
+│   │   │   │   ├── Color: Gold
+│   │   │   │   ├── Position: Top-right
+│   │   │   │   └── Animation: Rotate slowly (continuous)
+│   │   │   │
+│   │   │   ├── Cursor: Pointer on hover
+│   │   │   ├── Hover effect: Lift card, shadow increase, icon scale
+│   │   │   │
+│   │   │   └── State 2 (Expanded on Click):
+│   │   │       ├── Height: Auto-expand
+│   │   │       ├── Additional content appears with fade animation
+│   │   │       ├── Full exploration: "In a world too loud to listen, presence is the rarest treasure..."
+│   │   │       │   ├── Font: Sans-serif, 1.1rem
+│   │   │       │   ├── Line-height: 1.8
+│   │   │       │   ├── Margin-top: 1rem
+│   │   │       │   └── Color: Charcoal (opacity 0.9)
+│   │   │       │
+│   │   │       ├── Related Poem Link
+│   │   │       │   └── "Explore in: The Rare Ones" (clickable)
+│   │   │       │
+│   │   │       └── Collapse button (appears on expand)
+│   │   │
+│   │   ├── PHILOSOPHY CARD 2: "Growth requires presence and discipline"
+│   │   │   └── [Same structure as Card 1]
+│   │   │
+│   │   ├── PHILOSOPHY CARD 3: "Time is the ultimate teacher"
+│   │   │   └── [Same structure as Card 1]
+│   │   │
+│   │   └── PHILOSOPHY CARD 4: "We're all watching the same moon"
+│   │       └── [Same structure as Card 1]
+│   │
+│   ├── SECTION 4: CREATOR'S PERSPECTIVE (Optional Visual Animation)
+│   │   ├── Title: "A Day in My Perspective"
+│   │   │   ├── Font: Serif, 2.4rem
+│   │   │   └── Color: Charcoal
+│   │   │
+│   │   └── Visual Component
+│   │       ├── If animation capable: 30-60 second looping visual sequence
+│   │       │   ├── Scene 1: Balcony at night (camera pans)
+│       │   ├── Scene 2: Reading books (pages turn, highlights appear)
+│       │   ├── Scene 3: Handwriting in notebook (pen moves, words appear)
+│       │   ├── Scene 4: Stars emerge (fade in, twinkle)
+│       │   ├── Audio: Subtle ambient (wind, crickets, pen writing)
+│       │   └── Loop: Seamless transition back to Scene 1
+│       │
+│       └── If animation not capable: Static illustration with text overlay
+│           └── "Moments that inspire my work..."
+│   │
+│   ├── SECTION 5: PHILOSOPHY VISUALIZATION (Interactive Diagram)
+│   │   ├── Title: "How It All Connects"
+│   │   │   └── Subtitle: "The interconnected themes of my work"
+│   │   │
+│   │   └── Interactive Diagram
+│   │       ├── Center: "Your Core Message" or "Same Moon Poetry"
+│   │       │   ├── Circle or icon (gold, glowing)
+│   │       │   └── Animation: Subtle pulse, glow effect
+│   │       │
+│   │       ├── 4 Branches extending outward:
+│   │       │   ├── Branch 1: "Spiritual Depth" → connects to poems with moon icon
+│       │   ├── Branch 2: "Presence & Connection" → connects to poems with heart icon
+│       │   ├── Branch 3: "Growth & Becoming" → connects to poems with tree icon
+│       │   └── Branch 4: "Time & Purpose" → connects to poems with clock icon
+│       │
+│       ├── Interaction: Click any branch to see related poems
+│       ├── Animation: Lines draw on scroll, nodes appear staggered
+│       └── Mobile: Simplified version (linear instead of radial)
+│   │
+│   └── SECTION 6: DIRECT CONNECTION
+│       ├── Title: "Let's Connect"
+│       │   ├── Font: Serif, 2.4rem
+│       │   └── Subtitle: "I'd love to hear what resonates with you"
+│       │
+│       ├── Contact Form
+│       │   ├── Background: White with subtle border
+│       │   ├── Padding: 2rem
+│       │   ├── Border-radius: 16px
+│       │   ├── Max-width: 600px, centered
+│       │   │
+│       │   ├── Form Fields
+│       │   │   ├── "What brought you here?" (textarea, 3 rows)
+│       │   │   │   ├── Font: Sans-serif, 1rem
+│       │   │   │   ├── Padding: 1rem
+│       │   │   │   ├── Border: 2px solid jade-green on focus
+│       │   │   │   └── Placeholder: "Share your thoughts..."
+│       │   │   │
+│       │   │   ├── "Which poem resonated most?" (select dropdown)
+│       │   │   │   ├── Options: All poems listed
+│       │   │   │   └── Font: Sans-serif, 1rem
+│       │   │   │
+│       │   │   ├── "What's on your mind?" (textarea, 5 rows)
+│       │   │   │   ├── Font: Sans-serif, 1rem
+│       │   │   │   └── Placeholder: "Any reflections, questions, or connections..."
+│       │   │   │
+│       │   │   ├── "Email" (required, text input)
+│       │   │   │   ├── Font: Sans-serif, 1rem
+│       │   │   │   └── Type: email
+│       │   │   │
+│       │   │   ├── "Name" (optional, text input)
+│       │   │   │   └── Font: Sans-serif, 1rem
+│       │   │   │
+│       │   │   └── "Submit" Button
+│       │   │       ├── Background: Jade-green gradient
+│       │   │       ├── Text: White, uppercase, letter-spacing 1px
+│       │   │       ├── Padding: 1rem 2rem
+│       │   │       ├── Border-radius: 20px
+│       │   │       ├── Transition: 0.6s
+│       │   │       │
+│       │   │       └── On Hover:
+│       │   │           ├── Transform: translateY(-2px)
+│       │   │           └── Shadow: 0 8px 25px rgba(122,155,142,0.3)
+│       │   │
+│       │   └── Success State
+│       │       ├── Form resets
+│       │       ├── Message: "Thank you for connecting. I'll be in touch."
+│       │       ├── Message displays for 5 seconds
+│       │       └── Auto-fade out
+│       │
+│       ├── Newsletter Signup (below form or alongside)
+│       │   ├── Title: "Receive Monthly Reflections"
+│       │   ├── Description: "No spam. Just thoughtfully selected poetry and insights delivered monthly."
+│       │   ├── Email input (same style as contact form)
+│       │   └── Subscribe button
+│       │
+│       └── Social Links
+│           ├── Text: "Or find me here:"
+│           ├── Instagram icon + link
+│           ├── Twitter icon + link
+│           └── Email icon + link (separate from contact form)
+│
+└── FOOTER
+├── Divider line (gold)
+├── Copyright: "© 2024 Amen Allah Jebali. All rights reserved."
+├── Links: Privacy | Terms | Contact
+└── Social icons: Instagram | Twitter | Email
+
+---
+
+### **PAGE 6: IMMERSIVE POEM READER** (Modal/Full Screen)
+
+**Design & Functionality:**
+Reader Container:
+├── Position: Fixed, full viewport
+├── Z-index: 2000 (above all content)
+├── Background: White (light mode) or dark slate (dark mode)
+│
+├── CLOSE BUTTON
+│   ├── Position: Fixed, top-right (20px from edge)
+│   ├── Icon: X (large, 2rem)
+│   ├── Color: Charcoal / White (depending on mode)
+│   ├── Cursor: Pointer
+│   ├── Animation: Fade in
+│   └── On click: Smooth fade out, return to previous page
+│
+├── LEFT SIDEBAR CONTROLS (Sticky, right side on desktop)
+│   ├── Position: Fixed, right side (20px from edge)
+│   ├── Width: 120px
+│   ├── Background: Semi-transparent (backdrop blur)
+│   ├── Border-radius: 12px
+│   ├── Padding: 1rem
+│   │
+│   ├── Font Size Controls
+│   │   ├── Label: "Size" (small text)
+│   │   ├── Button: "-" (decrease)
+│   │   ├── Display: Current size (e.g., "100%")
+│   │   ├── Button: "+" (increase)
+│   │   ├── Range: 80% → 150%
+│   │   └── Animation: Smooth text transition on change
+│   │
+│   ├── Line Height Toggle
+│   │   ├── Label: "Space" (small text)
+│   │   ├── Options: 1.5 | 1.75 | 2 (buttons)
+│   │   ├── Current: Bold/highlighted
+│   │   └── Animation: Smooth transition on change
+│   │
+│   ├── Dark/Light Mode Toggle
+│   │   ├── Icon: Sun/Moon
+│   │   ├── On light mode: Sun icon, click to activate dark
+│   │   ├── On dark mode: Moon icon, click to activate light
+│   │   ├── Animation: Smooth color transition (0.3s)
+│   │   └── Persists in localStorage
+│   │
+│   ├── Reading Time Display
+│   │   ├── Icon: Clock
+│   │   ├── Text: "4 min read"
+│   │   └── Font: Small, sans-serif
+│   │
+│   └── Bookmark/Save Button
+│       ├── Icon: Bookmark (outline or filled)
+│       ├── On hover: Tooltip "Save to collection"
+│       ├── On click: Bookmark added/removed
+│       └── Filled icon = already bookmarked
+│
+├── MAIN READING AREA (Center)
+│   ├── Max-width: 70ch (optimal line length)
+│   ├── Margin: Auto (centered)
+│   ├── Padding: 3rem sides (desktop), 2rem (mobile)
+│   ├── Padding-right: Adjusted to avoid sidebar overlap
+│   │
+│   ├── POEM HEADER
+│   │   ├── Title: Poem title (large serif, 2.8rem)
+│   │   │   └── Animation: Fade in
+│   │   │
+│   │   ├── Metadata Row
+│   │   │   ├── Theme badge | Mood icon | Date written
+│   │   │   ├── Font: Small sans-serif
+│   │   │   ├── Color: Charcoal (opacity 0.7)
+│   │   │   └── Spacing: Margin-bottom 2rem
+│   │   │
+│   │   └── Divider: Thin line (gold)
+│   │
+│   ├── POEM CONTENT
+│   │   ├── Font: Serif, responsive size (base 1.2rem)
+│   │   ├── Line-height: Variable (1.5 → 2) based on user control
+│   │   ├── Color: Charcoal (light mode), off-white (dark mode)
+│   │   ├── Text-align: Center or left (option)
+│   │   ├── Spacing: 1.5rem between stanzas
+│   │   ├── Animation: Fade in on reader open
+│   │   │
+│   │   └── Text Interactions:
+│   │       ├── Hover over line: Subtle highlight (background shift)
+│   │       ├── Selection: User can highlight text
+│   │       ├── Triple-click: Select entire stanza
+│   │       └── Keyboard shortcuts: Ctrl+A selects all
+│   │
+│   ├── POEM METADATA (Below poem)
+│   │   ├── Divider: Thin line (gold)
+│   │   ├── Full theme: "Spiritual Depth"
+│   │   ├── Full mood: "Reflective"
+│   │   ├── Date written: (if available)
+│   │   ├── Context/inspiration: (1-2 sentences)
+│   │   ├── Font: Small sans-serif, italic
+│   │   ├── Color: Charcoal (opacity 0.7)
+│   │   └── Margin-top: 2rem
+│   │
+│   └── READER ACTIONS (Below metadata)
+│       ├── Layout: Flex row, center, gap 1rem
+│       │
+│       ├── Previous Poem Button
+│       │   ├── Icon: Left arrow
+│       │   ├── Text: "Previous"
+│       │   ├── Style: Outline
+│       │   └── Disabled if first poem
+│       │
+│       ├── Share Poem Button
+│       │   ├── Icon: Share
+│       │   ├── Text: "Share"
+│       │   ├── On click: Opens share modal
+│       │   └── Generates custom quote graphic
+│       │
+│       └── Next Poem Button
+│           ├── Icon: Right arrow
+│           ├── Text: "Next"
+│           ├── Style: Solid background
+│           └── Disabled if last poem
+│
+├── BOTTOM SECTION: RELATED CONTENT
+│   ├── Title: "Readers also explored"
+│   │   └── Font: Serif, 1.5rem
+│   │
+│   └── Related Poems Grid (3 columns, horizontal scroll on mobile)
+│       ├── Gap: 1rem
+│       │
+│       └── RELATED POEM CARD (for each)
+│           ├── Title
+│           ├── Excerpt (2-3 lines)
+│           ├── Theme badge
+│           ├── "Open" button
+│           └── On click: Loads that poem into reader (smooth transition)
+│
+└── KEYBOARD SHORTCUTS
+├── ESC: Close reader
+├── →: Next poem
+├── ←: Previous poem
+├── B: Bookmark current poem
+├── S: Share current poem
+└── Display hint at bottom (optional)
+
+---
+
+### **GLOBAL COMPONENTS & INTERACTIONS**
+
+#### **Navigation System**
+
+**Desktop Navigation:**
+Left Sidebar:
+├── Position: Fixed, left: 0, top: 0
+├── Width: 300px
+├── Height: 100vh
+├── Background: Linear gradient (rgba(122,155,142,0.95) → rgba(74,74,74,0.98))
+├── Overflow: Auto (scrollable)
+├── Z-index: 1000
+│
+├── Logo
+│   ├── Text: "Same Moon"
+│   ├── Font: Serif, 2.8rem, weight 300
+│   ├── Color: White
+│   ├── Padding: 2rem
+│   ├── Text-align: Center
+│   └── Cursor: Pointer (links to home)
+│
+├── Navigation Menu
+│   ├── List items
+│   ├── Font: Sans-serif, 1.1rem, weight 300
+│   ├── Letter-spacing: 2px
+│   ├── Padding: 1rem 2rem per item
+│   ├── Color: rgba(255,255,255,0.85)
+│   ├── Border-radius: 12px on each item
+│   │
+│   ├── Home (active by default)
+│   ├── Poetry Collection
+│   ├── Prose Stories
+│   └── About
+│   │
+│   ├── On Hover (each item):
+│   │   ├── Background: rgba(255,255,255,0.08)
+│   │   ├── Color: White
+│   │   ├── Transform: translateX(8px)
+│   │   └── Animation: 0.3s cubic-bezier
+│   │
+│   └── Active State:
+│       ├── Background: rgba(255,255,255,0.08)
+│       ├── Color: White
+│       ├── Left accent line appears (gold, 3px width)
+│       └── Animation: Slide in from left
+│
+├── NEW Badge (on Prose)
+│   ├── Position: Right side of "Prose" link
+│   ├── Background: Linear gradient (gold → lighter gold)
+│   ├── Color: Charcoal
+│   ├── Padding: 4px 12px
+│   ├── Border-radius: 12px
+│   ├── Font: Sans-serif, 0.7rem, weight 600
+│   ├── Text: "NEW"
+│   ├── Letter-spacing: 1px
+│   ├── Text-transform: Uppercase
+│   └── Animation: Pulse (opacity 1 → 0.7, scale 1 → 1.05) every 2 seconds
+│
+├── Social Links (bottom of sidebar)
+│   ├── Position: Flex, justify-center, gap 1rem
+│   ├── Margin-top: Auto (pushes to bottom)
+│   ├── Padding: 1rem
+│   │
+│   ├── Instagram Icon/Link
+│   │   ├── Size: 40x40px
+│   │   ├── Border: 1px solid rgba(255,255,255,0.3)
+│   │   ├── Border-radius: 12px
+│   │   ├── Background: Transparent
+│   │   ├── Color: rgba(255,255,255,0.7)
+│   │   ├── On hover: background rgba(255,255,255,0.15), transform translateY(-3px)
+│   │   └── Animation: 0.3s
+│   │
+│   ├── Twitter/X Icon/Link
+│   │   └── [Same as Instagram]
+│   │
+│   └── Email Icon/Link
+│       └── [Same as Instagram]
+
+**Mobile Navigation:**
+Hamburger Menu Toggle:
+├── Position: Fixed, top-left (20px from edges)
+├── Z-index: 1100
+├── Background: rgba(122,155,142,0.9)
+├── Border: None
+├── Padding: 0.5rem
+├── Border-radius: 12px
+│
+├── Icon: 3 stacked horizontal lines
+│   └── Animation on click (rotation to X):
+│       ├── Line 1: rotate(45deg) translate(5px, 5px)
+│       ├── Line 2: opacity 0
+│       └── Line 3: rotate(-45deg) translate(5px, -5px)
+│
+Sliding Navigation Drawer:
+├── Position: Fixed, left: -100%, top: 0
+├── Width: 280px
+├── Height: 100vh
+├── Background: Linear gradient (same as desktop sidebar)
+├── Z-index: 1050
+├── Transform on toggle: translateX(100%)
+├── Animation: 0.3s cubic-bezier
+│
+├── Content (same as desktop sidebar)
+└── Close: Click outside drawer or on X button
+
+**Floating Breadcrumb (Persistent Navigation Hint):**
+Position: Fixed, bottom-right (20px from edges)
+Z-index: 500
+Opacity: 0.7 (fade in on scroll, fade out on hero)
+Background: rgba(255,255,255,0.9)
+Padding: 0.75rem 1rem
+Border-radius: 20px
+Font: Sans-serif, 0.85rem
+Content:
+├── Home
+├── Icon: >
+├── Current Section (e.g., "Poetry")
+├── Icon: >
+└── Current Page (e.g., "Collection")
+On Click: Each breadcrumb links to that section
+On Desktop: Always visible (except on hero)
+On Mobile: Hidden (navigation drawer handles navigation)
+
+---
+
+#### **Animations & Transitions**
+
+**Global Animation Specifications:**
+Timing Functions:
+├── Standard: cubic-bezier(0.4, 0, 0.2, 1) [0.6s default]
+├── Fast: cubic-bezier(0.4, 0, 0.2, 1) [0.3s]
+├── Slow: cubic-bezier(0.4, 0, 0.2, 1) [1s]
+└── Ease-out: ease-out (for exits)
+Entrance Animations:
+├── Fade In: opacity 0 → 1
+├── Slide Up: translateY(20px) → 0 with opacity
+├── Slide Down: translateY(-20px) → 0 with opacity
+├── Slide Left: translateX(-30px) → 0 with opacity
+├── Slide Right: translateX(30px) → 0 with opacity
+├── Scale: scale(0.95) → 1 with opacity
+└── Stagger Delay: nth-child animations (0.1s, 0.2s, 0.3s, etc.)
+Scroll Animations:
+├── Parallax: Element position changes based on scroll (responsive, accessible)
+├── Reveal: Fade in + slide on scroll into view
+├── Staggered Reveal: Multiple elements reveal in sequence
+└── Sticky Scroll: Element becomes position: sticky until viewport leaves
+Hover/Interaction Animations:
+├── Button: Background color + shadow + transform (2px lift)
+├── Card: Shadow increase + transform (8-12px lift)
+├── Link: Color change + underline animation
+├── Icon: Rotate, scale, or color shift
+└── Text: Highlight or emphasis effect
+Loading States:
+├── Skeleton screens (if async loading)
+├── Pulse animation on loading elements
+├── Fade transition between states
+└── No jarring content shifts (layout stability)
+Accessibility:
+├── prefers-reduced-motion: Disable all animations
+├── Alternative: Instant transitions instead of animated
+└── User preference respected globally
+
+---
+
+#### **Responsive Design Specifications**
+
+**Breakpoints:**
+Mobile: max-width 639px
+├── Font size base: 14-16px
+├── Padding/Margin: 1rem base spacing
+├── Touch targets: 44px minimum (WCAG recommendation)
+├── One-column layouts
+├── Full-width cards
+├── Hamburger navigation
+└── Simplified graphics/illustrations
+Tablet: 640px to 1023px
+├── Font size base: 16px
+├── Padding/Margin: 1.5rem base spacing
+├── Two-column layouts (where applicable)
+├── Wider cards with breathing room
+├── Hybrid navigation (sidebar + drawer)
+└── Medium-complexity graphics
+Desktop: 1024px and above
+├── Font size base: 16px
+├── Padding/Margin: 2rem+ base spacing
+├── Multi-column layouts (2-3 columns)
+├── Full-featured designs
+├── Persistent navigation
+├── Parallax and complex animations
+└── Full-featured graphics/illustrations
+Landscape Mode (Mobile):
+├── Reduce vertical padding
+├── Adjust hero height (60vh instead of 100vh)
+├── Maintain readability
+└── Keep touch targets accessible
+Ultra-wide screens (>1440px):
+├── Max-width container: 1400px
+├── Increased side padding
+├── Larger typography (scales up 10-15%)
+└── Extra breathing room
+
+**Touch Optimization (Mobile/Tablet):**
+├── Button/Link targets: 48px × 48px minimum
+├── Spacing: 1rem minimum between interactive elements
+├── Double-tap: Disable (for faster interactions)
+├── Long-press: Show copy menu (for quoted text)
+├── Swipe gestures:
+│   ├── Left swipe: Next poem (in reader or collection)
+│   ├── Right swipe: Previous poem
+│   └── Swipe up: Go to top of page
+├── Pull-to-refresh: (Optional, if applicable to platform)
+└── Tap feedback: Subtle highlight/ripple effect on interaction
+
+---
+
+## SECTION 4: BACKEND & ADMIN PANEL ARCHITECTURE
+
+### **Admin Authentication**
+Login Page:
+├── URL: /admin/login
+├── Form Fields:
+│   ├── Email (text input, required)
+│   └── Password (password input, required)
+├── Submit Button: "Log In"
+├── Error handling: Display error message on failed login
+├── Forgot password link: (Optional, if email configured)
+│
+Security:
+├── HTTPS only
+├── Rate limiting: 5 attempts per 15 minutes
+├── Session timeout: 24 hours
+├── JWT token stored securely (httpOnly cookie)
+├── CORS protection enabled
+├── CSRF token validation
+└── Password hashing: bcrypt (10 rounds minimum)
+
+### **Admin Dashboard**
+Dashboard URL: /admin/dashboard
+Access: Admin users only (redirects to login if not authenticated)
+Layout:
+├── Header: "Dashboard" title + Creator name + Settings + Logout
+├── Sidebar: Navigation menu
+│   ├── Dashboard (current)
+│   ├── Poetry (content management)
+│   ├── Prose (content management)
+│   ├── Pages (static pages)
+│   ├── Analytics
+│   ├── Users & Subscribers
+│   ├── Settings
+│   └── Tools
+│
+└── Main Content Area:
+DASHBOARD CARDS (Summary):
+├── Card 1: Total Views
+│   ├── Large number: 2,847 (example)
+│   ├── Metric: "Views this month"
+│   ├── Trend: ↑ 12% from last month
+│   └── Color accent: Jade-green
+│
+├── Card 2: Popular Poem
+│   ├── Title: "Each One a Mirror"
+│   ├── Views: 487
+│   ├── Engagement: 34 shares
+│   └── Link: Click to view poem details
+│
+├── Card 3: Newsletter Subscribers
+│   ├── Number: 156 subscribers
+│   ├── Growth: +8 this month
+│   └── Engagement rate: 42%
+│
+├── Card 4: Recent Contact Form
+│   ├── From: "User Name"
+│   ├── Subject: "Love your poetry"
+│   ├── Date: "2 hours ago"
+│   └── Link: Click to view full message
+│
+└── Charts Section:
+├── Views Over Time (Line chart)
+│   ├── X-axis: Date (last 30 days)
+│   ├── Y-axis: View count
+│   ├── Interactive: Hover for exact values
+│   └── Color: Gold/jade-green gradient
+│
+├── Top 5 Poems (Bar chart)
+│   ├── Sorted by views (highest first)
+│   ├── Show poem title + view count
+│   └── Color: Staggered jade-green tones
+│
+└── Reader Demographics (Optional Pie chart)
+├── New vs. Returning readers
+├── Device breakdown (mobile/tablet/desktop)
+└── Color: Segmented by category
+
+### **Poetry Content Management**
+Poetry Management URL: /admin/poetry
+LIST VIEW:
+├── Table with columns:
+│   ├── Title (sortable)
+│   ├── Theme (filterable)
+│   ├── Mood (filterable)
+│   ├── Status (draft/published/scheduled)
+│   ├── Views (sortable)
+│   ├── Created Date (sortable)
+│   └── Actions (Edit | Delete | Preview)
+│
+├── Toolbar:
+│   ├── "+ Add New Poem" button (primary action)
+│   ├── Search bar (search by title/content)
+│   ├── Filter by Theme dropdown
+│   ├── Filter by Status dropdown
+│   ├── Sort options
+│   └── Export as CSV button
+│
+└── Pagination: 20 items per page
+EDIT POEM FORM:
+├── Form Layout: Vertical stack
+│
+├── Title Field
+│   ├── Label: "Poem Title"
+│   ├── Type: Text input
+│   ├── Required: Yes
+│   ├── Character count: Display running total
+│   └── Placeholder: "Enter poem title"
+│
+├── Content Field
+│   ├── Label: "Poem Content"
+│   ├── Type: Rich text editor (with markdown support)
+│   ├── Required: Yes
+│   ├── Toolbar: Bold, Italic, Heading, Quote, etc.
+│   ├── Character count: Display running total
+│   ├── Side panel: Markdown cheatsheet
+│   ├── Preview: Live side-by-side preview
+│   └── Height: 400px minimum (expandable)
+│
+├── Theme Dropdown
+│   ├── Label: "Primary Theme"
+│   ├── Options:
+│   │   ├── Spiritual Depth
+│   │   ├── Presence & Connection
+│   │   ├── Time & Purpose
+│   │   └── Growth & Becoming
+│   └── Required: Yes
+│
+├── Mood Dropdown
+│   ├── Label: "Mood"
+│   ├── Options:
+│   │   ├── Reflective
+│   │   ├── Energetic
+│   │   ├── Melancholic
+│   │   └── Inspiring
+│   └── Required: Yes
+│
+├── Reading Time (Auto-calculated)
+│   ├── Label: "Estimated Reading Time"
+│   ├── Value: Auto-calculated (average 200 words/min)
+│   ├── Display: "X min read"
+│   ├── Editable: Yes (allow override)
+│   └── Read-only preview until edit
+│
+├── Featured Image
+│   ├── Label: "Featured Image"
+│   ├── Type: Image upload
+│   ├── Accepted: JPG, PNG, WebP
+│   ├── Max size: 5MB
+│   ├── Preview: Show uploaded image thumbnail
+│   ├── Actions: Change | Remove
+│   └── Auto-resize: 1200x800px optimal
+│
+├── SEO Section (Expandable)
+│   ├── Meta Title
+│   │   ├── Character limit: 60 (show counter)
+│   │   └── Placeholder: Auto-filled from poem title
+│   │
+│   ├── Meta Description
+│   │   ├── Character limit: 160 (show counter)
+│   │   └── Placeholder: Auto-filled from first 100 chars
+│   │
+│   └── Keywords (comma-separated)
+│       ├── Suggestions: Based on theme + content
+│       └── Character limit: 160
+│
+├── Publication Settings
+│   ├── Status (Radio buttons):
+│   │   ├── Draft (not visible to public)
+│   │   ├── Published (visible immediately)
+│   │   └── Scheduled (set publish date/time)
+│   │
+│   ├── Publish Date/Time (appears if Scheduled selected)
+│   │   ├── Date picker
+│   │   ├── Time picker (Réessayer5Continuer│   ├── Time picker (HH:MM format)
+│   │   └── Timezone selector
+│   │
+│   └── Visibility:
+│       ├── Public (visible to all)
+│       └── (Optional) Private/Draft only
+│
+├── Save/Publish Actions (Sticky bottom)
+│   ├── "Save as Draft" button (outline style)
+│   ├── "Preview" button (outline style)
+│   ├── "Publish Now" button (solid jade-green)
+│   └── "Delete" button (red outline, confirmation modal)
+│
+└── Success/Error Messages:
+├── Toast notification top-right
+├── Message: "Poem published successfully!" or error details
+└── Auto-dismiss after 5 seconds
+
+### **Prose Content Management**
+Prose Management URL: /admin/prose
+Similar structure to Poetry but with dual-section form:
+EDIT PROSE FORM:
+├── Title Field
+│   └── [Same as Poem]
+│
+├── Philosophy Section
+│   ├── Label: "Opening Observation/Lesson"
+│   ├── Type: Rich text editor (markdown support)
+│   ├── Required: Yes
+│   ├── Preview: Shows formatted text
+│   ├── Character count: Display running total
+│   └── Height: 300px
+│
+├── Narrative Section
+│   ├── Label: "Personal Story"
+│   ├── Type: Rich text editor (markdown support)
+│   ├── Required: Yes
+│   ├── Preview: Shows formatted text
+│   ├── Character count: Display running total
+│   └── Height: 500px
+│
+├── Media Upload (for Narrative)
+│   ├── Type: File upload
+│   ├── Accepted: JPG, PNG, WebP, MP4, WebM
+│   ├── Max size: 10MB per file
+│   ├── Preview: Thumbnails for images, duration for video
+│   ├── Actions: Insert into text | Remove | Reorder
+│   └── Drag-and-drop: Enabled
+│
+├── Theme Dropdown
+│   ├── [Same as Poem]
+│   └── Most often: Presence & Connection
+│
+├── Mood Dropdown
+│   └── [Same as Poem]
+│
+├── Related Poem Link
+│   ├── Label: "Related Poem (Optional)"
+│   ├── Type: Select dropdown
+│   ├── Options: All available poems
+│   ├── None: "(No related poem)"
+│   └── Purpose: Shows at end of story
+│
+├── Reading Time (Auto-calculated)
+│   └── [Same as Poem, calculated from both sections]
+│
+├── Featured Image
+│   └── [Same as Poem]
+│
+├── SEO Section
+│   └── [Same as Poem]
+│
+├── Publication Settings
+│   └── [Same as Poem]
+│
+└── Save/Publish Actions
+└── [Same as Poem]
+
+### **Pages Content Management**
+Pages Management URL: /admin/pages
+EDITABLE SECTIONS:
+
+Homepage Hero Section
+├── Hero Quotes Pool
+│   ├── List of featured quotes
+│   ├── Add new quote button
+│   ├── Edit: Quote text | Theme | Mood | Date written
+│   ├── Delete: With confirmation
+│   └── Reorder: Drag-and-drop
+│
+└── Featured Poems Selection
+├── Select 3 poems for "Featured Journey"
+├── Drag-and-drop to set Act 1, 2, 3
+├── Preview: Shows how they'll appear
+└── Auto-save: After reordering
+About Page
+├── Creator Bio
+│   ├── Rich text editor
+│   └── Save changes
+│
+├── Timeline Events
+│   ├── Add new event button
+│   ├── Edit fields:
+│   │   ├── Year/Period (text)
+│   │   ├── Title (text)
+│   │   ├── Description (textarea)
+│   │   ├── Image (upload)
+│   │   ├── Related Poem (dropdown)
+│   │   └── Order (drag-to-reorder)
+│   │
+│   ├── Delete event (with confirmation)
+│   └── Preview: Timeline visualization
+│
+├── Philosophy Cards
+│   ├── 4 cards (core beliefs)
+│   ├── Each card editable:
+│   │   ├── Belief statement (text)
+│   │   ├── Full exploration (rich text)
+│   │   ├── Related poem (dropdown)
+│   │   └── Icon/emoji (selector)
+│   │
+│   ├── Add new belief card (rare, but possible)
+│   ├── Delete card (with confirmation)
+│   └── Reorder cards (drag-and-drop)
+│
+└── Contact Form Settings (Optional)
+├── Recipient email
+├── Email notifications: Enable/disable
+└── Success message customization
+Newsletter Settings
+├── Email for sending from
+├── Email provider: Nodemailer | SendGrid (selector)
+├── API key configuration (hidden, secure input)
+├── Sender name
+├── Test email send button
+└── Newsletter template editor (optional rich text)
+Social Links
+├── Instagram URL
+├── Twitter URL
+├── Email address
+└── Save changes
+
+
+### **Analytics Dashboard**
+Analytics URL: /admin/analytics
+OVERVIEW METRICS:
+├── Date Range Selector
+│   ├── Presets: Today | Last 7 days | Last 30 days | Custom range
+│   ├── Date pickers: From date | To date
+│   └── Auto-update: All charts refresh on date change
+│
+├── Key Metrics Cards:
+│   ├── Total Views (period)
+│   │   ├── Number: Large display
+│   │   ├── Trend: ↑ / ↓ with percentage
+│   │   └── Comparison: vs previous period
+│   │
+│   ├── Unique Visitors
+│   │   └── [Same structure]
+│   │
+│   ├── Average Time on Page
+│   │   ├── Display: "2 min 34 sec"
+│   │   └── Trend comparison
+│   │
+│   └── Bounce Rate
+│       ├── Display: Percentage
+│       └── Trend comparison
+│
+CONTENT ANALYTICS:
+├── Top Poems (Sortable table)
+│   ├── Columns:
+│   │   ├── Poem Title (link to edit)
+│   │   ├── Views
+│   │   ├── Unique Views
+│   │   ├── Avg Time on Poem
+│   │   ├── Shares
+│   │   ├── Saves/Bookmarks
+│   │   └── Actions: View Details
+│   │
+│   ├── Sort by: Views (default), Engagement, Time
+│   ├── Filter by: Theme, Mood
+│   └── Show: Top 5 / Top 10 / All
+│
+├── Top Stories (Sortable table)
+│   └── [Same structure as Top Poems]
+│
+├── Page Views Breakdown
+│   ├── Home: X views
+│   ├── Poetry Collection: Y views
+│   ├── Prose: Z views
+│   └── About: W views
+VISUAL CHARTS:
+├── Views Over Time (Line chart)
+│   ├── X-axis: Date
+│   ├── Y-axis: Views count
+│   ├── Line color: Gold
+│   ├── Fill under curve: Sage green (opacity 0.2)
+│   ├── Interactive: Hover for tooltip
+│   └── Responsive: Mobile-optimized
+│
+├── Content Performance (Bar chart)
+│   ├── Top 10 poems by views
+│   ├── Bar color: Jade-green
+│   ├── X-axis: Poem title
+│   ├── Y-axis: View count
+│   └── Interactive: Click bar to view details
+│
+├── Reader Demographics (Donut chart)
+│   ├── New vs Returning: Split percentage
+│   ├── Colors: Two distinct segments
+│   └── Center text: Percentage / count
+│
+├── Device Breakdown (Pie chart)
+│   ├── Desktop | Tablet | Mobile
+│   ├── Color-coded
+│   ├── Legend: Shows percentages
+│   └── Interactive: Hover for details
+│
+└── Engagement Metrics (Mixed chart)
+├── Shares | Bookmarks | Comments
+├── Trend over time
+└── Color: Different for each metric
+EXPORT OPTIONS:
+├── Export as CSV button (top-right)
+│   ├── Download: analytics_YYYY-MM-DD.csv
+│   ├── Includes: All data visible in table/charts
+│   └── Excel-compatible format
+│
+├── Export as PDF button (top-right)
+│   ├── Download: analytics_report_YYYY-MM-DD.pdf
+│   ├── Includes: Overview summary + charts
+│   └── Styled for printing
+│
+└── Email Report (Optional)
+├── Schedule: Daily | Weekly | Monthly
+├── Recipients: Email addresses (comma-separated)
+└── Send Now button
+
+### **Newsletter & Subscribers Management**
+Subscribers Management URL: /admin/subscribers
+SUBSCRIBERS LIST:
+├── Table with columns:
+│   ├── Email (sortable)
+│   ├── Name (optional, sortable)
+│   ├── Subscribed Date (sortable)
+│   ├── Last Email Sent (sortable)
+│   ├── Email Opens (if tracking)
+│   ├── Status: Active | Unsubscribed (filterable)
+│   └── Actions: Email | Delete | View History
+│
+├── Toolbar:
+│   ├── Search by email
+│   ├── Filter by status
+│   ├── Sort options
+│   └── Export as CSV button
+│
+├── Bulk Actions:
+│   ├── Select all checkbox (top)
+│   ├── Actions for selected:
+│   │   ├── Send email to selected
+│   │   ├── Mark as active/inactive
+│   │   └── Delete selected
+│   │
+│   └── Action confirmation modal
+│
+└── Pagination: 50 subscribers per page
+CONTACT FORM SUBMISSIONS:
+├── Table with columns:
+│   ├── From (name or "Anonymous")
+│   ├── Email
+│   ├── Subject/First line of message
+│   ├── Date submitted
+│   ├── Status: New | Read | Responded (filterable)
+│   └── Actions: View | Reply | Mark Responded | Delete
+│
+├── Toolbar:
+│   ├── Filter by status
+│   ├── Search by sender
+│   └── Sort by date (newest first)
+│
+└── Message Detail Modal (on click):
+├── Sender info: Name | Email
+├── Submission date/time
+├── Full message text
+├── Related poem: (if they mentioned one)
+├── Reply box:
+│   ├── Rich text editor
+│   ├── "Send Reply" button
+│   └── "Save as Template" (optional)
+│
+└── History: Show previous replies to same sender
+
+### **Admin Settings**
+Settings URL: /admin/settings
+ACCOUNT SETTINGS:
+├── Admin Email
+│   ├── Current email: Display only
+│   ├── Change email: Link to separate confirmation flow
+│   └── Security note: Confirmation required
+│
+├── Password Change
+│   ├── Current password (required)
+│   ├── New password (min 12 chars, strong password requirement)
+│   ├── Confirm password
+│   ├── Show/hide password toggles
+│   └── "Update Password" button
+│
+└── Session Management
+├── Active sessions: List device/browser/location
+├── "Logout all other sessions" button
+└── "Logout everywhere" button
+SITE SETTINGS:
+├── Site Metadata
+│   ├── Site title
+│   ├── Site description (for meta tags)
+│   ├── Keywords (comma-separated)
+│   ├── Favicon upload
+│   └── Save changes button
+│
+├── Social Links
+│   ├── Instagram profile URL
+│   ├── Twitter profile URL
+│   ├── Email address (for contact)
+│   └── Save changes button
+│
+├── Email Configuration
+│   ├── SMTP Settings (if self-hosted)
+│   │   ├── Host
+│   │   ├── Port
+│   │   ├── Username
+│   │   ├── Password (hidden input)
+│   │   └── "Test connection" button
+│   │
+│   ├── Email Provider (if third-party)
+│   │   ├── Provider selector (Nodemailer | SendGrid, etc.)
+│   │   ├── API key (hidden input, masked on display)
+│   │   └── "Test email send" button
+│   │
+│   ├── From email address
+│   ├── From name
+│   └── Save changes button
+│
+└── Theme Customization (Optional)
+├── Color picker for primary color
+├── Color picker for secondary color
+├── Font selector (limited options)
+├── Logo upload
+├── Live preview of changes
+└── "Apply theme" button
+SECURITY SETTINGS:
+├── API Keys (if applicable)
+│   ├── Generate new API key button
+│   ├── List existing keys:
+│   │   ├── Key (masked, show/hide toggle)
+│   │   ├── Created date
+│   │   ├── Last used date
+│   │   └── Actions: Regenerate | Delete
+│   │
+│   └── Copy to clipboard: Show feedback
+│
+├── Two-Factor Authentication (Optional)
+│   ├── Enable 2FA button
+│   ├── Setup instructions (QR code + manual entry)
+│   ├── Backup codes (download as text file)
+│   └── Status: Enabled / Disabled
+│
+└── Login History
+├── Table with columns:
+│   ├── Date/time
+│   ├── IP address
+│   ├── Browser/Device
+│   ├── Location (if available)
+│   └── Status: Success | Failed
+│
+└── Automatic logout after 24 hours of inactivity
+BACKUP & DATA:
+├── Automatic Backups
+│   ├── Frequency: Daily | Weekly (selector)
+│   ├── Retention: Last 30 days (configurable)
+│   ├── Manual backup button
+│   └── Status: Last backup X hours ago
+│
+├── Export All Data
+│   ├── Export button (downloads JSON or CSV)
+│   ├── Includes: All poems, prose, settings, analytics
+│   └── Warning: Large file size notice
+│
+└── Danger Zone
+├── Red background box
+├── "Restore from Backup" option
+│   ├── Select backup date
+│   ├── Warning: This will overwrite all current data
+│   └── "Confirm & Restore" button (requires password)
+│
+└── "Delete All Data" option (extremely rare, high security)
+├── Requires double confirmation
+├── Requires password + email verification
+└── Irreversible action warning
+
+### **Tools & Utilities**
+Tools URL: /admin/tools
+SEO CHECKER:
+├── Quick SEO Audit
+│   ├── Poem/story selector (dropdown)
+│   ├── Generate report button
+│   │
+│   └── Report displays:
+│       ├── Title length: Good / Warning / Error
+│       ├── Meta description: Good / Warning / Error
+│       ├── Keyword density: Good / Warning / Error
+│       ├── Heading structure: OK / Issues found
+│       ├── Images: Alt text check
+│       ├── Links: Internal/external balance
+│       ├── Mobile responsiveness: Check
+│       ├── Page speed estimate: Good / Fair / Poor
+│       └── Recommendations: List of suggested improvements
+│
+└── Generate Sitemap
+├── Button: "Generate XML Sitemap"
+├── Auto-generates: All poems, prose, pages
+├── Status: Last generated X hours ago
+└── Download button
+PERFORMANCE CHECKER:
+├── Performance Report
+│   ├── Check performance button
+│   │
+│   └── Report displays:
+│       ├── Page load time: X seconds
+│       ├── Core Web Vitals:
+│       │   ├── Largest Contentful Paint (LCP)
+│       │   ├── First Input Delay (FID)
+│       │   └── Cumulative Layout Shift (CLS)
+│       │
+│       ├── Image optimization: Check
+│       ├── CSS/JS minification: Check
+│       ├── Cache settings: Check
+│       └── Recommendations list
+│
+├── Image Optimization
+│   ├── Scan images button
+│   │
+│   └── Results:
+│       ├── List of images
+│       ├── Current size vs. optimized size
+│       ├── Format recommendations (WebP, etc.)
+│       ├── "Optimize all" button
+│       └── Individual optimize buttons
+└── Cache Management
+├── Clear cache button (confirm action)
+├── Auto-cache refresh: Enable/disable + interval
+└── Last cache clear: X hours ago
+
+---
+
+## SECTION 5: DATABASE ARCHITECTURE
+```sql
+-- Tables and Fields
+
+POEMS TABLE
+├── id: UUID (primary key)
+├── title: STRING (required, unique)
+├── content: TEXT (required)
+├── theme_id: UUID (foreign key → themes table)
+├── mood: ENUM [Reflective, Energetic, Melancholic, Inspiring]
+├── reading_time: INTEGER (minutes)
+├── featured_image_url: STRING (optional)
+├── featured_image_alt: STRING (alt text)
+├── created_at: TIMESTAMP
+├── updated_at: TIMESTAMP
+├── published_at: TIMESTAMP (nullable)
+├── status: ENUM [draft, published, scheduled]
+├── view_count: INTEGER (default 0)
+├── unique_view_count: INTEGER (default 0)
+├── bookmark_count: INTEGER (default 0)
+├── share_count: INTEGER (default 0)
+├── seo_title: STRING (optional)
+├── seo_description: STRING (optional, max 160 chars)
+├── seo_keywords: STRING (comma-separated)
+└── context: TEXT (inspiration/story behind poem, optional)
+
+PROSE_STORIES TABLE
+├── id: UUID (primary key)
+├── title: STRING (required, unique)
+├── philosophy_section: TEXT (required)
+├── narrative_section: TEXT (required)
+├── theme_id: UUID (foreign key → themes table)
+├── mood: ENUM [Reflective, Energetic, Melancholic, Inspiring]
+├── reading_time: INTEGER (minutes)
+├── featured_image_url: STRING (optional)
+├── featured_image_alt: STRING (alt text)
+├── related_poem_id: UUID (foreign key → poems table, nullable)
+├── created_at: TIMESTAMP
+├── updated_at: TIMESTAMP
+├── published_at: TIMESTAMP (nullable)
+├── status: ENUM [draft, published, scheduled]
+├── view_count: INTEGER (default 0)
+├── unique_view_count: INTEGER (default 0)
+├── bookmark_count: INTEGER (default 0)
+├── share_count: INTEGER (default 0)
+├── seo_title: STRING (optional)
+├── seo_description: STRING (optional, max 160 chars)
+├── seo_keywords: STRING (comma-separated)
+└── context: TEXT (inspiration, optional)
+
+THEMES TABLE
+├── id: UUID (primary key)
+├── name: STRING (required, unique)
+│   ├── "Spiritual Depth"
+│   ├── "Presence & Connection"
+│   ├── "Time & Purpose"
+│   └── "Growth & Becoming"
+├── description: TEXT
+├── icon_url: STRING (optional)
+├── color_accent: STRING (hex color, e.g., #7a9b8e)
+└── display_order: INTEGER (for sorting)
+
+ADMIN_USERS TABLE
+├── id: UUID (primary key)
+├── email: STRING (required, unique, indexed)
+├── password_hash: STRING (bcrypt hashed, min 12 chars)
+├── full_name: STRING
+├── role: ENUM [admin, editor] (default: editor)
+├── is_active: BOOLEAN (default: true)
+├── created_at: TIMESTAMP
+├── updated_at: TIMESTAMP
+├── last_login_at: TIMESTAMP (nullable)
+├── last_login_ip: STRING (nullable)
+├── mfa_enabled: BOOLEAN (default: false)
+├── mfa_secret: STRING (encrypted, nullable)
+└── password_reset_token: STRING (nullable, for forgot password flow)
+
+NEWSLETTER_SUBSCRIBERS TABLE
+├── id: UUID (primary key)
+├── email: STRING (required, unique, indexed)
+├── name: STRING (optional)
+├── status: ENUM [active, unsubscribed] (default: active)
+├── subscribed_at: TIMESTAMP
+├── unsubscribed_at: TIMESTAMP (nullable)
+├── last_email_sent_at: TIMESTAMP (nullable)
+├── email_open_count: INTEGER (if tracking enabled, default 0)
+├── subscription_source: STRING (email | website | import, default: website)
+├── ip_address: STRING (for fraud detection, nullable)
+└── metadata: JSON (custom fields, optional)
+
+CONTACT_SUBMISSIONS TABLE
+├── id: UUID (primary key)
+├── sender_name: STRING (optional, "Anonymous" if not provided)
+├── sender_email: STRING (required)
+├── message: TEXT (required)
+├── referenced_poem_id: UUID (foreign key → poems table, nullable)
+├── referenced_story_id: UUID (foreign key → prose_stories table, nullable)
+├── submitted_at: TIMESTAMP
+├── status: ENUM [new, read, responded] (default: new)
+├── admin_reply: TEXT (nullable)
+├── admin_reply_sent_at: TIMESTAMP (nullable)
+├── replied_by_admin_id: UUID (foreign key → admin_users table, nullable)
+├── ip_address: STRING (for spam detection, nullable)
+└── metadata: JSON (optional)
+
+ANALYTICS_EVENTS TABLE
+├── id: UUID (primary key)
+├── event_type: ENUM [page_view, poem_view, story_view, poem_bookmark, story_bookmark, poem_share, story_share, poem_comment]
+├── content_type: ENUM [poem, story, page]
+├── content_id: UUID (nullable, references poem or story)
+├── page_name: STRING (e.g., "home", "poetry_collection", "about")
+├── visitor_id: UUID (anonymous visitor tracking)
+├── user_agent: STRING
+├── ip_address: STRING (anonymized)
+├── referrer: STRING (nullable)
+├── device_type: ENUM [mobile, tablet, desktop]
+├── browser: STRING
+├── operating_system: STRING
+├── time_on_page: INTEGER (seconds, nullable)
+├── scroll_depth: INTEGER (percentage, nullable)
+├── created_at: TIMESTAMP
+└── metadata: JSON (custom event data, optional)
+
+ANALYTICS_DAILY_SUMMARY TABLE
+├── id: UUID (primary key)
+├── date: DATE
+├── total_views: INTEGER
+├── unique_visitors: INTEGER
+├── top_poem_id: UUID (nullable)
+├── top_poem_views: INTEGER (nullable)
+├── avg_time_on_site: DECIMAL
+├── bounce_rate: DECIMAL (percentage)
+├── metadata: JSON (additional metrics)
+└── created_at: TIMESTAMP
+
+TIMELINE_EVENTS TABLE
+├── id: UUID (primary key)
+├── year_period: STRING (e.g., "Childhood", "2020-2021")
+├── title: STRING
+├── description: TEXT
+├── image_url: STRING (optional)
+├── icon_url: STRING (optional)
+├── related_poem_id: UUID (foreign key → poems table, nullable)
+├── display_order: INTEGER (for sorting)
+├── created_at: TIMESTAMP
+└── updated_at: TIMESTAMP
+
+PHILOSOPHY_CARDS TABLE
+├── id: UUID (primary key)
+├── belief_statement: STRING (short, powerful statement)
+├── full_exploration: TEXT (longer explanation)
+├── related_poem_id: UUID (foreign key → poems table, nullable)
+├── icon_emoji: STRING (e.g., "🌙", optional)
+├── display_order: INTEGER
+├── created_at: TIMESTAMP
+└── updated_at: TIMESTAMP
+```
+
+---
+
+## SECTION 6: API ROUTES & ENDPOINTS
+PUBLIC API ROUTES (No authentication required):
+GET /api/poems
+└── Returns: Array of all published poems with metadata
+├── Query params: theme, mood, sort (views|date), limit, offset
+└── Response: { poems: [], total: 0, page: 1, perPage: 20 }
+GET /api/poems/:id
+└── Returns: Single poem with full content
+└── Response: { id, title, content, theme, mood, ... }
+GET /api/prose
+└── Returns: Array of all published prose stories
+├── Query params: sort, limit, offset
+└── Response: { stories: [], total: 0, page: 1 }
+GET /api/prose/:id
+└── Returns: Single story with philosophy + narrative
+└── Response: { id, title, philosophy_section, narrative_section, ... }
+GET /api/themes
+└── Returns: All available themes
+└── Response: { themes: [{ id, name, description, color_accent, ... }] }
+GET /api/analytics/public
+└── Returns: Public stats (total views, top poems, etc.)
+└── Response: { totalViews: 0, topPoems: [], ... }
+POST /api/contact
+├── Body: { senderName, senderEmail, message, referencedPoemId (optional) }
+├── Validation: Email format, message length, spam check
+├── Side effects: Email sent to admin, stored in database
+└── Response: { success: true, message: "Thank you for contacting..." }
+POST /api/newsletter/subscribe
+├── Body: { email, name (optional) }
+├── Validation: Email format, not already subscribed
+├── Confirmation: Send verification email (optional double opt-in)
+└── Response: { success: true, message: "Subscription confirmed!" }
+POST /api/newsletter/unsubscribe
+├── Body: { email }
+├── Validation: Email exists in subscribers
+├── Side effects: Mark as unsubscribed, send confirmation email
+└── Response: { success: true, message: "Unsubscribed successfully" }
+POST /api/analytics/track
+├── Body: { eventType, contentType, contentId, timeOnPage, scrollDepth, ... }
+├── Auth: Optional (for anonymous tracking)
+└── Side effects: Store event in analytics_events table
+
+ADMIN API ROUTES (Requires authentication):
+POEMS MANAGEMENT:
+POST /api/admin/poems
+├── Body: { title, content, themeId, mood, readingTime, ... }
+├── Auth: JWT required
+└── Response: { poem: {...}, success: true }
+GET /api/admin/poems
+├── Returns: All poems (including drafts)
+├── Query params: status, theme, sort, search
+└── Auth: JWT required
+PUT /api/admin/poems/:id
+├── Body: { title, content, themeId, mood, status, ... }
+├── Auth: JWT required
+└── Response: { poem: {...}, success: true }
+DELETE /api/admin/poems/:id
+├── Auth: JWT required
+├── Confirmation: Require password or 2FA
+└── Response: { success: true, message: "Poem deleted" }
+
+PROSE MANAGEMENT:
+POST /api/admin/prose
+├── Body: { title, philosophySection, narrativeSection, themeId, mood, relatedPoemId, ... }
+├── Auth: JWT required
+└── Response: { story: {...}, success: true }
+GET /api/admin/prose
+├── Returns: All prose stories
+├── Query params: status, sort, search
+└── Auth: JWT required
+PUT /api/admin/prose/:id
+├── Body: { title, philosophySection, narrativeSection, ... }
+├── Auth: JWT required
+└── Response: { story: {...}, success: true }
+DELETE /api/admin/prose/:id
+├── Auth: JWT required
+└── Response: { success: true }
+
+ANALYTICS:
+GET /api/admin/analytics/overview
+├── Query params: dateFrom, dateTo
+├── Returns: Aggregated metrics, trends
+├── Auth: JWT required
+└── Response: { totalViews, uniqueVisitors, avgTimeOnSite, topPoems, ... }
+GET /api/admin/analytics/poems
+├── Query params: sort, limit
+├── Returns: Per-poem analytics
+├── Auth: JWT required
+└── Response: { poems: [{ id, title, views, engagement, ... }] }
+GET /api/admin/analytics/export
+├── Query params: format (csv|json), dateFrom, dateTo
+├── Returns: File download
+├── Auth: JWT required
+└── Response: Downloadable file
+
+SUBSCRIBERS MANAGEMENT:
+GET /api/admin/subscribers
+├── Query params: sort, search, status, limit, offset
+├── Returns: List of subscribers
+├── Auth: JWT required
+└── Response: { subscribers: [], total: 0, page: 1 }
+DELETE /api/admin/subscribers/:id
+├── Auth: JWT required
+└── Response: { success: true }
+POST /api/admin/subscribers/export
+├── Query params: format (csv|json)
+├── Returns: File download
+├── Auth: JWT required
+└── Response: Downloadable file
+
+CONTACTS MANAGEMENT:
+GET /api/admin/contacts
+├── Query params: status, sort, search, limit, offset
+├── Returns: Contact form submissions
+├── Auth: JWT required
+└── Response: { contacts: [], total: 0, page: 1 }
+PUT /api/admin/contacts/:id
+├── Body: { status, reply (optional) }
+├── Side effects: Send reply email if provided
+├── Auth: JWT required
+└── Response: { contact: {...}, success: true }
+DELETE /api/admin/contacts/:id
+├── Auth: JWT required
+└── Response: { success: true }
+
+SETTINGS:
+GET /api/admin/settings
+├── Returns: All settings (excluding sensitive data)
+├── Auth: JWT required
+└── Response: { siteName, siteDescription, socialLinks, ... }
+PUT /api/admin/settings
+├── Body: { siteName, siteDescription, socialLinks, ... }
+├── Auth: JWT required
+└── Response: { settings: {...}, success: true }
+
+AUTHENTICATION:
+POST /api/auth/login
+├── Body: { email, password }
+├── Response: { token: "JWT...", user: { id, email, name }, expiresIn: 86400 }
+└── Side effects: Update last_login_at, log IP
+POST /api/auth/logout
+├── Response: { success: true }
+└── Side effects: Blacklist token (optional)
+POST /api/auth/refresh-token
+├── Body: { refreshToken }
+├── Response: { token: "new JWT..." }
+└── Requirements: Refresh token must be valid
+POST /api/auth/change-password
+├── Body: { currentPassword, newPassword, confirmPassword }
+├── Auth: JWT required
+├── Validation: Strong password, matches confirmation
+└── Response: { success: true }
+
+FILE UPLOADS:
+POST /api/admin/upload
+├── Multipart form data: { file }
+├── Auth: JWT required
+├── Validation: File type (image/video), max size 10MB
+├── Processing: Resize/Réessayer5Continuer├── Processing: Resize/optimize, convert to WebP if possible
+├── Storage: Upload to Cloudinary or S3
+└── Response: { url: "uploaded_image_url", alt: "filename", success: true }
+DELETE /api/admin/upload/:id
+├── Auth: JWT required
+├── Side effects: Delete from Cloudinary/S3
+└── Response: { success: true }
+
+---
+
+## SECTION 7: TECHNICAL STACK & DEPLOYMENT
+
+### **Frontend Stack**
+Framework: Next.js 14+ (React 18)
+Language: TypeScript
+Styling: Tailwind CSS + CSS Modules
+State Management: React Context API (or Zustand for complex state)
+Animation: Framer Motion
+Form Handling: React Hook Form + Zod validation
+Rich Text Editor: TipTap (with markdown support)
+Data Fetching: Fetch API + SWR for caching
+Image Optimization: Next.js Image component
+Charts: Recharts (lightweight, responsive)
+Table Component: TanStack Table v8 (headless, customizable)
+Icons: Custom SVG or Lucide React
+Notifications: Toast library (react-toastify or custom)
+Modal/Dialog: Radix UI Dialog or custom implementation
+Date Picking: React DatePicker
+Responsive Design: CSS media queries + Tailwind responsive prefixes
+Accessibility: axe DevTools, WAVE for testing
+
+### **Backend Stack**
+Runtime: Node.js 20+ LTS
+Framework: Next.js API routes (serverless) or Express.js
+Language: TypeScript
+Database: PostgreSQL 15+ with Prisma ORM
+Authentication: JWT (jsonwebtoken) + bcryptjs
+Email: Nodemailer or SendGrid API
+File Storage: Cloudinary CDN or AWS S3
+Caching: Redis (optional, for performance)
+Logging: Winston or Pino
+Error Tracking: Sentry
+Rate Limiting: express-rate-limit
+CORS: cors middleware
+Environment: dotenv for config management
+Validation: Zod or Joi
+
+### **Database**
+Provider: Vercel Postgres (managed PostgreSQL)
+OR AWS RDS PostgreSQL
+OR self-hosted PostgreSQL
+ORM: Prisma (schema-driven, type-safe)
+Migrations: Prisma migrations (version-controlled)
+Backups: Automated daily backups (provider-managed)
+Connection Pooling: Enabled (PgBouncer)
+SSL: Enforced on all connections
+
+### **Admin Panel Stack**
+Framework: Next.js (same codebase, separate route structure)
+Form Builder: React Hook Form + Zod
+Rich Text Editor: TipTap
+Charts: Recharts
+Tables: TanStack Table
+File Manager: Custom upload component + Cloudinary API
+Authentication: JWT + protected routes
+Authorization: Role-based access control (RBAC)
+
+### **Deployment Architecture**
+
+**Frontend & Backend Deployment:**
+Platform: Vercel (recommended)
+
+Automatic deployments on Git push
+Built-in analytics and monitoring
+Edge functions for global latency
+Automatic SSL/TLS
+CDN for static assets
+Serverless functions for API routes
+
+Alternative: Railway, Render, or self-hosted VPS
+Environment Management:
+
+Production: main branch
+Staging: develop branch (optional)
+Preview: Pull request deployments
+
+Domain:
+
+Custom domain configuration
+SSL certificate: Automatic (Let's Encrypt)
+DNS: Point to Vercel nameservers
+
+
+**Database Deployment:**
+Option 1: Vercel Postgres (recommended)
+
+Managed PostgreSQL on Vercel infrastructure
+Automated backups
+SSL included
+Minimal configuration
+
+Option 2: AWS RDS
+
+More control, scalable
+Requires additional setup
+Pay-per-use pricing
+
+Option 3: Self-hosted
+
+Full control
+More responsibility for backups/maintenance
+Higher operational overhead
+
+Backup Strategy:
+
+Daily automated backups
+Retention: 30 days minimum
+Weekly manual backups to separate storage
+Test restore process quarterly
+
+
+**Asset Storage:**
+Image & Video Hosting: Cloudinary
+
+CDN delivery
+Automatic resizing/optimization
+URL-based transformations
+5GB free tier (or paid plan)
+
+Alternatively: AWS S3
+
+Direct control
+CloudFront CDN integration
+Higher scalability
+More cost for small projects
+
+
+**Monitoring & Analytics:**
+Error Tracking: Sentry
+
+Real-time error monitoring
+Performance tracking
+Release management
+Alert notifications
+
+Analytics: PostHog or Mixpanel
+
+User behavior tracking (privacy-first)
+Event analytics
+Funnel analysis
+Custom dashboards
+
+Uptime Monitoring: UptimeRobot
+
+Ping website every 5 minutes
+Alert on downtime
+Status page
+SSL certificate monitoring
+
+
+---
+
+## SECTION 8: SECURITY REQUIREMENTS
+
+### **Data Protection**
+HTTPS: Enforced on all pages (HSTS header)
+Environment Variables: Sensitive data never in code
+├── Database credentials
+├── API keys (SendGrid, Cloudinary, etc.)
+├── JWT secret
+└── Admin credentials
+Database Encryption: At-rest encryption for sensitive fields
+├── Password hashes (bcrypt, min 10 rounds)
+├── MFA secrets (encrypted)
+└── API keys (hashed or encrypted)
+File Upload Security:
+├── Validate file type (whitelist only)
+├── Limit file size (5-10MB max)
+├── Scan for malware (optional integration)
+└── Store outside webroot (CDN like Cloudinary)
+
+### **Authentication & Authorization**
+Admin Login:
+├── Rate limiting: 5 failed attempts → 15-minute lockout
+├── Password requirements: Min 12 chars, mix of types
+├── Session timeout: 24 hours of inactivity
+├── JWT tokens: Signed, expiring, httpOnly cookie storage
+└── IP logging: Track login attempts per IP
+Multi-Factor Authentication (MFA):
+├── TOTP (Time-based One-Time Password) using authenticator app
+├── Backup codes: 10 codes for account recovery
+└── Optional for extra security
+Role-Based Access Control:
+├── Admin: Full access to all features
+├── Editor: Content creation/editing, no settings/user management
+└── Read-only: View-only access (optional)
+API Authentication:
+├── JWT in Authorization header: "Bearer [token]"
+├── Token refresh: Automatic via refresh token
+├── Token blacklisting: On logout (optional)
+└── API key for third-party integrations (optional)
+
+### **API Security**
+CORS: Whitelist trusted origins only
+Rate Limiting:
+├── General: 100 requests per 10 minutes per IP
+├── Login: 5 attempts per 15 minutes
+├── Contact form: 5 per hour per IP
+└── Newsletter: 10 per hour per email
+Input Validation:
+├── All form inputs validated server-side
+├── Zod schema validation
+├── Type checking (TypeScript)
+└── Sanitize HTML input (DOMPurify)
+SQL Injection Prevention:
+├── Parameterized queries (Prisma ORM)
+├── Never construct SQL strings
+└── Input escaping
+CSRF Protection:
+├── CSRF tokens for state-changing requests
+├── SameSite cookies (Strict)
+└── Validate origin header
+XSS Prevention:
+├── Content Security Policy (CSP) header
+├── Sanitize user input
+├── Escape HTML output
+└── No eval() or innerHTML with user data
+
+### **Compliance**
+GDPR Compliance:
+├── Privacy policy accessible
+├── Explicit consent for email collection
+├── Easy unsubscribe from newsletter
+├── Data export functionality
+├── Right to deletion (delete account/data)
+└── Email data retention limits (30 days after deletion)
+WCAG 2.1 Accessibility:
+├── Level AA compliance minimum
+├── Keyboard navigation support
+├── Screen reader compatibility
+├── Color contrast ratios ≥4.5:1
+└── Focus indicators visible
+Email Security:
+├── SPF, DKIM, DMARC configured
+├── No sensitive data in email subjects
+├── Unsubscribe link in every email
+└── Privacy policy link
+
+---
+
+## SECTION 9: CRITICAL FEATURES & MUST-HAVES
+
+### **Frontend Must-Haves:**
+✅ Fully responsive design (mobile-first)
+✅ Smooth, performant animations (no jank)
+✅ Dark/light mode toggle with persistent storage
+✅ Reading time calculations accurate
+✅ Theme-based poem organization
+✅ Dual-column prose layout (desktop)
+✅ Immersive poem reader with controls
+✅ Related content suggestions engine
+✅ Accessible navigation (keyboard + screen reader)
+✅ Fast load times (<3s LCP on 4G)
+✅ SEO optimized (meta tags, structured data)
+✅ Smooth page transitions
+✅ Mobile-optimized touch interactions
+✅ Newsletter signup with validation
+✅ Contact form with spam protection
+✅ Social sharing with custom graphics
+
+### **Backend Must-Haves:**
+✅ Secure admin authentication (JWT + 2FA optional)
+✅ Complete CRUD operations for poems/prose
+✅ Content versioning/draft management
+✅ Scheduled publishing capability
+✅ Comprehensive analytics tracking
+✅ Newsletter subscriber management
+✅ Contact form submission handling
+✅ Email notifications (admin alerts)
+✅ Role-based access control
+✅ Data validation on all inputs
+✅ Error handling & logging
+✅ Automatic backups
+✅ Rate limiting & spam protection
+✅ API rate limiting
+✅ Secure file uploads
+
+### **Admin Panel Must-Haves:**
+✅ Intuitive content editors (poems, prose, pages)
+✅ Live preview of changes
+✅ SEO optimization tools
+✅ Analytics dashboard with charts
+✅ Subscriber list management
+✅ Contact form response management
+✅ Settings configuration
+✅ User/account management
+✅ Search & filter functionality
+✅ Bulk actions (delete, export)
+✅ Success/error notifications
+✅ Responsive admin interface
+
+---
+
+## SECTION 10: PERFORMANCE TARGETS
+Core Web Vitals:
+├── Largest Contentful Paint (LCP): <2.5 seconds
+├── First Input Delay (FID): <100 milliseconds
+└── Cumulative Layout Shift (CLS): <0.1
+Page Load Metrics:
+├── First Contentful Paint (FCP): <1.8 seconds
+├── Time to Interactive (TTI): <3.5 seconds
+└── Total Blocking Time (TBT): <300ms
+Asset Optimization:
+├── JavaScript bundle: <150KB (gzipped)
+├── CSS bundle: <30KB (gzipped)
+├── Hero image: <80KB WebP
+├── Total page size: <500KB (all assets gzipped)
+└── Image optimization: 85% reduction using WebP
+Caching Strategy:
+├── Static assets: 1 year cache (with fingerprinting)
+├── HTML pages: 24 hours cache
+├── API responses: 5-60 minutes (content-dependent)
+├── Browser cache: Enabled via Cache-Control headers
+└── CDN cache: Cloudinary for images
+SEO Targets:
+├── Lighthouse score: >90
+├── PageSpeed Insights: >85 (mobile), >90 (desktop)
+├── Accessibility: 100 (Lighthouse audit)
+├── Best Practices: 100
+└── Core Web Vitals: All green
+
+---
+
+## SECTION 11: DEVELOPMENT WORKFLOW & DEPLOYMENT CHECKLIST
+
+### **Before Launch Checklist:**
+
+**Frontend:**
+- [ ] All pages responsive and tested on mobile/tablet/desktop
+- [ ] Animations smooth at 60fps
+- [ ] Dark/light mode tested and working
+- [ ] All forms validated (client + server)
+- [ ] Links all working (no 404s)
+- [ ] Images optimized and loading fast
+- [ ] Accessibility audit passed (axe DevTools)
+- [ ] SEO meta tags present on all pages
+- [ ] 404 page created and styled
+- [ ] 500 error page created and styled
+- [ ] Loading states implemented
+- [ ] Empty states handled (no poems, no subscribers, etc.)
+- [ ] Error handling for failed API calls
+- [ ] Newsletter signup tested end-to-end
+- [ ] Contact form tested with admin notification
+- [ ] Social sharing buttons working
+- [ ] Browser testing (Chrome, Firefox, Safari, Edge)
+- [ ] Mobile testing on real devices (iPhone, Android)
+
+**Backend:**
+- [ ] All API routes tested with Postman/Insomnia
+- [ ] Authentication flow working (login/logout)
+- [ ] JWT tokens generating and validating
+- [ ] Password hashing working (bcrypt)
+- [ ] Database queries optimized (indexes created)
+- [ ] Error handling on all routes (500 errors caught)
+- [ ] Rate limiting implemented and tested
+- [ ] CORS configured correctly
+- [ ] Email sending tested (contact form, newsletter)
+- [ ] File uploads working (size limits, virus scan)
+- [ ] Analytics tracking events properly
+- [ ] Backup strategy tested (restore tested)
+- [ ] Environment variables secured (no secrets in code)
+- [ ] Logging working for errors and important events
+- [ ] Database migrations tested on staging
+
+**Admin Panel:**
+- [ ] Login/logout working
+- [ ] All content editors functional
+- [ ] Preview feature working
+- [ ] Save/publish/schedule working
+- [ ] Delete confirmation modals present
+- [ ] Analytics dashboard loading data
+- [ ] Subscriber list searchable/filterable
+- [ ] Contact form submissions displaying
+- [ ] Settings can be modified and saved
+- [ ] Permission checks working (editor can't delete users)
+- [ ] Bulk actions working
+- [ ] Export to CSV/JSON working
+- [ ] Responsive on tablet/mobile
+- [ ] Keyboard navigation supported
+
+**Security:**
+- [ ] HTTPS enforced (no http)
+- [ ] Sensitive data not logged
+- [ ] API keys not in code/commits
+- [ ] SQL injection prevention tested
+- [ ] XSS prevention tested
+- [ ] CSRF tokens implemented
+- [ ] Rate limiting working
+- [ ] Admin password requirements enforced
+- [ ] Session timeout working
+- [ ] File upload validation working
+- [ ] Input validation comprehensive
+- [ ] No console errors in production
+
+**Deployment:**
+- [ ] Staging environment tested
+- [ ] Production environment configured
+- [ ] Database migrations run
+- [ ] Environment variables set (production)
+- [ ] SSL certificate valid
+- [ ] Domain pointing to server
+- [ ] Email service configured
+- [ ] Analytics service connected
+- [ ] Error tracking (Sentry) configured
+- [ ] Monitoring/uptime alerts set
+- [ ] Backups configured and tested
+- [ ] CDN configured for images
+- [ ] Performance metrics baseline established
+- [ ] Deployment process documented
+
+---
+
+## SECTION 12: POST-LAUNCH MAINTENANCE & ITERATION
+
+### **First Week After Launch:**
+- Monitor error logs and fix any issues
+- Check analytics for expected traffic patterns
+- Test all functionality with real users
+- Gather feedback via contact form
+- Monitor email deliverability
+- Check performance metrics
+
+### **Ongoing Maintenance (Monthly):**
+- Review analytics and identify popular content
+- Check for broken links
+- Update dependencies (security patches)
+- Review error logs for patterns
+- Test backup/restore process
+- Check SSL certificate expiry
+- Monitor uptime and performance
+- Review newsletter engagement metrics
+
+### **Feature Additions (Roadmap):**
+- Poem collections/playlists (users can save favorites)
+- Comment system on poems (moderated)
+- Social follow/profile system
+- Email collection statistics
+- Advanced search/filtering
+- Related poems recommendations (AI-powered)
+- Podcast version of poems
+- Print-to-PDF functionality
+- Reading progress tracking
+- Annotation/highlighting feature
+- Social integration (share counts, embeds)
+- Membership/subscription tier
+- Exclusive content for subscribers
+
+---
+
+## FINAL DELIVERY SPECIFICATIONS
+
+**Output Structure:**
+1. Complete Next.js project with all pages
+2. Fully functional admin panel
+3. Database schema and migrations
+4. API routes and backend logic
+5. Authentication system
+6. Analytics implementation
+7. Email service integration
+8. Deployment configuration files
+9. Environment variables template
+10. Documentation (README, API docs, setup guide)
+
+**Quality Standards:**
+- Clean, readable code with comments
+- TypeScript for type safety
+- Proper error handling throughout
+- Comprehensive logging
+- Security best practices implemented
+- Accessibility compliant
+- Performance optimized
+- Mobile-first responsive design
+- Production-ready and deployable
+
+**Testing Coverage:**
+- Unit tests for critical functions
+- Integration tests for API routes
+- E2E tests for key user flows
+- Manual testing on multiple devices
+- Accessibility audit passed
+- Performance audit passed
+
+**Documentation Included:**
+- Setup and installation guide
+- Environment configuration
+- Deployment instructions
+- Admin guide (how to manage content)
+- Database schema documentation
+- API endpoint documentation
+- Troubleshooting guide
+- Maintenance procedures
+
+---
+
+## EXECUTION INSTRUCTIONS FOR FLAMES.BLUE
+
+**System Directive:**
+Generate a complete, production-ready website for "Same Moon Poetry" that:
+
+1. **Analyzes all provided content** (poems, prose, about information) and integrates it seamlessly
+2. **Implements the full frontend design** as specified in this prompt, including all animations, responsive behavior, and user interactions
+3. **Creates a powerful admin panel** with all content management, analytics, and settings features
+4. **Builds a complete backend** with database schema, API routes, authentication, and email integration
+5. **Applies all security measures** specified (authentication, rate limiting, input validation, etc.)
+6. **Optimizes for performance** (lazy loading, image optimization, minification, caching)
+7. **Ensures accessibility** (WCAG 2.1 AA compliance, keyboard navigation, screen reader support)
+8. **Generates deployment-ready code** (all configuration files, environment setup, deployment instructions)
+
+**Priority Order:**
+1. Database schema and Prisma models
+2. Authentication system and JWT implementation
+3. Frontend pages (Hero, Collection, Prose, About)
+4. Admin panel (Dashboard, content editors, analytics)
+5. API routes (all CRUD operations)
+6. Email integration (newsletter, contact form)
+7. Analytics implementation
+8. Performance optimization
+9. Security hardening
+10. Deployment configuration
+
+**Preferred Technologies:**
+- Next.js 14+ with TypeScript
+- Prisma ORM with PostgreSQL
+- Tailwind CSS for styling
+- Framer Motion for animations
+- TipTap for rich text editing
+- JWT for authentication
+- Vercel for deployment
+
+**Output Format:**
+- Complete, functional codebase
+- All files organized in proper structure
+- Environment variables template (.env.example)
+- Database migration files
+- Deployment scripts
+- Complete documentation
+- Ready to clone, setup, and deploy
+
+---
+
+## END OF PROMPT
+
+**This is your complete, production-grade website rebuild specification. Everything needed to transform Same Moon Poetry into a 3-4x improved version is contained in this prompt. The system now has:**
+
+✅ Complete design system with colors, typography, spacing
+✅ All content (poems, prose, about information)
+✅ Detailed page specifications with interactions
+✅ Comprehensive admin panel design
+✅ Full database architecture
+✅ Complete API route specifications
+✅ Security requirements and best practices
+✅ Performance targets and optimization strategies
+✅ Deployment configuration and checklist
+✅ Post-launch maintenance plan
+
+**You are now ready to provide this prompt to Flames.blue and receive a complete, production-ready website that honors your original vision while delivering technical excellence and modern design.**
+
+The new Same Moon Poetry website will be:
+- 🌙 **Visually Stunning:** Modern, contemplative, emotionally resonant
+- ⚡ **Technically Excellent:** Fast, secure, accessible, maintainable
+- 💪 **Powerful:** Full admin panel for content management and analytics
+- 🎯 **User-Centric:** Intuitive navigation, engaging interactions, responsive design
+- 🔒 **Secure:** Authentication, rate limiting, input validation, data protection
+- 📈 **Scalable:** Ready for growth, new features, increased traffic
+
+**At least we are watching the same moon. Now, build it.** 🌙✨
