@@ -1,0 +1,1186 @@
+here an older vertion of the website and just take the same proes ans poems that are used in it (<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Same Moon Poetry - Amen Allah Jebali</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink-black: #2c2c2c;
+            --mist-gray: #f8f9fa;
+            --jade-green: #7a9b8e;
+            --soft-jade: #a8c3b8;
+            --mountain-blue: #8fa8a3;
+            --paper-white: #fdfefe;
+            --charcoal: #4a4a4a;
+            --accent-gold: #d4af37;
+            
+            --font-body: 'Source Sans 3', sans-serif;
+            --font-display: 'Crimson Text', serif;
+            
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 2rem;
+            --space-lg: 3rem;
+            --space-xl: 5rem;
+            
+            --sidebar-width: 300px;
+            --transition-smooth: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: var(--font-body);
+            color: var(--ink-black);
+            background: var(--paper-white);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .ink-atmosphere {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.4;
+        }
+
+        .mist-layer {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at 30% 20%, rgba(122, 155, 142, 0.08) 0%, transparent 50%),
+                        radial-gradient(ellipse at 70% 60%, rgba(143, 168, 163, 0.06) 0%, transparent 40%);
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: var(--sidebar-width);
+            height: 100vh;
+            background: linear-gradient(180deg, rgba(122, 155, 142, 0.95) 0%, rgba(74, 74, 74, 0.98) 100%);
+            backdrop-filter: blur(20px);
+            color: var(--paper-white);
+            padding: var(--space-lg) var(--space-md);
+            display: flex;
+            flex-direction: column;
+            z-index: 1000;
+            transition: transform var(--transition-smooth);
+            border-right: 1px solid rgba(122, 155, 142, 0.2);
+            overflow-y: auto;
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 2.8rem;
+            font-weight: 300;
+            letter-spacing: 4px;
+            color: #fff;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+
+        .nav-links {
+            list-style: none;
+            flex-grow: 1;
+        }
+
+        .nav-links li { margin-bottom: var(--space-md); }
+
+        .nav-links a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--space-sm) var(--space-md);
+            font-size: 1.1rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.85);
+            border-radius: 12px;
+            transition: all var(--transition-smooth);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateX(8px);
+        }
+
+        .new-badge {
+            background: linear-gradient(135deg, var(--accent-gold), #e8c547);
+            color: var(--ink-black);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            animation: badgePulse 2s ease-in-out infinite;
+        }
+
+        @keyframes badgePulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.05); }
+        }
+
+        .social-links {
+            display: flex;
+            gap: var(--space-sm);
+            justify-content: center;
+            margin-top: auto;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: all var(--transition-smooth);
+        }
+
+        .social-links a:hover {
+            background: rgba(255, 255, 255, 0.15);
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            position: fixed;
+            top: var(--space-md);
+            left: var(--space-md);
+            z-index: 1100;
+            background: rgba(122, 155, 142, 0.9);
+            border: none;
+            padding: var(--space-xs);
+            border-radius: 12px;
+            cursor: pointer;
+        }
+
+        .mobile-menu-toggle span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background-color: var(--paper-white);
+            margin: 5px 0;
+            transition: all var(--transition-smooth);
+        }
+
+        /* MAIN CONTENT */
+        .main-content {
+            margin-left: var(--sidebar-width);
+            min-height: 100vh;
+        }
+
+        .page { display: none; }
+        .page.active { display: block; animation: fadeIn 0.8s ease-out; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* CONTAINER & SPACING */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(248, 249, 250, 0.8) 0%, rgba(168, 195, 184, 0.1) 50%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            text-align: center;
+            padding: var(--space-md);
+            max-width: 900px;
+            z-index: 2;
+            position: relative;
+        }
+
+        .hero-poem {
+            font-family: var(--font-display);
+            font-size: 3.2rem;
+            font-weight: 300;
+            line-height: 1.4;
+            color: var(--ink-black);
+            margin-bottom: var(--space-xl);
+            font-style: italic;
+        }
+
+        .hero-author {
+            opacity: 0;
+            animation: slideUp 1.2s ease forwards 2.5s;
+        }
+
+        .hero-author h1 {
+            font-family: var(--font-display);
+            font-size: 4rem;
+            font-weight: 300;
+            letter-spacing: 6px;
+            margin-bottom: var(--space-sm);
+            color: var(--ink-black);
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--charcoal);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-style: italic;
+        }
+
+        @keyframes slideUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: var(--space-lg);
+            left: 50%;
+            transform: translateX(-50%);
+            animation: gentle-bounce 3s infinite;
+            color: var(--jade-green);
+            font-size: 1.8rem;
+        }
+
+        @keyframes gentle-bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-10px); }
+        }
+
+        /* FEATURED SECTION */
+        .featured {
+            padding: var(--space-xl) 0;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 3.2rem;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: var(--space-xl);
+            letter-spacing: 4px;
+            color: var(--ink-black);
+        }
+
+        /* POEM CARDS */
+        .poem-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: var(--space-lg);
+            margin-bottom: var(--space-xl);
+        }
+
+        .poem-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(122, 155, 142, 0.1);
+            transition: all var(--transition-smooth);
+            border: 1px solid rgba(122, 155, 142, 0.1);
+        }
+
+        .poem-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 60px rgba(122, 155, 142, 0.15);
+        }
+
+        .card-content { padding: var(--space-xl); }
+
+        .poem-card h3 {
+            font-family: 'Georgia', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: var(--space-md);
+            color: var(--ink-black);
+        }
+
+        .poem-excerpt {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--charcoal);
+            margin-bottom: var(--space-lg);
+            font-style: italic;
+        }
+
+        .read-more {
+            background: transparent;
+            border: 2px solid var(--jade-green);
+            color: var(--jade-green);
+            padding: var(--space-sm) var(--space-xl);
+            border-radius: 30px;
+            font-size: 0.95rem;
+            font-weight: 400;
+            cursor: pointer;
+            transition: all var(--transition-smooth);
+            text-transform: uppercase;
+        }
+
+        .read-more:hover {
+            background: var(--jade-green);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* PROSE TEASER */
+        .prose-teaser {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.08), rgba(212, 175, 55, 0.04));
+            padding: var(--space-xl);
+            border-radius: 24px;
+            margin-bottom: var(--space-xl);
+            text-align: center;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-left: 6px solid var(--accent-gold);
+        }
+
+        .prose-teaser h3 {
+            font-family: var(--font-display);
+            font-size: 2.4rem;
+            font-weight: 300;
+            color: var(--accent-gold);
+            margin-bottom: var(--space-md);
+            letter-spacing: 2px;
+        }
+
+        .prose-teaser p {
+            font-size: 1.1rem;
+            color: var(--charcoal);
+            line-height: 1.8;
+            margin-bottom: var(--space-lg);
+            font-style: italic;
+        }
+
+        .prose-teaser-button {
+            background: linear-gradient(135deg, var(--jade-green), var(--soft-jade));
+            color: white;
+            border: none;
+            padding: var(--space-md) var(--space-xl);
+            border-radius: 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all var(--transition-smooth);
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .prose-teaser-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(122, 155, 142, 0.2);
+        }
+
+        /* FAVORITES & NEWSLETTER */
+        .favorites-section {
+            background: linear-gradient(135deg, rgba(122, 155, 142, 0.06), rgba(168, 195, 184, 0.04));
+            padding: var(--space-xl);
+            border-radius: 24px;
+            margin-bottom: var(--space-xl);
+        }
+
+        .favorites-title {
+            font-family: var(--font-display);
+            font-size: 2.4rem;
+            font-weight: 300;
+            margin-bottom: var(--space-lg);
+            text-align: center;
+            color: var(--ink-black);
+        }
+
+        .favorites-row {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+        }
+
+        .favorite-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: var(--space-md) var(--space-lg);
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all var(--transition-smooth);
+            border: 1px solid rgba(122, 155, 142, 0.1);
+        }
+
+        .favorite-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(122, 155, 142, 0.15);
+        }
+
+        .favorite-icon {
+            color: var(--accent-gold);
+            font-size: 1.4rem;
+        }
+
+        .newsletter-section {
+            background: linear-gradient(135deg, var(--ink-black), var(--charcoal));
+            color: white;
+            padding: var(--space-xl);
+            border-radius: 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .newsletter-section h3 {
+            font-family: var(--font-display);
+            font-size: 2.6rem;
+            font-weight: 300;
+            margin-bottom: var(--space-sm);
+        }
+
+        .newsletter-section p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: var(--space-lg);
+            font-size: 1.1rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: var(--space-sm);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: var(--space-md) var(--space-lg);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 15px;
+            font-size: 1rem;
+        }
+
+        .newsletter-form input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .newsletter-form button {
+            background: linear-gradient(135deg, var(--jade-green), var(--soft-jade));
+            color: white;
+            border: none;
+            padding: var(--space-md) var(--space-xl);
+            border-radius: 15px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all var(--transition-smooth);
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .newsletter-form button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(122, 155, 142, 0.3);
+        }
+
+        /* COLLECTION & PROSE PAGES */
+        .collection-header {
+            padding: var(--space-xl) var(--space-md);
+            text-align: center;
+            margin-bottom: var(--space-xl);
+            background: linear-gradient(135deg, rgba(122, 155, 142, 0.03), rgba(168, 195, 184, 0.02));
+        }
+
+        .collection-header .section-title {
+            margin-bottom: var(--space-md);
+        }
+
+        .collection-header p {
+            font-size: 1.3rem;
+            color: var(--charcoal);
+            font-style: italic;
+        }
+
+        .full-poem, .prose-piece {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(15px);
+            border-radius: 24px;
+            padding: var(--space-xl);
+            margin-bottom: var(--space-xl);
+            box-shadow: 0 8px 40px rgba(122, 155, 142, 0.08);
+            border-left: 6px solid var(--jade-green);
+        }
+
+        .poem-title, .prose-title {
+            font-family: 'Georgia', serif;
+            font-size: 2.8rem;
+            font-weight: 400;
+            color: var(--ink-black);
+            margin-bottom: var(--space-lg);
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        .poem-content {
+            font-family: 'Georgia', serif;
+            font-size: 1.2rem;
+            line-height: 1.9;
+            color: var(--ink-black);
+            white-space: pre-line;
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .prose-content {
+            font-family: 'Georgia', serif;
+            font-size: 1.15rem;
+            line-height: 2;
+            color: var(--ink-black);
+            text-align: left;
+            max-width: 850px;
+            margin: 0 auto;
+            white-space: normal;
+        }
+
+        .prose-content p {
+            margin-bottom: 1.8rem;
+            text-align: justify;
+        }
+
+        .poem-meta, .prose-meta {
+            margin-top: var(--space-lg);
+            padding-top: var(--space-md);
+            border-top: 1px solid rgba(122, 155, 142, 0.2);
+            color: var(--charcoal);
+            font-style: italic;
+            text-align: center;
+        }
+
+        .prose-intro {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(15px);
+            border-radius: 24px;
+            padding: var(--space-xl);
+            margin-bottom: var(--space-xl);
+            box-shadow: 0 8px 40px rgba(122, 155, 142, 0.08);
+            border-left: 6px solid var(--soft-jade);
+        }
+
+        .prose-intro-text {
+            font-size: 1.15rem;
+            line-height: 2;
+            color: var(--charcoal);
+            text-align: center;
+            font-style: italic;
+        }
+
+        .prose-divider {
+            text-align: center;
+            margin: var(--space-xl) 0;
+            color: var(--jade-green);
+            font-size: 1.8rem;
+            opacity: 0.5;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+                width: 280px;
+            }
+            .sidebar.active { transform: translateX(0); }
+            .mobile-menu-toggle { display: block; }
+            .main-content { margin-left: 0; }
+            .hero-poem { font-size: 2.4rem; }
+            .hero-author h1 { font-size: 2.8rem; }
+            .poem-cards { grid-template-columns: 1fr; }
+            .newsletter-form { flex-direction: column; }
+            .favorites-row { flex-direction: column; align-items: center; }
+            .section-title { font-size: 2.4rem; }
+            .poem-title, .prose-title { font-size: 2.2rem; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-poem { font-size: 1.8rem; }
+            .hero-author h1 { font-size: 2.2rem; }
+            .logo { font-size: 2rem; }
+            .section-title { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="ink-atmosphere">
+        <div class="mist-layer"></div>
+    </div>
+
+    <nav class="sidebar" id="sidebar">
+        <h2 class="logo">Same Moon</h2>
+        <ul class="nav-links">
+            <li><a href="#" class="active" data-page="home">Home</a></li>
+            <li><a href="#" data-page="collection">Collection</a></li>
+            <li><a href="#" data-page="prose">Prose<span class="new-badge">NEW</span></a></li>
+            <li><a href="#" data-page="about">About</a></li>
+        </ul>
+        <div class="social-links">
+            <a href="https://instagram.com/amen__XD" target="_blank">IG</a>
+            <a href="https://twitter.com/Amen__XD" target="_blank">𝕏</a>
+            <a href="mailto:jamen9690@gmail.com">✉</a>
+        </div>
+    </nav>
+
+    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <span></span><span></span><span></span>
+    </button>
+
+    <main class="main-content">
+        <!-- HOME PAGE -->
+        <div id="home-page" class="page active">
+            <section class="hero">
+                <div class="hero-content">
+                    <p class="hero-poem" id="heroPoem"></p>
+                    <div class="hero-author">
+                        <h1>Amen Allah Jebali</h1>
+                        <p class="subtitle">Poet & Writer</p>
+                    </div>
+                </div>
+                <div class="scroll-indicator">↓</div>
+            </section>
+
+            <section class="featured">
+                <div class="container">
+                    <h2 class="section-title">Featured Poems</h2>
+                    
+                    <div class="poem-cards">
+                        <article class="poem-card">
+                            <div class="card-content">
+                                <h3>The Rare Ones</h3>
+                                <p class="poem-excerpt">In a world too loud to listen, I realized something... Some people are like treasure — rare, hidden, sometimes buried deep beneath noise and distraction...</p>
+                                <button class="read-more" data-poem="poem6">Read More</button>
+                            </div>
+                        </article>
+
+                        <article class="poem-card">
+                            <div class="card-content">
+                                <h3>If You Have to Ask</h3>
+                                <p class="poem-excerpt">"If you have to ask for it, it loses its value." Mind your business, do what makes you happy, and everything else will come naturally...</p>
+                                <button class="read-more" data-poem="poem1">Read More</button>
+                            </div>
+                        </article>
+
+                        <article class="poem-card">
+                            <div class="card-content">
+                                <h3>Each One a Mirror</h3>
+                                <p class="poem-excerpt">Here we are again, charged, full of emotions, and above all—gratitude to Allah. The moon—cut in half, grabs all my attention...</p>
+                                <button class="read-more" data-poem="poem2">Read More</button>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="prose-teaser">
+                        <h3>✨ Reflections in Prose ✨</h3>
+                        <p>Beyond poetry, I explore life's lessons through prose—stories grounded in real experiences that shaped my perspective. Each piece begins with observations and reflections, then unfolds into a personal narrative that brings the lesson to life.</p>
+                        <button class="prose-teaser-button" data-page="prose">Explore Prose</button>
+                    </div>
+
+                    <div class="favorites-section">
+                        <h3 class="favorites-title">Reader Favorites</h3>
+                        <div class="favorites-row">
+                            <div class="favorite-item" data-poem="poem6">
+                                <span class="favorite-icon">★</span>
+                                <span>The Rare Ones</span>
+                            </div>
+                            <div class="favorite-item" data-poem="poem2">
+                                <span class="favorite-icon">★</span>
+                                <span>Same Moon</span>
+                            </div>
+                            <div class="favorite-item" data-poem="poem3">
+                                <span class="favorite-icon">★</span>
+                                <span>When Today Is Enough</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="newsletter-section">
+                        <h3>Receive verses in your inbox</h3>
+                        <p>Monthly poetry, exclusive previews, and writing insights</p>
+                        <form class="newsletter-form" id="newsletterForm">
+                            <input type="email" placeholder="your.email@example.com" required>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- COLLECTION PAGE -->
+        <div id="collection-page" class="page">
+            <div class="collection-header">
+                <div class="container">
+                    <h1 class="section-title">Poetry Collection</h1>
+                    <p>A journey through words, reflections, and spiritual growth</p>
+                </div>
+            </div>
+
+            <div class="container">
+                <article class="full-poem" id="poem6">
+                    <h2 class="poem-title">The Rare Ones</h2>
+                    <div class="poem-content">in a world too loud to listen, i realized something... some people are like treasure — rare, hidden, sometimes buried deep beneath noise and distraction.
+
+it's hard to find someone who really understands you, someone who shares that quiet spark that makes you feel seen, like they've touched the part of you you couldn't even name.
+
+my favorite people are the ones who evolve — open-minded, ready to learn, ready to live new experiences.
+
+and when you find that sweet chemistry, that unexplainable click between souls... the magic begins. but even magic fades when one soul stops showing up. so sometimes, you have to let things go.
+
+because if they truly know your worth, they'll circle back — and if they don't... well, we live in an age where meaning is vanishing, where connection's become just another notification.
+
+everyone's online — but it feels like no one's there. scrolling, replying, talking — but not really speaking.
+
+i'm the type of guy who craves the real — a small talk that feels big, a shared silence that says everything, eye contact that speaks louder than words.
+
+you get the point... i'm not chasing attention — i'm searching for presence.
+
+because in the end, presence is the rarest treasure left.</div>
+                    <div class="poem-meta">A reflection on authentic connection in a distracted world</div>
+                </article>
+
+                <article class="full-poem" id="poem1">
+                    <h2 class="poem-title">If You Have to Ask</h2>
+                    <div class="poem-content">It's been a long time since I did one of these, but inspiration comes and goes.
+
+Anyways, I learned a valuable lesson. What lesson, you may ask?
+
+Let me tell you: "If you have to ask for it, it loses its value."
+
+Damn— that's too good of a lesson.
+
+Mind your business, do what makes you happy, and everything else will come naturally.
+
+That's why I fell in love with this quote: "Don't chase butterflies, plant a garden instead."
+
+This showed me: you attract what you are.
+
+And thank God I learned this early in my life— God knows best.
+
+Every chapter, every human interaction became a lesson for me.
+
+That switch in mindset— a real game changer.</div>
+                    <div class="poem-meta">A reflection on self-worth and natural attraction</div>
+                </article>
+
+                <article class="full-poem" id="poem2">
+                    <h2 class="poem-title">Each One a Mirror</h2>
+                    <div class="poem-content">Here we are again, charged, full of emotions, and above all—gratitude to Allah.
+
+I am blessed, alhamdulillah.
+
+I sit on my balcony, the sky stretched like a painting: light above, fiery orange below, mountains fading in the distance.
+
+But the moon— cut in half, grabs all my attention.
+
+And I whisper to myself: "How did I miss all this beauty, all this glory in front of me?"
+
+Thanks to someone— who inspired me, not with words, but with action, I found a new me.
+
+Wallahi, this brings me peace.
+
+I was inspired. Inspired by how they look at the sky differently, inspired by their passion for reading.
+
+At first, it felt strange— but soon, I was drawn in.
+
+Book by book, page by page: from The 48 Laws of Power, to The Psychology of Money, from Ego is the Enemy, to In Our Stories We Live.
+
+Each one a step, each one a mirror.
+
+And above all, strengthening my bond with Allah turned me into someone new.
+
+Now as I write, night has arrived— stars scattered in the distance, and the moon, magnificent, still watching over me.
+
+But at least we are watching the same moon.</div>
+                    <div class="poem-meta">A spiritual journey of gratitude and transformation</div>
+                </article>
+
+                <article class="full-poem" id="poem3">
+                    <h2 class="poem-title">When Today Is Enough</h2>
+                    <div class="poem-content">I wake up and the sun is already smiling
+birds doing their thing outside
+coffee in my hand, no rush in my step
+
+and I wonder—
+why do we make life harder than it is
+
+Why stress about tomorrow
+when today is sitting right here
+singing its simple song
+
+isn't this enough
+
+the breath in my chest
+the laugh waiting with my friends
+the small wins nobody claps for but me
+
+I used to think happiness was a place
+something I had to chase
+but maybe it's just this
+
+a good vibe
+a clear sky
+a moment where nothing feels missing
+
+And if storms come—so what
+doesn't the rainbow always follow
+so why complain about the clouds
+when they're just painting the view
+
+So yeah
+today I choose peace
+I choose laughter
+I choose the light in small things
+
+and maybe that's the secret after all</div>
+                    <div class="poem-meta">Finding contentment in the present moment</div>
+                </article>
+
+                <article class="full-poem" id="poem4">
+                    <h2 class="poem-title">Empty but Alive</h2>
+                    <div class="poem-content">I sat on the couch, listening to the calming sound of crickets, rain falling, drop by drop.
+
+Honestly, the vibe was perfect for relaxing and writing, but inside I felt empty.
+
+You might ask—what's the thing that does this to you?
+
+Truth is, I don't even know.
+
+When I pick up a pencil and let it move, words come naturally. I don't know if that's a blessing or just something developing inside me.
+
+Damn, I went too deep—time to breathe
+
+Still, a thought crosses my mind: We've all faced storms in our lives, yet we complain about a little rain on another day.
+
+So I made a promise to myself: never complain.
+
+Because really, what's the point? Complaining fixes nothing.
+
+Picture this: it's a burning hot day, you're working, laughing, talking with your friend— and suddenly I complain about the weather.
+
+Just like that, the vibe shifts. Negative energy spreads, and nothing changes.
+
+That's enough yapping for today.
+
+I'll leave it here, like raindrops fading into silence— a small truth whispered, but still enough to carry me forward.</div>
+                    <div class="poem-meta">A reflection on emptiness, creativity, and choosing positivity</div>
+                </article>
+
+                <article class="full-poem" id="poem5">
+                    <h2 class="poem-title">Choose Your Hard</h2>
+                    <div class="poem-content">"Time", people overlook it, but it's the very thing that shapes us.
+
+It builds discipline, it turns dreams into reality.
+
+Lately, I've been living with purpose. Every minute feels valuable.
+
+Yeah, I'm busy— but it's the kind of busy that makes me proud.
+
+Balancing studies, the gym, personal work— it's not easy.
+
+But easy never built anything.
+
+Excuses? I don't buy them.
+
+The classic "I got no time"? That's just fear in disguise.
+
+Here's the truth: Life will always be hard.
+
+But you get to choose your hard.
+
+Grinding is hard.
+
+Wasting time and regretting later is harder.</div>
+                    <div class="poem-meta">A reflection on purposeful living and the discipline of choice</div>
+                </article>
+            </div>
+        </div>
+
+        <!-- PROSE PAGE -->
+        <div id="prose-page" class="page">
+            <div class="collection-header">
+                <div class="container">
+                    <h1 class="section-title">Prose</h1>
+                    <p>Life lessons through stories and reflections</p>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="prose-intro">
+                    <p class="prose-intro-text">
+                        This section reflects the same themes I've explored in my poetry—authenticity, growth, and meaningful connection—but through a different lens. My approach is simple: I start by sharing observations and life lessons I've learned, then weave them into real stories from my own experience. This way, you don't just read about ideas—you see them come alive through moments that shaped my perspective. It's my way of inviting you into my world, showing you how I think, and maybe helping you see your own experiences a little differently.
+                    </p>
+                </div>
+
+                <div class="prose-divider">◈</div>
+
+                <article class="prose-piece" id="prose1">
+                    <h2 class="prose-title">Nice Encounter</h2>
+                    <div class="prose-content">
+                        <p>Ah, the art of manifesting — honestly, it's one of the most delightful feelings. It's like rewiring your brain to attract a certain moment, person, or outcome that you truly desire.</p>
+
+                        <p>Let me tell you a story. Last night, during my usual walk, I was thinking about seeing the one who first made me curious about reading, a small influence that ended up changing so much for me. And though I hadn't seen them in years, I went about my day as usual, not expecting anything. Then SubhanAllah, today, they came up to me first — calm and friendly, like time hadn't even passed.</p>
+
+                        <p>Don't get me wrong — we're all just people. I'm not putting anyone on a pedestal. But sometimes, someone's energy just grabs you. Their presence, their vibe — it speaks louder than words.</p>
+
+                        <p>It can happen in the simplest ways — through a look, a smile, or a few honest words. Lately, I've realized I've been developing a new skill: learning to read people. I'm still learning as I go, but it gives me a whole new perspective on how to see things.</p>
+
+                        <p>Kindness can show in small acts — like respecting the elderly, letting them go first, or giving up your seat. Little actions can say so much about a person. Sometimes, they even bring back memories you'd forgotten, showing how deeply they notice and listen.</p>
+
+                        <p>They're not just waiting for their turn to talk — they listen. They pay attention. And honestly, I'm the kind of person who loves that. I love observing, listening, and admiring the small things in life.</p>
+                    </div>
+                    <div class="prose-meta">
+                        Reflections on manifestation, presence, and the art of truly seeing people
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- ABOUT PAGE -->
+        <div id="about-page" class="page">
+            <div class="collection-header">
+                <div class="container">
+                    <h1 class="section-title">About Amen Allah Jebali</h1>
+                    <p>Poet, Writer, and Seeker of Truth</p>
+                </div>
+            </div>
+            
+            <div class="container">
+                <article class="full-poem">
+                    <div class="poem-content" style="white-space: normal; font-family: var(--font-body); font-size: 1.1rem;">
+                        <p><strong>Welcome to my world of words and reflections.</strong></p>
+                        
+                        <p>I am Amen Allah Jebali, and poetry found me when I needed it most. What began as scattered thoughts on late-night balconies has grown into a collection of verses that speak to the universal experiences of growth, spirituality, and self-discovery.</p>
+                        
+                        <p>My writing draws inspiration from the quiet moments—watching the moon cut in half above the mountains, reading books that challenge my perspective, and finding Allah in the spaces between heartbeats. Each poem is a conversation with myself, with the divine, and with anyone who has ever felt the pull of something greater.</p>
+                        
+                        <p><strong>The central themes in my work:</strong></p>
+                        
+                        <p><em>Spiritual Growth:</em> Every interaction, every chapter becomes a lesson. My relationship with Allah anchors my words and gives meaning to my observations.</p>
+                        
+                        <p><em>Natural Attraction:</em> "Don't chase butterflies, plant a garden instead." This philosophy shapes how I approach relationships, goals, and personal development.</p>
+                        
+                        <p><em>Shared Humanity:</em> We all watch the same moon, breathe the same air, and search for connection. My poetry celebrates what unites us.</p>
+                        
+                        <p><em>Transformation:</em> From chasing external validation to cultivating inner peace, my verses document the journey from wanting to becoming.</p>
+
+                        <p>When I'm not writing, you'll find me on my balcony, watching the sky paint itself in different colors, reading books that expand my mind, or simply sitting in grateful silence. But don't let these quiet moments fool you—I'm an energetic person who loves adventures and doesn't mind taking risks. I find balance between contemplation and action, whether I'm exercising, exploring new places, or diving into fun activities that challenge me. The stars scattered in the distance remind me that beauty exists in the spaces we often overlook, just as excitement lives in the experiences we dare to pursue.</p>
+                        
+                        <p style="font-style: italic; margin-top: var(--space-lg);">This website itself is a mix of new and old passion—coding and writing coming together. Every line of code and every verse represents the intersection of technology and creativity, where digital craftsmanship meets poetic expression.</p>
+                        
+                        <p>My hope is that these words reach you at exactly the right moment—when you need to remember your worth, when you're learning to plant gardens instead of chasing butterflies, or when you simply need to know that someone else is looking at the same moon, thinking similar thoughts.</p>
+                        
+                        <p style="font-style: italic; text-align: center; margin-top: var(--space-xl); color: var(--jade-green); font-size: 1.3rem;">
+                            "At least we are watching the same moon."
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const config = {
+            heroPoems: [
+                "If you have to ask for it, it loses its value",
+                "Don't chase butterflies, plant a garden instead",
+                "Each one a step, each one a mirror",
+                "At least we are watching the same moon",
+                "Life will always be hard. But you get to choose your hard",
+                "In the end, presence is the rarest treasure left"
+            ],
+            typewriterSpeed: 90
+        };
+
+        function typeWriter(element, text, speed = 90) {
+            let i = 0;
+            element.textContent = '';
+            function type() {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+            const targetPage = document.getElementById(pageId + '-page');
+            if (targetPage) targetPage.classList.add('active');
+            
+            document.querySelectorAll('.nav-links a').forEach(link => link.classList.remove('active'));
+            document.querySelector(`[data-page="${pageId}"]`)?.classList.add('active');
+            
+            if (pageId === 'home') {
+                setTimeout(initHeroAnimation, 300);
+            }
+            window.scrollTo(0, 0);
+        }
+
+        function initMobileMenu() {
+            const toggle = document.getElementById('mobileMenuToggle');
+            const sidebar = document.getElementById('sidebar');
+            
+            if (!toggle || !sidebar) return;
+            
+            toggle.addEventListener('click', () => {
+                toggle.classList.toggle('active');
+                sidebar.classList.toggle('active');
+            });
+            
+            document.addEventListener('click', (e) => {
+                if (!sidebar.contains(e.target) && !toggle.contains(e.target) && sidebar.classList.contains('active')) {
+                    sidebar.classList.remove('active');
+                    toggle.classList.remove('active');
+                }
+            });
+        }
+
+        function initHeroAnimation() {
+            const heroPoem = document.getElementById('heroPoem');
+            if (!heroPoem) return;
+            const randomPoem = config.heroPoems[Math.floor(Math.random() * config.heroPoems.length)];
+            typeWriter(heroPoem, '"' + randomPoem + '"', config.typewriterSpeed);
+        }
+
+        function initNewsletterForm() {
+            const form = document.getElementById('newsletterForm');
+            if (!form) return;
+            
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const button = form.querySelector('button');
+                const originalText = button.textContent;
+                
+                button.textContent = 'Thank you!';
+                setTimeout(() => {
+                    form.reset();
+                    button.textContent = originalText;
+                }, 3000);
+            });
+        }
+
+        function initNavigation() {
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const page = link.dataset.page;
+                    if (page) showPage(page);
+                });
+            });
+            
+            document.querySelectorAll('.prose-teaser-button').forEach(button => {
+                button.addEventListener('click', () => {
+                    showPage(button.dataset.page);
+                });
+            });
+            
+            document.querySelectorAll('.read-more').forEach(button => {
+                button.addEventListener('click', () => {
+                    const poemId = button.dataset.poem;
+                    showPage('collection');
+                    setTimeout(() => {
+                        const targetPoem = document.getElementById(poemId);
+                        if (targetPoem) {
+                            targetPoem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            targetPoem.style.boxShadow = '0 0 30px rgba(122, 155, 142, 0.25)';
+                            setTimeout(() => {
+                                targetPoem.style.boxShadow = '';
+                            }, 2500);
+                        }
+                    }, 400);
+                });
+            });
+            
+            document.querySelectorAll('.favorite-item').forEach(item => {
+                const poemId = item.dataset.poem;
+                if (poemId) {
+                    item.addEventListener('click', () => {
+                        showPage('collection');
+                        setTimeout(() => {
+                            const targetPoem = document.getElementById(poemId);
+                            if (targetPoem) {
+                                targetPoem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                targetPoem.style.boxShadow = '0 0 30px rgba(122, 155, 142, 0.25)';
+                                setTimeout(() => {
+                                    targetPoem.style.boxShadow = '';
+                                }, 2500);
+                            }
+                        }, 400);
+                    });
+                }
+            });
+        }
+
+        function initScrollAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            document.querySelectorAll('.poem-card').forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = `all 0.8s cubic-bezier(0.4, 0, 0.2, 1) ${index * 0.15}s`;
+                observer.observe(card);
+            });
+            
+            document.querySelectorAll('.full-poem, .prose-piece').forEach((poem, index) => {
+                poem.style.opacity = '0';
+                poem.style.transform = 'translateY(40px)';
+                poem.style.transition = `all 1s cubic-bezier(0.4, 0, 0.2, 1) ${index * 0.2}s`;
+                observer.observe(poem);
+            });
+        }
+
+        function init() {
+            initMobileMenu();
+            initHeroAnimation();
+            initNewsletterForm();
+            initNavigation();
+            initScrollAnimations();
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            init();
+        }
+    </script>
+</body>
+</html>)
