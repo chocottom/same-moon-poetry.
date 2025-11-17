@@ -10,6 +10,17 @@ export default {
         md: ".375rem", /* 6px */
         sm: ".1875rem", /* 3px */
       },
+      fontFamily: {
+        display: ['"Crimson Text"', 'serif'],
+        sans: ['"Source Sans 3"', 'sans-serif'],
+        mono: ['Monaco', 'Consolas', 'monospace'],
+      },
+      lineHeight: {
+        'tight': '1.2',
+        'normal': '1.5',
+        'relaxed': '1.75',
+        'loose': '2',
+      },
       colors: {
         // Flat / base colors (regular buttons)
         background: "hsl(var(--background) / <alpha-value>)",
