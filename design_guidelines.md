@@ -5,13 +5,16 @@ Contemplative, minimalist aesthetic celebrating universal connection through poe
 
 ## Color System
 ```
-Primary: #6b8b7e (Jade Green) - contemplation, growth
-Secondary: #d4af37 (Gold) - insight, highlights
-Accent: #4a5568 (Slate Blue) - depth, text emphasis
-Background: #faf9f7 (Off-white) - breathing room
-Text: #2c2c2c (Charcoal) - readability
-Highlight: #f5f3f0 (Cream) - subtle accent
+Primary: #6b8b7e (Jade Green - HSL: 160 24% 38%) - contemplation, growth
+Secondary: #c4956d (Warm Gold - HSL: 38 48% 54%) - insight, highlights, warm accents
+Accent: #5a7a72 (Muted Jade - HSL: 160 8% 88%) - depth, text emphasis
+Background: #faf9f7 (Off-white - HSL: 40 14% 98%) - breathing room
+Text: #2c2c2c (Charcoal - HSL: 0 0% 17%) - readability
+Muted: #e8e4e0 (Warm Taupe) - secondary backgrounds, subtle accents
 ```
+
+### Rationale
+The updated secondary color (warm gold) replaces harsh yellow with earthy, inviting tones that harmonize with jade green. The muted color palette shifts to jade-based neutrals for improved cohesion and readability across light/dark modes.
 
 ## Typography
 - **Display Font**: 'Crimson Text' (serif) - titles, quotes, spiritual elements
