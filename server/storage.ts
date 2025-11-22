@@ -119,7 +119,8 @@ export class DatabaseStorage implements IStorage {
       .select()
       .from(poems)
       .where(and(eq(poems.status, "published"), sql`${poems.isFeatured} > 0`))
-      .orderBy(poems.isFeatured);
+      .orderBy(desc(poems.isFeatured))
+      .limit(3);
   }
 
   async getPoemsByTheme(theme: string): Promise<Poem[]> {
@@ -204,8 +205,8 @@ export class DatabaseStorage implements IStorage {
       .select()
       .from(prose)
       .where(and(eq(prose.status, "published"), sql`${prose.isFeatured} > 0`))
-      .orderBy(desc(prose.publishedAt))
-      .limit(2);
+      .orderBy(desc(prose.isFeatured))
+      .limit(1);
   }
 
   async updateProse(id: string, proseData: Partial<InsertProse>): Promise<Prose | undefined> {
