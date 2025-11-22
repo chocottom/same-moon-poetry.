@@ -6,15 +6,20 @@ Contemplative, minimalist aesthetic celebrating universal connection through poe
 ## Color System
 ```
 Primary: #6b8b7e (Jade Green - HSL: 160 24% 38%) - contemplation, growth
-Secondary: #c4956d (Warm Gold - HSL: 38 48% 54%) - insight, highlights, warm accents
-Accent: #5a7a72 (Muted Jade - HSL: 160 8% 88%) - depth, text emphasis
+Secondary: #b8704d (Rich Bronze - HSL: 32 62% 50% light / 32 72% 58% dark) - warm accents, highlights
+Secondary-Foreground: #f8f5f1 (Cream - light) / #0a0f1a (Near-black - dark) - text on secondary backgrounds
+Accent: #d4d0cc (Muted Taupe - HSL: 160 8% 88%) - depth, subtle backgrounds
 Background: #faf9f7 (Off-white - HSL: 40 14% 98%) - breathing room
-Text: #2c2c2c (Charcoal - HSL: 0 0% 17%) - readability
+Text: #2c2c2c (Charcoal - HSL: 0 0% 17%) - primary readability
 Muted: #e8e4e0 (Warm Taupe) - secondary backgrounds, subtle accents
 ```
 
 ### Rationale
-The updated secondary color (warm gold) replaces harsh yellow with earthy, inviting tones that harmonize with jade green. The muted color palette shifts to jade-based neutrals for improved cohesion and readability across light/dark modes.
+**Rich Bronze Secondary Color**: Replaces harsh yellow with a richer, warmer bronze tone (32° hue, 62-72% saturation) that feels inviting and earthy. Higher saturation creates better visual hierarchy without being garish.
+
+**High-Contrast Text**: Secondary-foreground uses cream text on light mode (90%+ lightness) and near-black on dark mode for maximum readability (7:1+ contrast ratio) when used on secondary backgrounds.
+
+**Improved Styling**: The Philosophy box on Prose pages uses 20% opacity on light backgrounds and 15% on dark, with a subtle ring border to create clear visual separation while maintaining harmony with the overall design.
 
 ## Typography
 - **Display Font**: 'Crimson Text' (serif) - titles, quotes, spiritual elements

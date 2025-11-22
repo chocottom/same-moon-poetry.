@@ -124,12 +124,12 @@ export default function ProseStory() {
           {/* Philosophy Column */}
           <div className="space-y-6">
             <div className="sticky top-24">
-              <div className="bg-secondary/10 border-l-4 border-secondary p-6 rounded-lg">
+              <div className="bg-secondary/20 border-l-4 border-secondary p-6 rounded-lg ring-1 ring-secondary/30 dark:bg-secondary/15">
                 <h2 className="font-display text-2xl font-semibold mb-4 text-secondary-foreground">
                   The Philosophy
                 </h2>
                 <div 
-                  className="prose prose-lg max-w-none leading-relaxed whitespace-pre-wrap"
+                  className="prose prose-lg max-w-none leading-relaxed whitespace-pre-wrap text-foreground"
                   data-testid="text-philosophy-content"
                 >
                   {prose.philosophyContent}
