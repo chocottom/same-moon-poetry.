@@ -1,0 +1,56 @@
+I need you to redesign the color palette for a poetry website section. Here's what I want:
+
+CURRENT PROBLEM:
+- Background: Too dark/brown, feels heavy and not elegant
+- Text: Poor contrast, doesn't feel natural or premium
+- Cards: Heavy appearance, needs to feel lighter and fresher
+- Overall vibe: Feels off and not pleasant to read
+
+DESIRED OUTCOME:
+Create 3 complete, distinct color palette variations for a poetry writing website that feel:
+- Clean and peaceful
+- Elegant but not too serious
+- Aesthetic writing website vibe
+- Easy on the eyes for reading
+
+FOR EACH PALETTE, PROVIDE:
+1. Background color (hex code) - with reasoning why it works
+2. Text color (hex code) - with reasoning for readability and harmony
+3. Card/highlight background (hex code) - fresher, lighter feel
+4. Card border color (hex code) - subtle but defined
+5. Accent/highlight color (hex code) - for tags, buttons, section headers
+6. Muted text color (hex code) - for secondary text
+7. Detailed explanation of why each color works together
+8. The mood/feeling the palette creates
+
+ADDITIONAL REQUIREMENTS:
+- All hex codes must be realistic and production-ready
+- Explain color psychology for each palette
+- Suggest font recommendations (typefaces, weights, line-height)
+- Include a visual preview if possible (React component preferred)
+- Make the palettes interactive so I can switch between them to compare
+
+REFERENCE CONTEXT:
+- Website type: Literary, reflective poetry platform
+- Current colors to avoid: Muddy browns, harsh darks, low contrast
+- Target aesthetic: Modern minimalist meets literary elegance
+- Content example: Poetry entries with titles, philosophy sections, and story narratives
+
+BONUS:
+- Suggest 2-3 font pairing combinations
+- Recommend line-height and letter-spacing for optimal readability
+- Explain which palette works best for long-form reading
+
+---
+
+HERE IS REFERENCE CODE TO INSPIRE OR BUILD UPON:
+(Use this as inspiration or copy/modify the structure, but replace the emoji icons with custom SVG icons or your own design)
+
+[PASTE THE REACT CODE HERE]
+
+NOTE: Feel free to use the same structure and approach from the reference code, but:
+- Replace the emoji icons (📖, 👁) with proper icon components or custom SVGs that match your brand
+- You can copy the layout, state management, and interactivity pattern
+- Improve or customize the styling as needed
+- Keep the same color palette logic and organization
+- Maintain the interactive switching between palettes feature

@@ -1,0 +1,244 @@
+import { useState } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+
+export default function PoetryRedesign() {
+  const [activeVariant, setActiveVariant] = useState(0);
+
+  const palettes = [
+    {
+      name: "Serene Minimalist",
+      description: "Clean, peaceful, with soft gradients",
+      bg: "#f8f7f3",
+      bgSecondary: "#faf9f6",
+      text: "#2d2d2d",
+      textMuted: "#6b7280",
+      cardBg: "#ffffff",
+      cardBorder: "#e5e3dd",
+      accent: "#d4a574",
+      accentLight: "#e8dcc8",
+      reasoning: {
+        bg: "Warm off-white creates calm without sterility",
+        text: "Dark charcoal for contrast and readability",
+        card: "Pure white with soft border for premium feel",
+        accent: "Warm terracotta-beige complements poetry theme"
+      }
+    },
+    {
+      name: "Elegant Dark Mode",
+      description: "Sophisticated dark palette with warm accents",
+      bg: "#1a1a1a",
+      bgSecondary: "#242422",
+      text: "#f5f1e8",
+      textMuted: "#a89e93",
+      cardBg: "#2a2825",
+      cardBorder: "#3d3a34",
+      accent: "#c99a6e",
+      accentLight: "#8b7355",
+      reasoning: {
+        bg: "Deep charcoal feels premium and easy on eyes",
+        text: "Warm cream preserves readability without harshness",
+        card: "Subtle dark elevation with refined borders",
+        accent: "Warm gold creates elegance and warmth"
+      }
+    },
+    {
+      name: "Soft Pastel Aesthetic",
+      description: "Gentle, modern, with muted jewel tones",
+      bg: "#f0ebe5",
+      bgSecondary: "#f5f2ed",
+      text: "#3e3b37",
+      textMuted: "#7a7570",
+      cardBg: "#fdfbf8",
+      cardBorder: "#e8e2d9",
+      accent: "#a8926b",
+      accentLight: "#d4cec3",
+      reasoning: {
+        bg: "Warm beige feels naturally aesthetic",
+        text: "Deep taupe maintains elegance and readability",
+        card: "Cream card with minimal border for softness",
+        accent: "Muted sage-gold feels contemporary and calm"
+      }
+    }
+  ];
+
+  const current = palettes[activeVariant];
+
+  return (
+    <div className="min-h-screen p-8" style={{ backgroundColor: current.bg }}>
+      <div className="max-w-6xl mx-auto">
+        {/* Header */}
+        <div className="mb-12">
+          <h1 className="text-5xl font-bold mb-2" style={{ color: current.text }}>
+            Same Moon Poetry
+          </h1>
+          <p className="text-lg" style={{ color: current.textMuted }}>
+            Redesign Preview
+          </p>
+        </div>
+
+        {/* Navigation */}
+        <div className="flex gap-4 mb-8 items-center">
+          <button
+            onClick={() => setActiveVariant((p) => (p - 1 + palettes.length) % palettes.length)}
+            className="p-2 rounded-lg hover:opacity-70 transition"
+            style={{ backgroundColor: current.cardBg, color: current.text }}
+          >
+            <ChevronLeft size={20} />
+          </button>
+          
+          <div className="flex-1">
+            <h2 className="text-3xl font-bold mb-1" style={{ color: current.text }}>
+              {current.name}
+            </h2>
+            <p style={{ color: current.textMuted }}>{current.description}</p>
+          </div>
+
+          <button
+            onClick={() => setActiveVariant((p) => (p + 1) % palettes.length)}
+            className="p-2 rounded-lg hover:opacity-70 transition"
+            style={{ backgroundColor: current.cardBg, color: current.text }}
+          >
+            <ChevronRight size={20} />
+          </button>
+        </div>
+
+        {/* Main Content Preview */}
+        <div className="mb-12">
+          <div className="flex gap-4 mb-6">
+            <span
+              className="px-4 py-2 rounded-full text-sm font-medium transition"
+              style={{
+                backgroundColor: current.accentLight,
+                color: current.text
+              }}
+            >
+              Presence & Connection
+            </span>
+            <span style={{ color: current.textMuted }} className="py-2">
+              Reflective
+            </span>
+            <span style={{ color: current.textMuted }} className="py-2">
+              📖 3 min read
+            </span>
+            <span style={{ color: current.textMuted }} className="py-2">
+              👁 12 views
+            </span>
+          </div>
+
+          <h1 className="text-5xl font-bold mb-8" style={{ color: current.text }}>
+            Nice Encounter
+          </h1>
+
+          {/* Philosophy Card */}
+          <div
+            className="p-8 rounded-2xl mb-12 border-2 transition"
+            style={{
+              backgroundColor: current.cardBg,
+              borderColor: current.cardBorder,
+              boxShadow: "0 4px 15px rgba(0,0,0,0.08)"
+            }}
+          >
+            <h3
+              className="text-2xl font-semibold mb-4"
+              style={{ color: current.accent }}
+            >
+              The Philosophy
+            </h3>
+            <p
+              className="text-lg leading-relaxed"
+              style={{ color: current.text }}
+            >
+              Ah, the art of manifesting — honestly, it's one of the most delightful feelings. It's like rewiring your brain to attract a certain moment, person, or outcome that you truly desire.
+            </p>
+          </div>
+
+          {/* Story Section */}
+          <h2 className="text-4xl font-bold mb-6" style={{ color: current.text }}>
+            The Story
+          </h2>
+          <p
+            className="text-lg leading-relaxed mb-6"
+            style={{ color: current.textMuted }}
+          >
+            Let me tell you a story. Last night, during my usual walk, this random thought just popped into my head about the person who first made me curious about reading — funny how something so small ends up changing so much. I hadn't seen them in years, and honestly, I went about my day like usual, not expecting anything. Then SubhanAllah, today, they came up to me first — calm and friendly, like time hadn't even passed. Don't get me wrong...
+          </p>
+        </div>
+
+        {/* Color Details */}
+        <div
+          className="p-8 rounded-xl border-2 mb-8"
+          style={{
+            backgroundColor: current.cardBg,
+            borderColor: current.cardBorder
+          }}
+        >
+          <h3 className="text-2xl font-bold mb-6" style={{ color: current.text }}>
+            Color Palette Details
+          </h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {Object.entries(current.reasoning).map(([key, value]) => (
+              <div key={key} className="space-y-2">
+                <h4 className="font-semibold capitalize" style={{ color: current.accent }}>
+                  {key.replace(/([A-Z])/g, ' $1').trim()}
+                </h4>
+                <p style={{ color: current.textMuted }}>{value}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Hex Codes */}
+        <div
+          className="grid grid-cols-2 md:grid-cols-5 gap-4"
+          style={{ backgroundColor: current.cardBg }}
+        >
+          {[
+            { name: "Background", hex: current.bg },
+            { name: "Text", hex: current.text },
+            { name: "Card", hex: current.cardBg },
+            { name: "Accent", hex: current.accent },
+            { name: "Muted", hex: current.textMuted }
+          ].map((color) => (
+            <div
+              key={color.name}
+              className="p-4 rounded-lg text-center"
+              style={{ backgroundColor: color.hex, border: `2px solid ${current.cardBorder}` }}
+            >
+              <div
+                className="text-sm font-mono font-bold mb-2"
+                style={{
+                  color: parseInt(color.hex.slice(1), 16) > 0x808080 ? "#000" : "#fff"
+                }}
+              >
+                {color.hex}
+              </div>
+              <div
+                className="text-xs"
+                style={{
+                  color: parseInt(color.hex.slice(1), 16) > 0x808080 ? "#666" : "#aaa"
+                }}
+              >
+                {color.name}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Font Recommendations */}
+        <div className="mt-12 p-8 rounded-xl" style={{ backgroundColor: current.cardBg, border: `2px solid ${current.cardBorder}` }}>
+          <h3 className="text-2xl font-bold mb-4" style={{ color: current.text }}>
+            Font Recommendations
+          </h3>
+          <ul className="space-y-3" style={{ color: current.textMuted }}>
+            <li><strong style={{ color: current.text }}>Headings:</strong> Inter Bold (700) or Poppins Bold — clean, modern, and airy</li>
+            <li><strong style={{ color: current.text }}>Subheadings:</strong> Inter SemiBold (600) — maintains hierarchy without heaviness</li>
+            <li><strong style={{ color: current.text }}>Body text:</strong> Georgia or Inter Regular (400) — Georgia feels literary; Inter feels contemporary</li>
+            <li><strong style={{ color: current.text }}>Line-height:</strong> 1.7–1.8 for body text — improves readability and creates breathing room</li>
+            <li><strong style={{ color: current.text }}>Letter-spacing:</strong> +0.3px for headings — adds elegance and prevents crowding</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+}

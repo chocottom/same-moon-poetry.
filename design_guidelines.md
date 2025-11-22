@@ -4,22 +4,36 @@
 Contemplative, minimalist aesthetic celebrating universal connection through poetry and prose. Design evokes introspection, spiritual growth, and shared human experience under "the same moon."
 
 ## Color System
+
+### Light Mode - Soft Pastel Aesthetic
 ```
-Primary: #6b8b7e (Jade Green - HSL: 160 24% 38%) - contemplation, growth
-Secondary: #b8704d (Rich Bronze - HSL: 32 62% 50% light / 32 72% 58% dark) - warm accents, highlights
-Secondary-Foreground: #f8f5f1 (Cream - light) / #0a0f1a (Near-black - dark) - text on secondary backgrounds
-Accent: #d4d0cc (Muted Taupe - HSL: 160 8% 88%) - depth, subtle backgrounds
-Background: #faf9f7 (Off-white - HSL: 40 14% 98%) - breathing room
-Text: #2c2c2c (Charcoal - HSL: 0 0% 17%) - primary readability
-Muted: #e8e4e0 (Warm Taupe) - secondary backgrounds, subtle accents
+Background: #f0ebe5 (Warm Beige - HSL: 33 27% 92%) - calm, breathing room
+Text/Foreground: #3e3b37 (Taupe Brown - HSL: 34 6% 23%) - deep, readable
+Card Background: #fdfbf8 (Soft Cream - HSL: 36 56% 98%) - premium, elevated
+Card Border: #e8e2d9 (Subtle Taupe - HSL: 36 25% 88%) - gentle definition
+Primary/Secondary: #a8926b (Muted Sage-Gold - HSL: 38 26% 54%) - warm accents, highlights
+Accent Light: #d4cec3 (Pale Taupe - HSL: 39 17% 80%) - secondary backgrounds
+Muted Text: #7a7570 (Soft Gray - HSL: 30 4% 46%) - secondary information
+```
+
+### Dark Mode - Elegant Dark
+```
+Background: #1a1a1a (Deep Charcoal - HSL: 0 0% 10%) - sophisticated, premium
+Text/Foreground: #f5f1e8 (Warm Cream - HSL: 42 39% 94%) - readable without harshness
+Card Background: #2a2825 (Charcoal-Brown - HSL: 36 6% 15%) - refined elevation
+Card Border: #3d3a34 (Subtle Brown - HSL: 40 8% 22%) - gentle definition
+Primary/Secondary: #c99a6e (Warm Terracotta - HSL: 29 46% 61%) - elegant warmth
+Muted Text: #a89e93 (Soft Beige-Gray - HSL: 31 11% 62%) - secondary information
 ```
 
 ### Rationale
-**Rich Bronze Secondary Color**: Replaces harsh yellow with a richer, warmer bronze tone (32° hue, 62-72% saturation) that feels inviting and earthy. Higher saturation creates better visual hierarchy without being garish.
+**Soft Pastel Aesthetic (Light)**: Warm beige background (#f0ebe5) creates a contemplative, literary feel without being sterile. The muted sage-gold accent (#a8926b) provides visual hierarchy while remaining elegant and readable. This palette evokes the feel of aged paper and refined book design.
 
-**High-Contrast Text**: Secondary-foreground uses cream text on light mode (90%+ lightness) and near-black on dark mode for maximum readability (7:1+ contrast ratio) when used on secondary backgrounds.
+**Elegant Dark (Dark)**: Deep charcoal background with warm cream text creates a sophisticated, eye-friendly reading experience. The terracotta accent (#c99a6e) adds warmth and prevents the dark palette from feeling cold or clinical. Perfect for evening reading sessions.
 
-**Improved Styling**: The Philosophy box on Prose pages uses 20% opacity on light backgrounds and 15% on dark, with a subtle ring border to create clear visual separation while maintaining harmony with the overall design.
+**High Contrast for Readability**: Text on both backgrounds achieves 7:1+ contrast ratios for accessibility. Card backgrounds are subtly elevated from the base background to create clear visual hierarchy.
+
+**Poetry-First Design**: Both palettes prioritize long-form reading with generous line heights, soft borders, and warm color temperatures. The palettes create an atmosphere of introspection and contemplation aligned with the "Same Moon Poetry" brand.
 
 ## Typography
 - **Display Font**: 'Crimson Text' (serif) - titles, quotes, spiritual elements
