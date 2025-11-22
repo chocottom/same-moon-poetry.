@@ -109,12 +109,22 @@ export default function About() {
             Amen Allah Jebali
           </h1>
           <p className="text-2xl text-muted-foreground font-display italic mb-8">
-            Poet, Writer, and Seeker of Truth
+            Poet, Coder, Connector, and Seeker of Truth
           </p>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Through poetry and prose, I explore the intersections of spiritual growth, 
-            human connection, and the universal experiences that bind us all together.
-          </p>
+          <div className="max-w-3xl mx-auto space-y-6 text-lg text-muted-foreground leading-relaxed">
+            <p>
+              Welcome to my world—where words meet code, and spirit dances with growth.
+            </p>
+            <p>
+              Poetry found me in my quietest moments. Not as a lightning bolt, but as a gradual awakening—moonlit nights, whispered prayers, and books that challenged me. Writing became my lifeline, a way to process emotions, deepen my faith, and discover who I truly am.
+            </p>
+            <p>
+              Beyond the poems, I code. I read obsessively. I crave deep conversations with people who actually listen. My days balance learning, creation, and genuine connection. I believe the most powerful growth happens when we blend logic with creativity, discipline with compassion, solitude with presence.
+            </p>
+            <p>
+              Here, you'll find more than poetry. You'll find heartfelt conversations—with yourself, the divine, and anyone who's ever looked up at the same moon craving true connection. Whether I'm lost in thought, immersed in code, or helping those around me, every word is a step toward balance, meaning, and transformation.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -122,7 +132,7 @@ export default function About() {
         {/* Timeline Section */}
         <section className="mb-24">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-center mb-12">
-            Creative Journey
+            My Journey
           </h2>
           
           <div className="relative">
@@ -132,19 +142,29 @@ export default function About() {
             <div className="space-y-12">
               {[
                 {
-                  year: "Early Years",
-                  title: "Finding My Voice",
-                  description: "Began writing as a way to process complex emotions and spiritual questions. Poetry became a tool for self-discovery."
+                  year: "Childhood Curiosity",
+                  title: "Sparked by stories and the power of reading",
+                  description: ""
                 },
                 {
-                  year: "Growth",
-                  title: "Exploring Themes",
-                  description: "Developed distinct themes around spiritual depth, authentic connection, time, and personal growth. Each poem became a meditation."
+                  year: "Late-Night Discovery",
+                  title: "Poetry as a way to process emotions and find clarity",
+                  description: ""
                 },
                 {
-                  year: "Present",
-                  title: "Sharing the Journey",
-                  description: "Now sharing these reflections to connect with others on similar paths. We're all watching the same moon."
+                  year: "Spiritual Awakening",
+                  title: "Deepening my relationship with Allah and living with gratitude",
+                  description: ""
+                },
+                {
+                  year: "Embracing Code & Connection",
+                  title: "Combining creativity with logic to build and inspire",
+                  description: ""
+                },
+                {
+                  year: "Creating This Space",
+                  title: "Sharing reflections to connect and uplift others",
+                  description: ""
                 }
               ].map((milestone, index) => (
                 <div 
@@ -154,12 +174,9 @@ export default function About() {
                   <div className="flex-1">
                     <Card className={`p-6 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
                       <span className="text-sm font-medium text-primary">{milestone.year}</span>
-                      <h3 className="font-display text-xl font-semibold mt-2 mb-2">
+                      <h3 className="font-display text-lg font-semibold mt-2">
                         {milestone.title}
                       </h3>
-                      <p className="text-muted-foreground">
-                        {milestone.description}
-                      </p>
                     </Card>
                   </div>
                   <div className="w-4 h-4 bg-primary rounded-full relative z-10 hidden md:block" />
@@ -173,32 +190,25 @@ export default function About() {
         {/* Philosophy Cards */}
         <section className="mb-24">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-center mb-12">
-            Core Beliefs
+            What I Believe
           </h2>
           
-          <div className="grid md:grid-cols-2 gap-6">
-            {PHILOSOPHY_CARDS.map((card, index) => (
-              <Card
-                key={index}
-                className={`p-6 cursor-pointer transition-all duration-300 hover-elevate ${
-                  selectedCard === index ? 'ring-2 ring-primary' : ''
-                }`}
-                onClick={() => setSelectedCard(selectedCard === index ? null : index)}
-                data-testid={`card-philosophy-${index}`}
-              >
-                <h3 className="font-display text-xl font-semibold mb-3">
-                  {card.title}
-                </h3>
-                <p className="text-muted-foreground mb-4">
-                  {selectedCard === index ? card.full : card.preview}
-                </p>
-                {selectedCard === index && (
-                  <p className="font-display italic text-sm text-primary">
-                    Related: "{card.relatedPoem}"
-                  </p>
-                )}
-              </Card>
-            ))}
+          <div className="space-y-4 mb-8 max-w-3xl mx-auto">
+            <p className="text-lg text-muted-foreground">
+              <strong className="text-foreground">Authentic Connection:</strong> True relationships are built on presence, not performance. The rare ones who genuinely listen are treasures.
+            </p>
+            <p className="text-lg text-muted-foreground">
+              <strong className="text-foreground">Life is hard.</strong> You get to choose your hard—the kind that grows you or the kind that leaves regret.
+            </p>
+            <p className="text-lg text-muted-foreground">
+              <strong className="text-foreground">Every moment is a lesson.</strong> We manifest what we focus on. Daily choices shape our destiny.
+            </p>
+            <p className="text-lg text-muted-foreground">
+              <strong className="text-foreground">Despite different paths,</strong> we all seek the same things: meaning, growth, peace, and belonging.
+            </p>
+            <p className="text-lg text-muted-foreground">
+              <strong className="text-foreground">Shared energy inspires collective growth.</strong> Lifting others lifts us all.
+            </p>
           </div>
         </section>
 
