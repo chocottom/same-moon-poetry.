@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Eye, BookOpen } from "lucide-react";
+import { Eye, BookOpen, Moon, Heart, Clock, Sprout } from "lucide-react";
 import type { Prose } from "@shared/schema";
 
 interface ProseCardProps {
@@ -9,8 +9,16 @@ interface ProseCardProps {
   onClick?: () => void;
 }
 
+const themeIcons = {
+  "Spiritual Depth": Moon,
+  "Presence & Connection": Heart,
+  "Time & Purpose": Clock,
+  "Growth & Becoming": Sprout,
+};
+
 export function ProseCard({ prose, onClick }: ProseCardProps) {
   const philosophySummary = prose.philosophyContent.slice(0, 120) + "...";
+  const ThemeIcon = themeIcons[prose.theme as keyof typeof themeIcons] || Moon;
 
   return (
     <Card 
@@ -18,9 +26,14 @@ export function ProseCard({ prose, onClick }: ProseCardProps) {
       onClick={onClick}
       data-testid={`card-prose-${prose.id}`}
     >
-      <h3 className="font-display text-2xl font-semibold text-foreground mb-3">
-        {prose.title}
-      </h3>
+      <div className="flex items-start justify-between gap-4 mb-3">
+        <h3 className="font-display text-2xl font-semibold text-foreground">
+          {prose.title}
+        </h3>
+        <div className="flex-shrink-0 text-primary/80">
+          <ThemeIcon className="w-6 h-6" />
+        </div>
+      </div>
       
       <div className="flex flex-wrap gap-2 mb-4">
         <Badge variant="secondary" className="text-xs">

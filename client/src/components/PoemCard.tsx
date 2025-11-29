@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Eye, BookOpen } from "lucide-react";
+import { Eye, BookOpen, Moon, Heart, Clock, Sprout, Sparkles, Zap, CloudRain, Star } from "lucide-react";
 import type { Poem } from "@shared/schema";
 
 interface PoemCardProps {
@@ -9,15 +9,23 @@ interface PoemCardProps {
   onClick?: () => void;
 }
 
+const themeIcons = {
+  "Spiritual Depth": Moon,
+  "Presence & Connection": Heart,
+  "Time & Purpose": Clock,
+  "Growth & Becoming": Sprout,
+};
+
 const moodIcons = {
-  Reflective: "🌙",
-  Energetic: "⚡",
-  Melancholic: "🌧️",
-  Inspiring: "✨"
+  Reflective: Moon,
+  Energetic: Zap,
+  Melancholic: CloudRain,
+  Inspiring: Sparkles,
 };
 
 export function PoemCard({ poem, onClick }: PoemCardProps) {
   const excerpt = poem.content.split('\n').slice(0, 2).join('\n');
+  const ThemeIcon = themeIcons[poem.theme as keyof typeof themeIcons] || Moon;
 
   return (
     <Card 
@@ -29,9 +37,9 @@ export function PoemCard({ poem, onClick }: PoemCardProps) {
         <h3 className="font-display text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
           {poem.title}
         </h3>
-        <span className="text-2xl flex-shrink-0">
-          {moodIcons[poem.mood as keyof typeof moodIcons] || "🌙"}
-        </span>
+        <div className="flex-shrink-0 text-primary/80">
+          <ThemeIcon className="w-6 h-6" />
+        </div>
       </div>
       
       <div className="flex flex-wrap gap-2 mb-4">

@@ -6,41 +6,38 @@ import { Badge } from "@/components/ui/badge";
 import { PoemCard } from "@/components/PoemCard";
 import { ImmersivePoemReader } from "@/components/ImmersivePoemReader";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { Search } from "lucide-react";
+import { Search, Moon, Heart, Clock, Sprout, type LucideIcon } from "lucide-react";
 import type { Poem } from "@shared/schema";
-import moonIcon from "@assets/generated_images/Moon_theme_icon_b3300182.png";
-import connectionIcon from "@assets/generated_images/Connection_theme_icon_3e6b2fbf.png";
-import timeIcon from "@assets/generated_images/Time_theme_icon_ef6f3ad1.png";
-import growthIcon from "@assets/generated_images/Growth_theme_icon_0f4e520c.png";
 
-const THEMES = [
+const THEMES: Array<{
+  name: string;
+  description: string;
+  Icon: LucideIcon;
+  gradient: string;
+}> = [
   {
     name: "Spiritual Depth",
     description: "Poems exploring Allah, gratitude, transformation, and spiritual awakening",
-    icon: moonIcon,
+    Icon: Moon,
     gradient: "from-emerald-50 to-teal-50 dark:from-emerald-950/20 dark:to-teal-950/20",
-    emoji: "🌙"
   },
   {
     name: "Presence & Connection",
     description: "On authentic relationships, listening, and being truly seen",
-    icon: connectionIcon,
+    Icon: Heart,
     gradient: "from-slate-50 to-blue-50 dark:from-slate-950/20 dark:to-blue-950/20",
-    emoji: "💫"
   },
   {
     name: "Time & Purpose",
     description: "Wrestling with time, discipline, intentional living, and choosing your hard",
-    icon: timeIcon,
+    Icon: Clock,
     gradient: "from-amber-50 to-yellow-50 dark:from-amber-950/20 dark:to-yellow-950/20",
-    emoji: "⏰"
   },
   {
     name: "Growth & Becoming",
     description: "The journey from wanting to becoming, transformation, evolution",
-    icon: growthIcon,
+    Icon: Sprout,
     gradient: "from-green-50 to-emerald-50 dark:from-green-950/20 dark:to-emerald-950/20",
-    emoji: "🌱"
   }
 ];
 
@@ -131,7 +128,8 @@ export default function PoetryCollection() {
                 onClick={() => setSelectedTheme(theme.name)}
                 data-testid={`button-filter-${theme.name.toLowerCase().replace(/\s+/g, '-')}`}
               >
-                {theme.emoji} {theme.name}
+                <theme.Icon className="w-4 h-4 mr-1" />
+                {theme.name}
               </Button>
             ))}
           </div>
@@ -154,7 +152,9 @@ export default function PoetryCollection() {
                 }}
               >
                 <div className="flex items-start gap-4 mb-6">
-                  <span className="text-4xl">{theme.emoji}</span>
+                  <div className="p-3 rounded-lg bg-background/50">
+                    <theme.Icon className="w-8 h-8 text-primary" />
+                  </div>
                   <div className="flex-1">
                     <h2 className="font-display text-3xl md:text-4xl font-bold mb-2">
                       {theme.name}
