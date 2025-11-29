@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useQuery, useMutation } from "@tanstack/react-query";
+import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
@@ -23,6 +24,7 @@ const FEATURED_QUOTES = [
 
 export default function Home() {
   const { toast } = useToast();
+  const [, setLocation] = useLocation();
   const [currentQuote, setCurrentQuote] = useState(0);
   const [email, setEmail] = useState("");
   const [selectedPoem, setSelectedPoem] = useState<Poem | null>(null);
@@ -82,15 +84,15 @@ export default function Home() {
             Same Moon Poetry
           </h1>
           <nav className="flex items-center gap-6">
-            <a href="/poetry" className="text-sm hover:text-primary transition-colors">
+            <Link href="/poetry" className="text-sm hover:text-primary transition-colors">
               Poetry
-            </a>
-            <a href="/prose" className="text-sm hover:text-primary transition-colors">
+            </Link>
+            <Link href="/prose" className="text-sm hover:text-primary transition-colors">
               Prose
-            </a>
-            <a href="/about" className="text-sm hover:text-primary transition-colors">
+            </Link>
+            <Link href="/about" className="text-sm hover:text-primary transition-colors">
               About
-            </a>
+            </Link>
             <ThemeToggle />
           </nav>
         </div>
@@ -194,7 +196,7 @@ export default function Home() {
               <ProseCard 
                 key={prose.id} 
                 prose={prose}
-                onClick={() => window.location.href = `/prose/${prose.id}`}
+                onClick={() => setLocation(`/prose/${prose.id}`)}
               />
             ))}
           </div>
@@ -204,7 +206,7 @@ export default function Home() {
               variant="outline" 
               size="lg"
               data-testid="button-view-all-prose"
-              onClick={() => window.location.href = '/prose'}
+              onClick={() => setLocation('/prose')}
             >
               View All Prose
             </Button>
@@ -257,9 +259,9 @@ export default function Home() {
             <div>
               <h4 className="font-semibold mb-4">Explore</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="/poetry" className="text-muted-foreground hover:text-primary">Poetry Collection</a></li>
-                <li><a href="/prose" className="text-muted-foreground hover:text-primary">Prose Reflections</a></li>
-                <li><a href="/about" className="text-muted-foreground hover:text-primary">About</a></li>
+                <li><Link href="/poetry" className="text-muted-foreground hover:text-primary">Poetry Collection</Link></li>
+                <li><Link href="/prose" className="text-muted-foreground hover:text-primary">Prose Reflections</Link></li>
+                <li><Link href="/about" className="text-muted-foreground hover:text-primary">About</Link></li>
               </ul>
             </div>
             <div>
