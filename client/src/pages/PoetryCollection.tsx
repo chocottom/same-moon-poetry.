@@ -50,17 +50,30 @@ export default function PoetryCollection() {
     queryKey: ["/api/poems"],
   });
 
-  const filteredPoems = poems.filter((poem) => {
+  const isFilterActive = searchQuery.trim() !== "" || selectedTheme !== null;
+  
+  const publishedPoems = poems.filter((poem) => poem.status === "published");
+
+  const matchingPoems = publishedPoems.filter((poem) => {
     const matchesTheme = !selectedTheme || poem.theme === selectedTheme;
     const matchesSearch = !searchQuery || 
       poem.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       poem.content.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesTheme && matchesSearch && poem.status === "published";
+    return matchesTheme && matchesSearch;
   });
 
-  const groupedPoems = THEMES.map((theme) => ({
+  const matchingPoemIds = new Set(matchingPoems.map((p) => p.id));
+
+  const remainingPoems = publishedPoems.filter((poem) => !matchingPoemIds.has(poem.id));
+
+  const groupedRemainingPoems = THEMES.map((theme) => ({
     ...theme,
-    poems: filteredPoems.filter((p) => p.theme === theme.name)
+    poems: remainingPoems.filter((p) => p.theme === theme.name)
+  }));
+
+  const groupedAllPoems = THEMES.map((theme) => ({
+    ...theme,
+    poems: publishedPoems.filter((p) => p.theme === theme.name)
   }));
 
   return (
@@ -135,14 +148,111 @@ export default function PoetryCollection() {
           </div>
         </div>
 
-        {/* Theme Sections */}
+        {/* Poem Sections */}
         {isLoading ? (
           <div className="text-center py-12">
             <p className="text-muted-foreground">Loading poems...</p>
           </div>
-        ) : (
+        ) : isFilterActive ? (
           <div className="space-y-24">
-            {groupedPoems.map((theme, index) => (
+            {/* Matching Poems Section - Shown First When Filter Active */}
+            {matchingPoems.length > 0 && (
+              <section 
+                className="rounded-xl p-8 bg-gradient-to-br from-primary/5 to-primary/10 dark:from-primary/10 dark:to-primary/20"
+                data-testid="section-matching-poems"
+                style={{
+                  animation: `fadeInUp 0.6s ease-out both`,
+                }}
+              >
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="p-3 rounded-lg bg-background/50">
+                    <Search className="w-8 h-8 text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <h2 className="font-display text-3xl md:text-4xl font-bold mb-2">
+                      {searchQuery ? `Results for "${searchQuery}"` : `${selectedTheme}`}
+                    </h2>
+                    <p className="text-lg text-muted-foreground">
+                      {matchingPoems.length} {matchingPoems.length === 1 ? 'poem' : 'poems'} found
+                    </p>
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {matchingPoems.map((poem) => (
+                    <PoemCard
+                      key={poem.id}
+                      poem={poem}
+                      onClick={() => setSelectedPoem(poem)}
+                    />
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {matchingPoems.length === 0 && (
+              <div className="text-center py-12">
+                <p className="text-muted-foreground text-lg">
+                  No poems match your search. Try a different term or browse below.
+                </p>
+              </div>
+            )}
+
+            {/* Remaining Poems - Grouped by Theme */}
+            {remainingPoems.length > 0 && (
+              <>
+                <div className="text-center">
+                  <h3 className="font-display text-2xl font-semibold text-muted-foreground mb-2">
+                    More Poems to Explore
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Browse other poems by theme
+                  </p>
+                </div>
+
+                {groupedRemainingPoems.map((theme, index) => (
+                  theme.poems.length > 0 && (
+                    <section 
+                      key={theme.name}
+                      className={`rounded-xl p-8 bg-gradient-to-br ${theme.gradient}`}
+                      data-testid={`section-theme-${theme.name.toLowerCase().replace(/\s+/g, '-')}`}
+                      style={{
+                        animation: `fadeInUp 0.6s ease-out ${(index + 1) * 0.1}s both`,
+                      }}
+                    >
+                      <div className="flex items-start gap-4 mb-6">
+                        <div className="p-3 rounded-lg bg-background/50">
+                          <theme.Icon className="w-8 h-8 text-primary" />
+                        </div>
+                        <div className="flex-1">
+                          <h2 className="font-display text-3xl md:text-4xl font-bold mb-2">
+                            {theme.name}
+                          </h2>
+                          <p className="text-lg text-muted-foreground">
+                            {theme.description}
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {theme.poems.map((poem) => (
+                          <PoemCard
+                            key={poem.id}
+                            poem={poem}
+                            onClick={() => setSelectedPoem(poem)}
+                          />
+                        ))}
+                      </div>
+                    </section>
+                  )
+                ))}
+              </>
+            )}
+          </div>
+        ) : (
+          /* Default View - All Poems Grouped by Theme */
+          <div className="space-y-24">
+            {groupedAllPoems.map((theme, index) => (
               <section 
                 key={theme.name}
                 className={`rounded-xl p-8 bg-gradient-to-br ${theme.gradient}`}
