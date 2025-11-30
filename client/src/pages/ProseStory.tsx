@@ -1,60 +1,60 @@
-import { useEffect } from "react";
-import { useQuery, useMutation } from "@tanstack/react-query";
-import { useRoute } from "wouter";
+import { Link, useRoute, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { PoemCard } from "@/components/PoemCard";
-import { ArrowLeft, BookOpen, Eye } from "lucide-react";
-import { apiRequest } from "@/lib/queryClient";
-import type { Prose, Poem } from "@shared/schema";
+import { ArrowLeft, BookOpen, Eye, Home } from "lucide-react";
+import { getProseById, getPoemById, type Prose, type Poem } from "@/data";
 
 export default function ProseStory() {
   const [, params] = useRoute("/prose/:id");
+  const [, setLocation] = useLocation();
   const proseId = params?.id;
 
-  const { data: prose, isLoading } = useQuery<Prose>({
-    queryKey: ["/api/prose", proseId],
-    enabled: !!proseId,
-  });
-
-  const { data: relatedPoem } = useQuery<Poem>({
-    queryKey: ["/api/poems", prose?.relatedPoemId],
-    enabled: !!prose?.relatedPoemId,
-  });
-
-  // Track view
-  const viewMutation = useMutation({
-    mutationFn: async () => {
-      if (proseId) {
-        await apiRequest("POST", `/api/prose/${proseId}/view`, {});
-      }
-    },
-  });
-
-  useEffect(() => {
-    if (proseId && !viewMutation.isPending) {
-      viewMutation.mutate();
-    }
-  }, [proseId]);
-
-  if (isLoading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <p className="text-muted-foreground">Loading story...</p>
-      </div>
-    );
-  }
+  const prose = proseId ? getProseById(proseId) : undefined;
+  const relatedPoem = prose?.relatedPoemId ? getPoemById(prose.relatedPoemId) : undefined;
 
   if (!prose) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <p className="text-muted-foreground mb-4">Story not found</p>
-          <Button onClick={() => window.location.href = "/prose"}>
-            Back to Prose Collection
-          </Button>
+      <div className="min-h-screen bg-background">
+        <header className="sticky top-0 z-40 bg-background/80 backdrop-blur-md border-b border-border">
+          <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+            <Link href="/" className="font-display text-2xl font-bold hover:text-primary transition-colors">
+              Same Moon Poetry
+            </Link>
+            <nav className="flex items-center gap-6">
+              <Link href="/poetry" className="text-sm hover:text-primary transition-colors">
+                Poetry
+              </Link>
+              <Link href="/prose" className="text-sm font-medium text-primary">
+                Prose
+              </Link>
+              <Link href="/about" className="text-sm hover:text-primary transition-colors">
+                About
+              </Link>
+              <ThemeToggle />
+            </nav>
+          </div>
+        </header>
+        
+        <div className="flex flex-col items-center justify-center min-h-[60vh] px-4">
+          <div className="text-center max-w-md">
+            <h1 className="font-display text-3xl font-bold mb-4">Story Not Found</h1>
+            <p className="text-muted-foreground mb-8">
+              The prose piece you're looking for doesn't exist or may have been moved.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button onClick={() => setLocation("/prose")} data-testid="button-browse-prose">
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                Browse Prose
+              </Button>
+              <Button variant="outline" onClick={() => setLocation("/")} data-testid="button-go-home">
+                <Home className="w-4 h-4 mr-2" />
+                Go Home
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     );
@@ -62,40 +62,37 @@ export default function ProseStory() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
       <header className="sticky top-0 z-40 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <a href="/" className="font-display text-2xl font-bold hover:text-primary transition-colors">
+          <Link href="/" className="font-display text-2xl font-bold hover:text-primary transition-colors">
             Same Moon Poetry
-          </a>
+          </Link>
           <nav className="flex items-center gap-6">
-            <a href="/poetry" className="text-sm hover:text-primary transition-colors">
+            <Link href="/poetry" className="text-sm hover:text-primary transition-colors">
               Poetry
-            </a>
-            <a href="/prose" className="text-sm font-medium text-primary">
+            </Link>
+            <Link href="/prose" className="text-sm font-medium text-primary">
               Prose
-            </a>
-            <a href="/about" className="text-sm hover:text-primary transition-colors">
+            </Link>
+            <Link href="/about" className="text-sm hover:text-primary transition-colors">
               About
-            </a>
+            </Link>
             <ThemeToggle />
           </nav>
         </div>
       </header>
 
       <div className="container mx-auto px-4 py-12 max-w-6xl">
-        {/* Back Button */}
         <Button
           variant="ghost"
           className="mb-8"
-          onClick={() => window.location.href = "/prose"}
+          onClick={() => setLocation("/prose")}
           data-testid="button-back"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
           Back to Prose
         </Button>
 
-        {/* Title and Metadata */}
         <div className="mb-12">
           <h1 className="font-display text-4xl md:text-5xl font-bold mb-4" data-testid="text-prose-title">
             {prose.title}
@@ -119,9 +116,7 @@ export default function ProseStory() {
           </div>
         </div>
 
-        {/* Dual Column Layout */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
-          {/* Philosophy Column */}
           <div className="space-y-6">
             <div className="sticky top-24">
               <div className="bg-secondary/20 border-l-4 border-secondary p-6 rounded-lg ring-1 ring-secondary/30 dark:bg-secondary/15">
@@ -138,7 +133,6 @@ export default function ProseStory() {
             </div>
           </div>
 
-          {/* Narrative Column */}
           <div className="space-y-6">
             <div>
               <h2 className="font-display text-2xl font-semibold mb-4">
@@ -154,7 +148,6 @@ export default function ProseStory() {
           </div>
         </div>
 
-        {/* Related Poem */}
         {relatedPoem && (
           <div className="mt-16 pt-8 border-t border-border">
             <h3 className="font-display text-2xl font-semibold mb-6">
@@ -163,13 +156,12 @@ export default function ProseStory() {
             <div className="max-w-md">
               <PoemCard 
                 poem={relatedPoem}
-                onClick={() => window.location.href = `/poetry`}
+                onClick={() => setLocation("/poetry")}
               />
             </div>
           </div>
         )}
 
-        {/* Reflection Prompt */}
         <Card className="mt-16 p-8 bg-muted/30">
           <h3 className="font-display text-xl font-semibold mb-3">
             Reflect on This

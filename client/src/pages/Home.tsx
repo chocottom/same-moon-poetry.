@@ -1,18 +1,15 @@
 import { useState, useEffect } from "react";
-import { useQuery, useMutation } from "@tanstack/react-query";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Card } from "@/components/ui/card";
 import { MoonPhase } from "@/components/MoonPhase";
 import { PoemCard } from "@/components/PoemCard";
 import { ProseCard } from "@/components/ProseCard";
 import { ImmersivePoemReader } from "@/components/ImmersivePoemReader";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { useToast } from "@/hooks/use-toast";
-import { apiRequest, queryClient } from "@/lib/queryClient";
 import { ArrowDown, Mail } from "lucide-react";
-import type { Poem, Prose } from "@shared/schema";
+import { getFeaturedPoems, getFeaturedProse, getPublishedPoems, type Poem, type Prose } from "@/data";
 import heroImage from "@assets/generated_images/Hero_silhouette_under_moon_dfa1e07c.png";
 
 const FEATURED_QUOTES = [
@@ -28,6 +25,7 @@ export default function Home() {
   const [currentQuote, setCurrentQuote] = useState(0);
   const [email, setEmail] = useState("");
   const [selectedPoem, setSelectedPoem] = useState<Poem | null>(null);
+  const [isSubscribing, setIsSubscribing] = useState(false);
 
   // Rotating quotes
   useEffect(() => {
@@ -37,41 +35,24 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
-  // Fetch featured poems (3-act structure)
-  const { data: featuredPoems = [] } = useQuery<Poem[]>({
-    queryKey: ["/api/poems", { featured: true }],
-  });
-
-  // Fetch featured prose
-  const { data: featuredProse = [] } = useQuery<Prose[]>({
-    queryKey: ["/api/prose", { featured: true }],
-  });
-
-  // Newsletter subscription
-  const subscribeMutation = useMutation({
-    mutationFn: async (email: string) => {
-      await apiRequest("POST", "/api/newsletter", { email });
-    },
-    onSuccess: () => {
-      toast({
-        title: "Subscribed!",
-        description: "You'll receive monthly reflections in your inbox.",
-      });
-      setEmail("");
-    },
-    onError: () => {
-      toast({
-        title: "Error",
-        description: "Failed to subscribe. Please try again.",
-        variant: "destructive",
-      });
-    },
-  });
+  // Get featured poems and prose from local data
+  const featuredPoems = getFeaturedPoems();
+  const featuredProse = getFeaturedProse();
+  const allPoems = getPublishedPoems();
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
     if (email) {
-      subscribeMutation.mutate(email);
+      setIsSubscribing(true);
+      // For static site, just show success message
+      setTimeout(() => {
+        toast({
+          title: "Thank you!",
+          description: "Please contact us directly to subscribe to the newsletter.",
+        });
+        setEmail("");
+        setIsSubscribing(false);
+      }, 500);
     }
   };
 
@@ -192,11 +173,11 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {featuredProse.slice(0, 2).map((prose) => (
+            {featuredProse.slice(0, 2).map((proseItem) => (
               <ProseCard 
-                key={prose.id} 
-                prose={prose}
-                onClick={() => setLocation(`/prose/${prose.id}`)}
+                key={proseItem.id} 
+                prose={proseItem}
+                onClick={() => setLocation(`/prose/${proseItem.id}`)}
               />
             ))}
           </div>
@@ -237,10 +218,10 @@ export default function Home() {
             />
             <Button 
               type="submit" 
-              disabled={subscribeMutation.isPending}
+              disabled={isSubscribing}
               data-testid="button-subscribe"
             >
-              {subscribeMutation.isPending ? "Subscribing..." : "Subscribe"}
+              {isSubscribing ? "Subscribing..." : "Subscribe"}
             </Button>
           </form>
         </div>
@@ -267,7 +248,7 @@ export default function Home() {
             <div>
               <h4 className="font-semibold mb-4">Connect</h4>
               <p className="text-sm text-muted-foreground">
-                © 2024 Amen Allah Jebali
+                2024 Amen Allah Jebali
               </p>
             </div>
           </div>
@@ -279,6 +260,7 @@ export default function Home() {
         <ImmersivePoemReader
           poem={selectedPoem}
           onClose={() => setSelectedPoem(null)}
+          relatedPoems={allPoems.filter(p => p.theme === selectedPoem.theme && p.id !== selectedPoem.id)}
         />
       )}
 

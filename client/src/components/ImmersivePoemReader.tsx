@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ThemeToggle } from "./ThemeToggle";
-import type { Poem } from "@shared/schema";
+import type { Poem } from "@/data";
 
 interface ImmersivePoemReaderProps {
   poem: Poem;

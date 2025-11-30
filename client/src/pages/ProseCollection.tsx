@@ -1,17 +1,16 @@
 import { useState } from "react";
-import { useQuery } from "@tanstack/react-query";
+import { Link, useLocation } from "wouter";
 import { Input } from "@/components/ui/input";
 import { ProseCard } from "@/components/ProseCard";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Search } from "lucide-react";
-import type { Prose } from "@shared/schema";
+import { getPublishedProse, type Prose } from "@/data";
 
 export default function ProseCollection() {
   const [searchQuery, setSearchQuery] = useState("");
+  const [, setLocation] = useLocation();
 
-  const { data: proseStories = [], isLoading } = useQuery<Prose[]>({
-    queryKey: ["/api/prose"],
-  });
+  const proseStories = getPublishedProse();
 
   const filteredProse = proseStories.filter((prose) => {
     const matchesSearch = !searchQuery || 
@@ -23,22 +22,21 @@ export default function ProseCollection() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
       <header className="sticky top-0 z-40 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <a href="/" className="font-display text-2xl font-bold hover:text-primary transition-colors">
+          <Link href="/" className="font-display text-2xl font-bold hover:text-primary transition-colors">
             Same Moon Poetry
-          </a>
+          </Link>
           <nav className="flex items-center gap-6">
-            <a href="/poetry" className="text-sm hover:text-primary transition-colors">
+            <Link href="/poetry" className="text-sm hover:text-primary transition-colors">
               Poetry
-            </a>
-            <a href="/prose" className="text-sm font-medium text-primary">
+            </Link>
+            <Link href="/prose" className="text-sm font-medium text-primary">
               Prose
-            </a>
-            <a href="/about" className="text-sm hover:text-primary transition-colors">
+            </Link>
+            <Link href="/about" className="text-sm hover:text-primary transition-colors">
               About
-            </a>
+            </Link>
             <ThemeToggle />
           </nav>
         </div>
@@ -79,17 +77,13 @@ export default function ProseCollection() {
         </div>
 
         {/* Prose Grid */}
-        {isLoading ? (
-          <div className="text-center py-12">
-            <p className="text-muted-foreground">Loading stories...</p>
-          </div>
-        ) : filteredProse.length > 0 ? (
+        {filteredProse.length > 0 ? (
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {filteredProse.map((prose) => (
               <ProseCard
                 key={prose.id}
                 prose={prose}
-                onClick={() => window.location.href = `/prose/${prose.id}`}
+                onClick={() => setLocation(`/prose/${prose.id}`)}
               />
             ))}
           </div>

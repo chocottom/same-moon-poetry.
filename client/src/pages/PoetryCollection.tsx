@@ -1,13 +1,12 @@
 import { useState } from "react";
-import { useQuery } from "@tanstack/react-query";
+import { Link } from "wouter";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { PoemCard } from "@/components/PoemCard";
 import { ImmersivePoemReader } from "@/components/ImmersivePoemReader";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Search, Moon, Heart, Clock, Sprout, type LucideIcon } from "lucide-react";
-import type { Poem } from "@shared/schema";
+import { getPublishedPoems, type Poem } from "@/data";
 
 const THEMES: Array<{
   name: string;
@@ -46,9 +45,8 @@ export default function PoetryCollection() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedPoem, setSelectedPoem] = useState<Poem | null>(null);
 
-  const { data: poems = [], isLoading } = useQuery<Poem[]>({
-    queryKey: ["/api/poems"],
-  });
+  // Get poems from local data
+  const poems = getPublishedPoems();
 
   const isFilterActive = searchQuery.trim() !== "" || selectedTheme !== null;
   
@@ -78,22 +76,21 @@ export default function PoetryCollection() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
       <header className="sticky top-0 z-40 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <a href="/" className="font-display text-2xl font-bold hover:text-primary transition-colors">
+          <Link href="/" className="font-display text-2xl font-bold hover:text-primary transition-colors">
             Same Moon Poetry
-          </a>
+          </Link>
           <nav className="flex items-center gap-6">
-            <a href="/poetry" className="text-sm font-medium text-primary">
+            <Link href="/poetry" className="text-sm font-medium text-primary">
               Poetry
-            </a>
-            <a href="/prose" className="text-sm hover:text-primary transition-colors">
+            </Link>
+            <Link href="/prose" className="text-sm hover:text-primary transition-colors">
               Prose
-            </a>
-            <a href="/about" className="text-sm hover:text-primary transition-colors">
+            </Link>
+            <Link href="/about" className="text-sm hover:text-primary transition-colors">
               About
-            </a>
+            </Link>
             <ThemeToggle />
           </nav>
         </div>
@@ -149,11 +146,7 @@ export default function PoetryCollection() {
         </div>
 
         {/* Poem Sections */}
-        {isLoading ? (
-          <div className="text-center py-12">
-            <p className="text-muted-foreground">Loading poems...</p>
-          </div>
-        ) : isFilterActive ? (
+        {isFilterActive ? (
           <div className="space-y-24">
             {/* Matching Poems Section - Shown First When Filter Active */}
             {matchingPoems.length > 0 && (

@@ -2,7 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Eye, BookOpen, Moon, Heart, Clock, Sprout, Sparkles, Zap, CloudRain, Star } from "lucide-react";
-import type { Poem } from "@shared/schema";
+import type { Poem } from "@/data";
 
 interface PoemCardProps {
   poem: Poem;

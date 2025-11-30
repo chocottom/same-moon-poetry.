@@ -4,11 +4,10 @@ A poetry and prose website for Amen Allah Jebali, featuring a collection of poem
 
 ## Overview
 
-This is a full-stack JavaScript application built with:
+This is a static website built for Netlify deployment:
 - **Frontend**: React with Vite, TailwindCSS, shadcn/ui components
-- **Backend**: Express.js
-- **Database**: PostgreSQL with Drizzle ORM
-- **Routing**: wouter for client-side routing
+- **Data**: Local JSON files (no backend required for static deployment)
+- **Routing**: wouter for client-side SPA routing
 
 ## Project Structure
 
@@ -16,66 +15,67 @@ This is a full-stack JavaScript application built with:
 client/
   src/
     components/     # Reusable UI components
-    pages/          # Page components (Home, PoetryCollection, ProseCollection, About)
-    lib/            # Utility functions and query client
+    pages/          # Page components (Home, PoetryCollection, ProseCollection, ProseStory, About)
+    data/           # JSON data files and helper functions
+      poems.json    # All poems content
+      prose.json    # All prose content  
+      index.ts      # Data types and helper functions
+    lib/            # Utility functions
     hooks/          # Custom React hooks
-server/
-  routes.ts         # API endpoints
-  storage.ts        # Database operations
-  db.ts             # Database connection
-shared/
-  schema.ts         # Drizzle ORM schema and Zod types
+    contexts/       # Theme context for dark/light mode
 ```
 
-## Key Features
+## Static Deployment (Netlify)
 
-### Theme Organization
+This website is designed for static hosting on Netlify:
+
+### Build Command
+```bash
+npm run build
+```
+
+### Publish Directory
+```
+dist/public
+```
+
+### Key Features for Static Deployment
+1. All content loaded from local JSON files (`client/src/data/`)
+2. No API calls or backend dependencies
+3. Client-side routing with wouter (requires _redirects file for SPA)
+4. Newsletter subscription shows informational message instead of form submission
+
+### Netlify Configuration
+Create a `_redirects` file in the public folder with:
+```
+/*    /index.html   200
+```
+
+## Theme Organization
 Poems are organized into four themes:
 - **Spiritual Depth** (Moon icon) - Exploring Allah, gratitude, transformation
 - **Presence & Connection** (Heart icon) - Authentic relationships, listening
 - **Time & Purpose** (Clock icon) - Discipline, intentional living
 - **Growth & Becoming** (Sprout icon) - Transformation, evolution
 
-### Mood Categories
+## Mood Categories
 - Reflective
 - Energetic
 - Melancholic
 - Inspiring
 
-### Search Prioritization
-When searching or filtering poems:
-1. Matching poems appear first at the top (ungrouped) in a highlighted results section
-2. Remaining poems are displayed below, grouped by their respective themes
-3. This ensures relevant content is immediately visible without scrolling through theme sections
+## Data Helper Functions
 
-## API Endpoints
-
-- `GET /api/poems` - Retrieve all poems
-- `GET /api/poems/:id` - Get single poem
-- `POST /api/poems` - Create new poem
-- `GET /api/prose` - Retrieve all prose pieces
-- `GET /api/prose/:id` - Get single prose piece
-- `POST /api/prose` - Create new prose piece
-
-## Database Schema
-
-### Poems Table
-- id (UUID, primary key)
-- title, content, excerpt
-- theme (enum: Spiritual Depth, Presence & Connection, Time & Purpose, Growth & Becoming)
-- mood (enum: Reflective, Energetic, Melancholic, Inspiring)
-- status (draft/published)
-- readingTime, views
-
-### Prose Table
-- id (UUID, primary key)
-- title, content, excerpt
-- category
-- status (draft/published)
-- readingTime, views
+Located in `client/src/data/index.ts`:
+- `getFeaturedPoems()` - Get poems for homepage hero section
+- `getPublishedPoems()` - Get all published poems
+- `getPoemsByTheme(theme)` - Filter poems by theme
+- `getPublishedProse()` - Get all published prose
+- `getProseById(id)` - Get single prose piece by ID
 
 ## Recent Changes
 
-- **2024-11-29**: Implemented search prioritization - matching poems now appear first when filtering
-- **2024-11-29**: Replaced emoji icons with lucide-react icons matching each poem's theme
-- **2024-11-29**: Created PostgreSQL database and inserted 8 poems + 1 prose piece
+- **2024-11-30**: Converted to static JSON-based architecture for Netlify deployment
+- **2024-11-30**: Removed admin dashboard, authentication, and database dependencies
+- **2024-11-30**: Created data utility layer with poems.json and prose.json
+- **2024-11-30**: Updated all navigation to use wouter's Link component for proper SPA routing
